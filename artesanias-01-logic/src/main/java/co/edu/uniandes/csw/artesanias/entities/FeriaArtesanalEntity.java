@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.uniandes.csw.artesanias.entities;
+package co.edu.uniandes.csw.artesanias.entities;
 
 import java.util.Date;
 import javax.persistence.Entity;
@@ -20,6 +20,8 @@ import javax.persistence.TemporalType;
 public class FeriaArtesanalEntity {
     
     @Id
+    private Integer id;
+    
     private String nombre;
     
     @Temporal(TemporalType.DATE)
@@ -30,6 +32,10 @@ public class FeriaArtesanalEntity {
     
     private String lugar;
 
+    public Integer getId(){
+        return id;
+    }
+    
     public String getNombre() {
         return nombre;
     }
@@ -44,6 +50,10 @@ public class FeriaArtesanalEntity {
 
     public String getLugar() {
         return lugar;
+    }
+    
+    public void setId(Integer id){
+        this.id = id;
     }
 
     public void setNombre(String nombre) {
@@ -61,8 +71,6 @@ public class FeriaArtesanalEntity {
     public void setLugar(String lugar) {
         this.lugar = lugar;
     }
-    
-    
-    
+
         
 }

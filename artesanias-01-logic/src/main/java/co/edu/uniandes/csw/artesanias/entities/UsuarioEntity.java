@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.uniandes.csw.artesanias.entities;
+package co.edu.uniandes.csw.artesanias.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
