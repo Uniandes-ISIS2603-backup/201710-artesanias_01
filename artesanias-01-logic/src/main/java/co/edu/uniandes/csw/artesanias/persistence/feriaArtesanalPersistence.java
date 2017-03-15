@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.artesanias.persistence;
 
+import co.edu.uniandes.csw.artesanias.entities.ConferenciaEntity;
 import co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity;
 import co.edu.uniandes.csw.artesanias.entities.PabellonEntity;
 import co.edu.uniandes.csw.artesanias.entities.StandEntity;
@@ -113,7 +114,7 @@ public class feriaArtesanalPersistence {
          
         public List<StandEntity> findAllStands()
     {
-        TypedQuery <StandEntity> q = em.createQuery("select u from PabellonEntity u" , StandEntity.class);
+        TypedQuery <StandEntity> q = em.createQuery("select u from StandEntity u" , StandEntity.class);
         return q.getResultList();
         
     }
@@ -146,9 +147,41 @@ public class feriaArtesanalPersistence {
          
         public List<UsuarioEntity> findAllUsuarios()
     {
-        TypedQuery <UsuarioEntity> q = em.createQuery("select u from PabellonEntity u" , UsuarioEntity.class);
+        TypedQuery <UsuarioEntity> q = em.createQuery("select u from UsuarioEntity u" , UsuarioEntity.class);
         return q.getResultList();
         
     }
     
+         public ConferenciaEntity createConferencia (ConferenciaEntity entity)
+        {
+            em.persist(entity);
+            
+            return entity;
+        }
+        
+         public ConferenciaEntity findConferencia (Long id) 
+        {
+      
+        return em.find(ConferenciaEntity.class, id);
+   
+        }
+        public ConferenciaEntity updateConferencia(ConferenciaEntity entity) 
+        {
+       
+        return em.merge(entity);
+   
+        } 
+        
+        public void deleteConferencia (Long id) {
+        
+        ConferenciaEntity entity = em.find(ConferenciaEntity.class, id);
+        em.remove(entity);
+    }
+         
+        public List<ConferenciaEntity> findAllConferencias()
+    {
+        TypedQuery <ConferenciaEntity> q = em.createQuery("select u from ConferenciaEntity u" , ConferenciaEntity.class);
+        return q.getResultList();
+        
+    }
 }
