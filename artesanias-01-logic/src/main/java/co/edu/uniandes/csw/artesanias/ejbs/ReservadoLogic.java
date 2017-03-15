@@ -19,10 +19,15 @@ public class ReservadoLogic {
     
     @Inject private feriaArtesanalPersistence persistence;
     
-    public ReservadoEntity createObra(ReservadoEntity entity){
+    public ReservadoEntity createReservado(ReservadoEntity entity){
         return persistence.createReservado(entity);
     }
-    public ReservadoEntity updateObra(ReservadoEntity entity){
+    
+    public ReservadoEntity getReservado(Long id){
+         return persistence.findReservado(id);
+     }
+    
+    public ReservadoEntity updateReservado(ReservadoEntity entity){
         return persistence.updateReservado(entity);
     }
     

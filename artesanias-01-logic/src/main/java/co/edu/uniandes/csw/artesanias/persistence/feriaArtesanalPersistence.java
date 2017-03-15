@@ -194,6 +194,7 @@ public class feriaArtesanalPersistence {
         return em.find(ConferenciaEntity.class, id);
    
         }
+         
         public ConferenciaEntity updateConferencia(ConferenciaEntity entity) 
         {
        
@@ -221,12 +222,34 @@ public class feriaArtesanalPersistence {
             return entity;
         }
         
+        public ComentarioEntity findComentario (Long id) 
+        {
+      
+        return em.find(ComentarioEntity.class, id);
+   
+        }
+         
+        public ReservadoEntity findReservado (Long id) 
+        {
+      
+        return em.find(ReservadoEntity.class, id);
+   
+        }
+        
+        public FotoEntity findFoto (Long id) 
+        {
+      
+        return em.find(FotoEntity.class, id);
+   
+        } 
+         
          public ObraEntity findObra (Long id) 
         {
       
         return em.find(ObraEntity.class, id);
    
         }
+                 
         public ObraEntity updateObra(ObraEntity entity) 
         {
        

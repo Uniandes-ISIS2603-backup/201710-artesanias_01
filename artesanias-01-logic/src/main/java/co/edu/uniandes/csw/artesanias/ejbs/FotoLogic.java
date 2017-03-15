@@ -23,6 +23,10 @@ public class FotoLogic {
          return persistence.createFoto(entity);
      }
      
+     public FotoEntity getFoto(Long id){
+         return persistence.findFoto(id);
+     }
+     
      public void deleteFoto(Long id){
          persistence.deleteFoto(id);
      }        
