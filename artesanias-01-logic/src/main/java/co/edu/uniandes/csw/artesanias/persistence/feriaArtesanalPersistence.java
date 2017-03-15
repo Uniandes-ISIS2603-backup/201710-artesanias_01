@@ -5,7 +5,11 @@
  */
 package co.edu.uniandes.csw.artesanias.persistence;
 
+import co.edu.uniandes.csw.artesanias.entities.ComentarioEntity;
+import co.edu.uniandes.csw.artesanias.entities.ConferenciaEntity;
 import co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity;
+import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
+import co.edu.uniandes.csw.artesanias.entities.ObraEntity;
 import co.edu.uniandes.csw.artesanias.entities.PabellonEntity;
 import co.edu.uniandes.csw.artesanias.entities.StandEntity;
 import co.edu.uniandes.csw.artesanias.entities.UsuarioEntity;
@@ -61,6 +65,13 @@ public class feriaArtesanalPersistence {
         
         FeriaArtesanalEntity entity = em.find(FeriaArtesanalEntity.class, id);
         em.remove(entity);
+    }
+        
+             public List<FeriaArtesanalEntity> findAllFerias()
+    {
+        TypedQuery <FeriaArtesanalEntity> q = em.createQuery("select u from FeriaEntity u" , FeriaArtesanalEntity.class);
+        return q.getResultList(); 
+        
     }
         public PabellonEntity createPabellon (PabellonEntity entity)
         {
@@ -123,7 +134,7 @@ public class feriaArtesanalPersistence {
          
         public List<StandEntity> findAllStands()
     {
-        TypedQuery <StandEntity> q = em.createQuery("select u from PabellonEntity u" , StandEntity.class);
+        TypedQuery <StandEntity> q = em.createQuery("select u from StandEntity u" , StandEntity.class);
         return q.getResultList();
         
     }
@@ -156,9 +167,105 @@ public class feriaArtesanalPersistence {
          
         public List<UsuarioEntity> findAllUsuarios()
     {
-        TypedQuery <UsuarioEntity> q = em.createQuery("select u from PabellonEntity u" , UsuarioEntity.class);
+        TypedQuery <UsuarioEntity> q = em.createQuery("select u from UsuarioEntity u" , UsuarioEntity.class);
         return q.getResultList();
         
     }
     
+         public ConferenciaEntity createConferencia (ConferenciaEntity entity)
+        {
+            em.persist(entity);
+            
+            return entity;
+        }
+        
+         public ConferenciaEntity findConferencia (Long id) 
+        {
+      
+        return em.find(ConferenciaEntity.class, id);
+   
+        }
+        public ConferenciaEntity updateConferencia(ConferenciaEntity entity) 
+        {
+       
+        return em.merge(entity);
+   
+        } 
+        
+        public void deleteConferencia (Long id) {
+        
+        ConferenciaEntity entity = em.find(ConferenciaEntity.class, id);
+        em.remove(entity);
+    }
+         
+        public List<ConferenciaEntity> findAllConferencias()
+    {
+        TypedQuery <ConferenciaEntity> q = em.createQuery("select u from ConferenciaEntity u" , ConferenciaEntity.class);
+        return q.getResultList();
+        
+    }
+        
+         public ObraEntity createObra (ObraEntity entity)
+        {
+            em.persist(entity);
+            
+            return entity;
+        }
+        
+         public ObraEntity findObra (Long id) 
+        {
+      
+        return em.find(ObraEntity.class, id);
+   
+        }
+        public ObraEntity updateObra(ObraEntity entity) 
+        {
+       
+        return em.merge(entity);
+   
+        } 
+        
+        public void deleteObra (Long id) {
+        
+        ObraEntity entity = em.find(ObraEntity.class, id);
+        em.remove(entity);
+    }
+         
+        public List<ObraEntity> findAllObras()
+    {
+        TypedQuery <ObraEntity> q = em.createQuery("select u from ObraEntity u" , ObraEntity.class);
+        return q.getResultList();
+        
+    }
+        
+         public ComentarioEntity createComentario (ComentarioEntity entity)
+        {
+            em.persist(entity);
+            
+            return entity;
+        }
+        
+        
+        public void deleteComentario (Long id) {
+        
+        ComentarioEntity entity = em.find(ComentarioEntity.class, id);
+        em.remove(entity);
+    }
+     
+                 public FotoEntity createFoto (FotoEntity entity)
+        {
+            em.persist(entity);
+            
+            return entity;
+        }
+        
+        
+        public void deleteFoto (Long id) {
+        
+        FotoEntity entity = em.find(FotoEntity.class, id);
+        em.remove(entity);
+    }
+        
+   
+ 
 }
