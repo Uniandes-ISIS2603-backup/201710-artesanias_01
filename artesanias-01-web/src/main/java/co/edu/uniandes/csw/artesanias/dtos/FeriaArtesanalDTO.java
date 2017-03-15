@@ -11,9 +11,7 @@ package co.edu.uniandes.csw.artesanias.dtos;
  */
 
 import co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity;
-import co.edu.uniandes.csw.artesanias.entities.PabellonEntity;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
 

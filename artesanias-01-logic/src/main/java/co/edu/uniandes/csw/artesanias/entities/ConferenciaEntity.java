@@ -21,6 +21,7 @@ import javax.persistence.TemporalType;
 @Entity 
 public class ConferenciaEntity  implements Serializable
 {
+    
     //Atributos
 @Id
 private int id;
@@ -33,7 +34,46 @@ private Date fechaInicio;
 @Temporal(TemporalType.DATE)
 private Date fechaFin;
 
-private Enumeration tema;
+public enum EnumTemasConferencia{
+     
+  COMERCIO {
+      public String toString() {
+          return "Comercialización de las artesanías";
+      }
+  },
+
+  NEGOCIOS {
+      public String toString() {
+          return "Negocios en internet para artesanos";
+      }
+    },
+  ARTE {
+      public String toString(){
+          return "Arte y Artesanos";
+      }
+  },
+  LUJOS
+          {
+      public String toString(){
+          return "Artesanias y Lujos";
+      }
+  },
+  HISTORIA
+          {
+      public String toString()
+      {
+          return "Historia de las artesanias";
+      }
+  },
+  OTROS
+          {
+      public String toString()
+      {
+          return "Otros";
+      }
+  };
+}
+private EnumTemasConferencia tema;
 
 private int rating;
 
@@ -77,11 +117,11 @@ private UsuarioEntity conferencista;
         this.salon = salon;
     }
 
-    public Enumeration getTema() {
+    public EnumTemasConferencia getTema() {
         return tema;
     }
 
-    public void setTema(Enumeration tema) {
+    public void setTema(EnumTemasConferencia tema) {
         this.tema = tema;
     }
 

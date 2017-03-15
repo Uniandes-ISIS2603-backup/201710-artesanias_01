@@ -25,7 +25,13 @@ private int id;
     
 private double costo;
 
-private Enumeration estado;
+public enum EstadoEnum{
+    PAGADO,
+    RESERVADO,
+    CANCELADO;
+}
+
+private EstadoEnum estado;
 
 //asociaciones
 //one to one
@@ -55,13 +61,15 @@ private UsuarioEntity artesano;
         this.costo = costo;
     }
 
-    public Enumeration getEstado() {
+    public EstadoEnum getEstado() {
         return estado;
     }
 
-    public void setEstado(Enumeration estado) {
+    public void setEstado(EstadoEnum estado) {
         this.estado = estado;
     }
+
+    
 
     
     

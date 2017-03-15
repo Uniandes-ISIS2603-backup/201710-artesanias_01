@@ -22,9 +22,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class PabellonEntity extends BaseEntity implements Serializable{
     
-    @Id
-    @GeneratedValue( strategy= GenerationType.IDENTITY)
-    private Integer id;
+   
     
     //asociaciones
     //compuesta
@@ -34,13 +32,7 @@ public class PabellonEntity extends BaseEntity implements Serializable{
     private FeriaArtesanalEntity feriaArtesanal;
     private String tema;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    
 
     public String getTema() {
         return tema;

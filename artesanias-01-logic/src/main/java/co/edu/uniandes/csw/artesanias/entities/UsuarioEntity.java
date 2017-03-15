@@ -31,11 +31,11 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
     
     private String nombre;
     
-    private String nacinalidad;
+    private String nacionalidad;
     
     private boolean boleta;
     
-    private String infomracionTrabajos;
+    private String informacionTrabajos;
     
  //asociaciones
  private FeriaArtesanalEntity feria;
@@ -62,16 +62,16 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
         return nombre;
     }
 
-    public String getNacinalidad() {
-        return nacinalidad;
+    public String getNacionalidad() {
+        return nacionalidad;
     }
     
     public boolean getBoleta() {
         return boleta;
     }
 
-    public String getInfomracionTrabajos() {
-        return infomracionTrabajos;
+    public String getInformacionTrabajos() {
+        return informacionTrabajos;
     }
 
 //    public void setId(Long id) {
@@ -86,16 +86,16 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
         this.nombre = nombre;
     }
 
-    public void setNacinalidad(String nacinalidad) {
-        this.nacinalidad = nacinalidad;
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
     }
 
     public void setBoleta(boolean boleta) {
         this.boleta = boleta;
     }
 
-    public void setInfomracionTrabajos(String infomracionTrabajos) {
-        this.infomracionTrabajos = infomracionTrabajos;
+    public void setInformacionTrabajos(String informacionTrabajos) {
+        this.informacionTrabajos = informacionTrabajos;
     }
     
     
