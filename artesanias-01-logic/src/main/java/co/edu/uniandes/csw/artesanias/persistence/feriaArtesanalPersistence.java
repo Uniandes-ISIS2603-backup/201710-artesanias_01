@@ -11,6 +11,7 @@ import co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity;
 import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
 import co.edu.uniandes.csw.artesanias.entities.ObraEntity;
 import co.edu.uniandes.csw.artesanias.entities.PabellonEntity;
+import co.edu.uniandes.csw.artesanias.entities.ReservadoEntity;
 import co.edu.uniandes.csw.artesanias.entities.StandEntity;
 import co.edu.uniandes.csw.artesanias.entities.UsuarioEntity;
 import java.util.List;
@@ -80,18 +81,33 @@ public class feriaArtesanalPersistence {
             return entity;
         }
         
+        public ReservadoEntity createReservado (ReservadoEntity entity)
+        {
+            em.persist(entity);
+            
+            return entity;
+        }
+        
          public PabellonEntity findPabellon (Long id) 
         {
       
         return em.find(PabellonEntity.class, id);
    
         }
+        
         public PabellonEntity updatePabellon(PabellonEntity entity) 
         {
        
         return em.merge(entity);
    
         } 
+        
+        public ReservadoEntity updateReservado(ReservadoEntity entity) 
+        {
+       
+        return em.merge(entity);
+   
+        }
         
         public void deletePabellon (Long id) {
         
