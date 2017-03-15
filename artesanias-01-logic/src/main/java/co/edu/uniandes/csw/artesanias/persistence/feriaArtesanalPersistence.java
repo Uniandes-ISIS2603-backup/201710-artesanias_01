@@ -60,7 +60,7 @@ public class feriaArtesanalPersistence {
              public List<FeriaArtesanalEntity> findAllFerias()
     {
         TypedQuery <FeriaArtesanalEntity> q = em.createQuery("select u from FeriaEntity u" , FeriaArtesanalEntity.class);
-        return q.getResultList();
+        return q.getResultList(); 
         
     }
         public PabellonEntity createPabellon (PabellonEntity entity)
