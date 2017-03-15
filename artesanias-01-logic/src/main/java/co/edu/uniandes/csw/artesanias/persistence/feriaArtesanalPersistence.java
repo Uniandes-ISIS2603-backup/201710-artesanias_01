@@ -8,6 +8,7 @@ package co.edu.uniandes.csw.artesanias.persistence;
 import co.edu.uniandes.csw.artesanias.entities.ComentarioEntity;
 import co.edu.uniandes.csw.artesanias.entities.ConferenciaEntity;
 import co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity;
+import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
 import co.edu.uniandes.csw.artesanias.entities.ObraEntity;
 import co.edu.uniandes.csw.artesanias.entities.PabellonEntity;
 import co.edu.uniandes.csw.artesanias.entities.StandEntity;
@@ -230,9 +231,23 @@ public class feriaArtesanalPersistence {
         
         public void deleteComentario (Long id) {
         
-        UsuarioEntity entity = em.find(UsuarioEntity.class, id);
+        ComentarioEntity entity = em.find(ComentarioEntity.class, id);
         em.remove(entity);
     }
-         
+     
+                 public FotoEntity createFoto (FotoEntity entity)
+        {
+            em.persist(entity);
+            
+            return entity;
+        }
+        
+        
+        public void deleteFoto (Long id) {
+        
+        FotoEntity entity = em.find(FotoEntity.class, id);
+        em.remove(entity);
+    }
+   
  
 }
