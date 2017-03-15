@@ -23,6 +23,10 @@ public class ComentarioLogic {
     public ComentarioEntity createComentario(ComentarioEntity entity){
          return persistence.createComentario(entity);
      }
+    
+    public ComentarioEntity getComentario(Long id){
+         return persistence.findComentario(id);
+     }
      
      public void deleteComentario(Long id){
          persistence.deleteComentario(id);
