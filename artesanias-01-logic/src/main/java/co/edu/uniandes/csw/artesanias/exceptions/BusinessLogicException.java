@@ -28,7 +28,8 @@ import javax.ejb.ApplicationException;
 @ApplicationException(rollback = true)
 public class BusinessLogicException extends Exception {
 
-    public BusinessLogicException() {
+    public BusinessLogicException() 
+    {
         super();
     }
 
