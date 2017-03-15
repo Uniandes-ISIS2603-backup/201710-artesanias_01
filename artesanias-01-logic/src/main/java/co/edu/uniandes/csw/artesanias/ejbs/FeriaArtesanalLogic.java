@@ -19,6 +19,9 @@ import javax.ejb.Stateless;
 public class FeriaArtesanalLogic 
 {
     @Inject private feriaArtesanalPersistence persistence;
+    public List<FeriaArtesanalEntity> getFerias(){
+        return persistence.findAllFerias();
+    }
     public FeriaArtesanalEntity getFeria(Long id){
         return persistence.findFeria(id);
     }

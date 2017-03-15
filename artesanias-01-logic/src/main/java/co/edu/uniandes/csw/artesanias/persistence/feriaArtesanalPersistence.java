@@ -45,6 +45,16 @@ public class feriaArtesanalPersistence {
         return em.find(FeriaArtesanalEntity.class, id);
    
         }
+        
+      public List<FeriaArtesanalEntity> findAllFerias()
+    {
+        TypedQuery <FeriaArtesanalEntity> q = em.createQuery("select u from FeriaArtesanalEntity u" , FeriaArtesanalEntity.class);
+        return q.getResultList();
+        
+    }
+   
+        
+        
         public FeriaArtesanalEntity updateFeria(FeriaArtesanalEntity entity) 
         {
        
@@ -56,13 +66,6 @@ public class feriaArtesanalPersistence {
         
         FeriaArtesanalEntity entity = em.find(FeriaArtesanalEntity.class, id);
         em.remove(entity);
-    }
-        
-             public List<FeriaArtesanalEntity> findAllFerias()
-    {
-        TypedQuery <FeriaArtesanalEntity> q = em.createQuery("select u from FeriaEntity u" , FeriaArtesanalEntity.class);
-        return q.getResultList(); 
-        
     }
         public PabellonEntity createPabellon (PabellonEntity entity)
         {
