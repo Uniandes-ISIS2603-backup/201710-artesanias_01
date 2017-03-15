@@ -11,6 +11,7 @@ package co.edu.uniandes.csw.artesanias.dtos;
  */
 
 
+import co.edu.uniandes.csw.artesanias.entities.PabellonEntity;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -36,6 +37,21 @@ public class PabellonDTO implements Serializable {
         this.tema = tema;
     }
     
+    public PabellonDTO(){}
     
+    public PabellonDTO(PabellonEntity entity)
+    {
+        this.id = entity.getId();
+        this.tema = entity.getTema();
+        
+    }
+    
+    public PabellonEntity toEntity()
+    {
+        PabellonEntity entity = new PabellonEntity();
+        entity.setId(id);
+        entity.setTema(tema);
+        return entity;
+    }
     
 }
