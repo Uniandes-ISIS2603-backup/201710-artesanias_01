@@ -56,6 +56,13 @@ public class feriaArtesanalPersistence {
         FeriaArtesanalEntity entity = em.find(FeriaArtesanalEntity.class, id);
         em.remove(entity);
     }
+        
+             public List<FeriaArtesanalEntity> findAllFerias()
+    {
+        TypedQuery <FeriaArtesanalEntity> q = em.createQuery("select u from FeriaEntity u" , FeriaArtesanalEntity.class);
+        return q.getResultList();
+        
+    }
         public PabellonEntity createPabellon (PabellonEntity entity)
         {
             em.persist(entity);
@@ -248,6 +255,7 @@ public class feriaArtesanalPersistence {
         FotoEntity entity = em.find(FotoEntity.class, id);
         em.remove(entity);
     }
+        
    
  
 }
