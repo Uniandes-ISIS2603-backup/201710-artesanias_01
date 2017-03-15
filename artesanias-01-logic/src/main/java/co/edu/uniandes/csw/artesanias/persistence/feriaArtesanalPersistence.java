@@ -40,6 +40,10 @@ public class feriaArtesanalPersistence {
         return em.find(FeriaArtesanalEntity.class, id);
    
         }
+        
+   
+        
+        
         public FeriaArtesanalEntity updateFeria(FeriaArtesanalEntity entity) 
         {
        
