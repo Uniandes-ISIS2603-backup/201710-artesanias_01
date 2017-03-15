@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.artesanias.persistence;
 
+import co.edu.uniandes.csw.artesanias.entities.ComentarioEntity;
 import co.edu.uniandes.csw.artesanias.entities.ConferenciaEntity;
 import co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity;
 import co.edu.uniandes.csw.artesanias.entities.ObraEntity;
@@ -218,4 +219,20 @@ public class feriaArtesanalPersistence {
         return q.getResultList();
         
     }
+        
+         public ComentarioEntity createComentario (ComentarioEntity entity)
+        {
+            em.persist(entity);
+            
+            return entity;
+        }
+        
+        
+        public void deleteComentario (Long id) {
+        
+        UsuarioEntity entity = em.find(UsuarioEntity.class, id);
+        em.remove(entity);
+    }
+         
+ 
 }
