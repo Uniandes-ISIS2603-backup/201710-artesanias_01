@@ -7,11 +7,13 @@ package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
 import javax.inject.Inject;
+import javax.ejb.Stateless;
 
 /**
  *
  * @author f.velasquez11
  */
+@Stateless
 public class ConferenciaLogic 
 {
     @Inject private feriaArtesanalPersistence persistence;

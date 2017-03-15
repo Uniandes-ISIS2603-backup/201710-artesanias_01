@@ -14,7 +14,7 @@ import javax.ejb.Stateless;
  * @author f.velasquez11
  */
 @Stateless
-public class FeriaArtesanalLogic 
+public class ObraLogic 
 {
     @Inject private feriaArtesanalPersistence persistence;
     
