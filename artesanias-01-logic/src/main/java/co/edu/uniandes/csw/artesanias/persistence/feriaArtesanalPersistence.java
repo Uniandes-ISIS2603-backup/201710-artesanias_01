@@ -7,6 +7,7 @@ package co.edu.uniandes.csw.artesanias.persistence;
 
 import co.edu.uniandes.csw.artesanias.entities.ConferenciaEntity;
 import co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity;
+import co.edu.uniandes.csw.artesanias.entities.ObraEntity;
 import co.edu.uniandes.csw.artesanias.entities.PabellonEntity;
 import co.edu.uniandes.csw.artesanias.entities.StandEntity;
 import co.edu.uniandes.csw.artesanias.entities.UsuarioEntity;
@@ -181,6 +182,39 @@ public class feriaArtesanalPersistence {
         public List<ConferenciaEntity> findAllConferencias()
     {
         TypedQuery <ConferenciaEntity> q = em.createQuery("select u from ConferenciaEntity u" , ConferenciaEntity.class);
+        return q.getResultList();
+        
+    }
+        
+         public ObraEntity createObra (ObraEntity entity)
+        {
+            em.persist(entity);
+            
+            return entity;
+        }
+        
+         public ObraEntity findObra (Long id) 
+        {
+      
+        return em.find(ObraEntity.class, id);
+   
+        }
+        public ObraEntity updateObra(ObraEntity entity) 
+        {
+       
+        return em.merge(entity);
+   
+        } 
+        
+        public void deleteObra (Long id) {
+        
+        ObraEntity entity = em.find(ObraEntity.class, id);
+        em.remove(entity);
+    }
+         
+        public List<ObraEntity> findAllObras()
+    {
+        TypedQuery <ObraEntity> q = em.createQuery("select u from ObraEntity u" , ObraEntity.class);
         return q.getResultList();
         
     }
