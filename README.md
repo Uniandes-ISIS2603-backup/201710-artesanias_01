@@ -11,31 +11,37 @@ Nuestro proyecto maneja la venta de tiquetes de una feria, organiza a los Artesa
       <td> Nombre </td>
       <td> Codigo </td>
       <td> Líder </td>
+      <td> Login Uniandes </td>
    </tr> 
    <tr>
       <td> David Cortes </td> 
       <td> 201423363 </td> 
       <td> Líder de planeación </td> 
+      <td> da.cortes11 </td> 
    </tr>           
    <tr>
       <td> James H. Lake </td>
       <td> 201531545 </td>
       <td> Líder de Soporte </td>
+      <td> jh.lake </td> 
    </tr> 
    <tr>
       <td> Juan M. Muñoz </td>
       <td> 201517667 </td>
       <td> Líder de Desarrollo </td>
+      <td> jm.munoz14 </td> 
    </tr> 
    <tr>
       <td> Daniel S. Tapia </td>
       <td> 201414880 </td>
       <td> Líder del Proceso y la Calidad </td>
+      <td> ds.tapia10 </td> 
    </tr> 
    <tr>
       <td> Felipe Velásquez </td>
       <td> 201515450 </td>
       <td> Líder del Equipo </td>
+      <td> f.velasquez11 </td> 
    </tr> 
 </table>
 <br>
