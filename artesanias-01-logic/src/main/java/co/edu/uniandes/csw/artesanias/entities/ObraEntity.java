@@ -24,9 +24,9 @@ import javax.persistence.OneToOne;
 public class ObraEntity extends BaseEntity implements Serializable
 {
     //Atributos
-//@Id
-//@GeneratedValue(strategy = GenerationType.IDENTITY)
-//private int id;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private int id;
 
 private String nombre;
 
@@ -43,18 +43,18 @@ private List<ComentarioEntity> comentarios= new ArrayList<>();
 private List<FotoEntity> fotos= new ArrayList<>();
 
 //one to one
-//@OneToOne
+@OneToOne
 private UsuarioEntity artesano;
 
 //metodos setters y getters
 
- //   public int getId() {
- //       return id;
-//    }
+   public int getId() {
+        return id;
+   }
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
+   public void setId(int id) {
+       this.id = id;
+   }
 
     public String getNombre() {
         return nombre;
