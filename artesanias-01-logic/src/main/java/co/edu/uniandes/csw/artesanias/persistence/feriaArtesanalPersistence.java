@@ -41,6 +41,12 @@ public class feriaArtesanalPersistence {
    
         }
         
+      public List<FeriaArtesanalEntity> findAllFerias()
+    {
+        TypedQuery <FeriaArtesanalEntity> q = em.createQuery("select u from FeriaArtesanalEntity u" , FeriaArtesanalEntity.class);
+        return q.getResultList();
+        
+    }
    
         
         
