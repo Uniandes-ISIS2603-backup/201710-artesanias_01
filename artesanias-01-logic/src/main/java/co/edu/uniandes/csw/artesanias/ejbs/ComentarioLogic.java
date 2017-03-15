@@ -7,6 +7,7 @@ package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.ComentarioEntity;
 import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
+import java.util.List;
 import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -19,6 +20,10 @@ import javax.inject.Inject;
 public class ComentarioLogic {
     
     @Inject private feriaArtesanalPersistence persistence;
+    
+     public List<ComentarioEntity> getComentarios(){
+        return persistence.findAllComentarios();
+    }
     
     public ComentarioEntity createComentario(ComentarioEntity entity){
          return persistence.createComentario(entity);

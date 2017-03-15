@@ -31,4 +31,8 @@ public class ObraLogic
     public ObraEntity updateObra(ObraEntity entity){
         return persistence.updateObra(entity);
     }
+    public void deleteObra(Long id){
+        persistence.deleteObra(id);
+        
+    }
 }

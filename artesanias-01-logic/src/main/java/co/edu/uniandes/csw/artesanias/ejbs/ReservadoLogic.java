@@ -7,6 +7,7 @@ package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.ReservadoEntity;
 import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
@@ -19,8 +20,13 @@ public class ReservadoLogic {
     
     @Inject private feriaArtesanalPersistence persistence;
     
+    
     public ReservadoEntity createReservado(ReservadoEntity entity){
         return persistence.createReservado(entity);
+    }
+    
+    public List<ReservadoEntity> getReservados(){
+        return persistence.findAllReservados();
     }
     
     public ReservadoEntity getReservado(Long id){
@@ -29,6 +35,11 @@ public class ReservadoLogic {
     
     public ReservadoEntity updateReservado(ReservadoEntity entity){
         return persistence.updateReservado(entity);
+    }
+    
+    public void deleteReservado (Long id)
+    {
+        persistence.deleteReservado(id);
     }
     
 }

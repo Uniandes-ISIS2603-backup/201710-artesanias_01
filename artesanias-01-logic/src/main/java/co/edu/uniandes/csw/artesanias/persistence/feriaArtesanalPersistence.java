@@ -236,6 +236,20 @@ public class feriaArtesanalPersistence {
    
         }
         
+          public List<ReservadoEntity> findAllReservados()
+    {
+        TypedQuery <ReservadoEntity> q = em.createQuery("select u from ReservadoEntity u" , ReservadoEntity.class);
+        return q.getResultList();
+        
+    }
+        
+          
+          public void deleteReservado (Long id) {
+        
+        ReservadoEntity entity = em.find(ReservadoEntity.class, id);
+        em.remove(entity);
+    }
+        
         public FotoEntity findFoto (Long id) 
         {
       
@@ -276,6 +290,13 @@ public class feriaArtesanalPersistence {
             
             return entity;
         }
+         
+      public List<ComentarioEntity> findAllComentarios()
+    {
+        TypedQuery <ComentarioEntity> q = em.createQuery("select u from ComentarioEntity u" , ComentarioEntity.class);
+        return q.getResultList();
+        
+    }
         
         
         public void deleteComentario (Long id) {
