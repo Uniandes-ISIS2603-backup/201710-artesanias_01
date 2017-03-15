@@ -5,7 +5,10 @@
  */
 package co.edu.uniandes.csw.artesanias.entities;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -14,9 +17,10 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class StandEntity {
+public class StandEntity implements Serializable{
     
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int numeroStand;
     
     private int tamanio;
@@ -24,6 +28,13 @@ public class StandEntity {
     private double precio;
     
     private String caracteristicas;
+    
+    //asociaciones
+    //uno a uno
+    private PabellonEntity pabellon;
+   
+    private ReservadoEntity reservado;
+    
 
     public int getNumeroStand() {
         return numeroStand;

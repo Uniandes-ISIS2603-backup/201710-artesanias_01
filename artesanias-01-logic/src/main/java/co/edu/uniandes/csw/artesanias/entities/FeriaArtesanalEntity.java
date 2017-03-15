@@ -5,9 +5,16 @@
  */
 package co.edu.uniandes.csw.artesanias.entities;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -17,10 +24,12 @@ import javax.persistence.TemporalType;
  */
 
 @Entity
-public class FeriaArtesanalEntity {
+public class FeriaArtesanalEntity extends BaseEntity implements Serializable{
     
-    @Id
-    private Integer id;
+//    @Id
+//    @GeneratedValue(strategy=GenerationType.IDENTITY )
+    
+//    private Integer id;
     
     private String nombre;
     
@@ -31,10 +40,20 @@ public class FeriaArtesanalEntity {
     private Date fechaFin;
     
     private String lugar;
+    
+//asociaciones
+@OneToMany(mappedBy="FeriaArtesanal", cascade = CascadeType.ALL, orphanRemoval = true)
+private List<PabellonEntity> pabellones= new ArrayList<>();
 
-    public Integer getId(){
-        return id;
-    }
+@OneToMany(mappedBy = "FeriaArtesanal", cascade = CascadeType.ALL, orphanRemoval = true)
+private List<ConferenciaEntity> conferencias= new ArrayList<>();
+
+@OneToMany
+private UsuarioEntity usuarios;
+
+//    public Integer getId(){
+//        return id;
+//    }
     
     public String getNombre() {
         return nombre;
@@ -52,9 +71,9 @@ public class FeriaArtesanalEntity {
         return lugar;
     }
     
-    public void setId(Integer id){
-        this.id = id;
-    }
+//    public void setId(Integer id){
+//        this.id = id;
+//    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -71,6 +90,6 @@ public class FeriaArtesanalEntity {
     public void setLugar(String lugar) {
         this.lugar = lugar;
     }
-
-        
+ 
+       
 }

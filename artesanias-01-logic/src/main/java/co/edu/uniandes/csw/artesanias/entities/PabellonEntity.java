@@ -5,22 +5,36 @@
  */
 package co.edu.uniandes.csw.artesanias.entities;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author jlake
  */
 @Entity
-public class PabellonEntity {
+public class PabellonEntity extends BaseEntity implements Serializable{
     
     @Id
+    @GeneratedValue( strategy= GenerationType.IDENTITY)
     private Integer id;
     
+    //asociaciones
+    //compuesta
+    @OneToMany(mappedBy="Pabellon", cascade= CascadeType.ALL, orphanRemoval = true )
+    private List<StandEntity> stand = new ArrayList<>();   
+    //one to one 
+    private FeriaArtesanalEntity feriaArtesanal;
     private String tema;
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
