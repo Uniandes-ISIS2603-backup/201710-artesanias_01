@@ -1,3 +1,4 @@
+// TODO: eliminar los mensajes por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -45,20 +46,26 @@ public class PabellonResource {
         return listEntity2DTO(logica.getPabellones());
     }
     
+    // TODO: revisar la representación
     @GET
     @Path("{id: \\d+}")
     public PabellonDTO getPabellon(@PathParam ("id") Long id){
         return new PabellonDTO(logica.getPabellon(id));
     }
+    
+    // TODO: revisar la representación
     @POST
     public PabellonDTO createPabellon(PabellonDTO dto){
         return new PabellonDTO(logica.createPabellon(dto.toEntity()));
     } 
+    
+    // TODO: revisar la representación
     @PUT
     @Path("{id: \\d+}")
     public PabellonDTO updatePabellon(PabellonDTO dto){
         return new PabellonDTO(logica.updatePabellon(dto.toEntity()));
     }
+    
     @DELETE
     @Path("{id: \\d+}")
     public void deletePabellon(@PathParam("id") Long id){

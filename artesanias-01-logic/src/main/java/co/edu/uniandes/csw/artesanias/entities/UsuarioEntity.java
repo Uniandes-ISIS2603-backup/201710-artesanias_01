@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+// TODO: eliminar los "import" que no se usan
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,6 +24,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class UsuarioEntity extends BaseEntity implements Serializable{
     
+    // TODO: eliminar código en comentarios que no se usa
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    private Long id;
@@ -37,19 +39,23 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
     
     private String informacionTrabajos;
     
+ // TODO: implementar la relación con FeriaArtesanal
  //asociaciones
  private FeriaArtesanalEntity feria;
  
+ // TODO: revisar el nombre "reservado". No sería mejor "reservas"?
+ // TODO: revisar el tipo: OneToMany no requiere una colección?
  @OneToMany
  private ReservadoEntity reservado;
  
  @OneToMany(mappedBy ="Usuario", cascade = CascadeType.ALL, orphanRemoval = true)
  private List<ObraEntity> obras= new ArrayList<>();
  
+ // TODO: revisar el tipo: OneToMany no requirere una coleccion?
  @OneToMany
  private ConferenciaEntity conferencia;
  
-
+// TODO: eliminar el códgo innecesario, en comentarios
 //    public Long getId() {
 //        return id;
 //    }
@@ -98,8 +104,6 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
         this.informacionTrabajos = informacionTrabajos;
     }
     
-    
-    
-    
+    // TODO: implemenentar los métodos getXXX y setXXX para las relaciones
     
 }

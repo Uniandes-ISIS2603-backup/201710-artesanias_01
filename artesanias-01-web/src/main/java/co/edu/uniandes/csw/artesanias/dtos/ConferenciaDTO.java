@@ -1,3 +1,4 @@
+// TODO: eliminar los comentarios por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,6 +11,7 @@ package co.edu.uniandes.csw.artesanias.dtos;
  * @author jlake
  */
 import co.edu.uniandes.csw.artesanias.entities.ConferenciaEntity;
+// TODO: eliminar los import no usados
 import co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity;
 import java.io.Serializable;
 import java.util.Date;

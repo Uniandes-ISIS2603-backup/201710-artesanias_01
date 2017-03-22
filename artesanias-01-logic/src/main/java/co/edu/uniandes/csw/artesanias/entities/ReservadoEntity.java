@@ -6,6 +6,7 @@
 package co.edu.uniandes.csw.artesanias.entities;
 
 import java.io.Serializable;
+// TODO: eliminar los "import" que no se usan
 import java.util.Enumeration;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,12 +32,17 @@ public enum EstadoEnum{
     CANCELADO;
 }
 
+// TODO: definir la forma de implementar la persistencia
 private EstadoEnum estado;
 
 //asociaciones
+
+// TODO: implementar las asociaciones
+// TODO: revisar esta relación OneToOne: un stand solo puede tener una reserva (toda la vida?)
 //one to one
 private StandEntity stand;
 
+// TODO: implementar la asociación con Usuario
 private UsuarioEntity artesano;
 
 
@@ -69,7 +75,8 @@ private UsuarioEntity artesano;
         this.estado = estado;
     }
 
-    
+    // TODO: implementar los métodos getStand y setStand
+    // TODO: implementar los métodos getArtesano y setArtesano
 
     
     

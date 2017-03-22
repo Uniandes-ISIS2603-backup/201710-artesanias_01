@@ -1,3 +1,4 @@
+// TODO: eliminar los comentarios por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,6 +19,8 @@ import javax.inject.Inject;
 @Stateless
 public class PabellonLogic 
 {
+    // TODO: implementar las validaciones de negocio
+    
     @Inject private feriaArtesanalPersistence persistence;
     public List<PabellonEntity> getPabellones(){
         return persistence.findAllPabellones();

@@ -7,6 +7,7 @@ package co.edu.uniandes.csw.artesanias.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+// TODO: remover los "import" que no se requieren
 import java.util.Enumeration;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -73,10 +74,12 @@ public enum EnumTemasConferencia{
       }
   };
 }
+// TODO: definir la persistencia de la enumeración
 private EnumTemasConferencia tema;
 
 private int rating;
 
+// TODO: implementar las asociaciones entre las entidades
 //asociaciones
 //one to one
 private FeriaArtesanalEntity feria;
@@ -133,6 +136,7 @@ private UsuarioEntity conferencista;
         this.rating = rating;
     }
  
-    
+    // TODO: implementar getFeria y setFeria
+    // TODO: implementar getConferencias y setConferencista
 
 }

@@ -1,3 +1,4 @@
+// TODO: eliminar los mensajes por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,7 +6,7 @@
  */
 package co.edu.uniandes.csw.artesanias.resources;
 
-
+// TODO: eliminar los import no reqeridos
 import co.edu.uniandes.csw.artesanias.dtos.PabellonDTO;
 import co.edu.uniandes.csw.artesanias.ejbs.UsuarioLogic;
 import co.edu.uniandes.csw.artesanias.entities.UsuarioEntity;
@@ -48,20 +49,26 @@ public class UsuarioResource {
         return listEntity2DTO(logic.getUsuarios());
     }
     
+    // TODO: revisar la representación
     @GET
     @Path("{id: \\d+}")
     public UsuarioDTO getPabellon(@PathParam ("id") Long id){
         return new UsuarioDTO(logic.getUsuario(id));
     }
+
+    // TODO: revisar la representación
     @POST
     public UsuarioDTO createPabellon(UsuarioDTO dto){
         return new UsuarioDTO(logic.createUsuario(dto.toEntity()));
     } 
+
+    // TODO: revisar la representación
     @PUT
     @Path("{id: \\d+}")
     public UsuarioDTO updatePabellon(UsuarioDTO dto){
         return new UsuarioDTO(logic.updateUsuario(dto.toEntity()));
     }
+
     @DELETE
     @Path("{id: \\d+}")
     public void deletePabellon(@PathParam("id") Long id){

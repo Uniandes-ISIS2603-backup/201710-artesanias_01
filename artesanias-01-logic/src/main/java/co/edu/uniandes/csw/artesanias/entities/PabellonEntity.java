@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+// TODO: eliminar los "import" que no se usan
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,12 +25,17 @@ public class PabellonEntity extends BaseEntity implements Serializable{
     
    
     
+    // TODO: implementar la relación en la clase Stand Entity
     //asociaciones
     //compuesta
     @OneToMany(mappedBy="Pabellon", cascade= CascadeType.ALL, orphanRemoval = true )
     private List<StandEntity> stand = new ArrayList<>();   
+    
+    // TODO: implementar las otras relaciones
+    // TODO: revisar esta relación OneToOne: una feria solo tiene un único pabellón?
     //one to one 
     private FeriaArtesanalEntity feriaArtesanal;
+    
     private String tema;
 
     
@@ -42,6 +48,7 @@ public class PabellonEntity extends BaseEntity implements Serializable{
         this.tema = tema;
     }
     
-    
+    // TODO: implementar los métodos getStand y setStand
+    // TODO: implementar los métodos de getFeria y setFeria
     
 }

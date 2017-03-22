@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+// TODO: remover los "import" que no se requieren
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -51,6 +52,7 @@ private List<ConferenciaEntity> conferencias= new ArrayList<>();
 @OneToMany
 private UsuarioEntity usuarios;
 
+// TODO: remover los métodos que están entre comentarios
 //    public Integer getId(){
 //        return id;
 //    }
@@ -91,5 +93,8 @@ private UsuarioEntity usuarios;
         this.lugar = lugar;
     }
  
+    // TODO: implementar getPabellones y setPabellones
+    // TODO: implementar getConferencas y setConferencias
+    // TODO: implementar getUsuarios y setUsuarios
        
 }

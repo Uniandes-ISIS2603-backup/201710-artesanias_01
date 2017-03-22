@@ -1,3 +1,4 @@
+// TODO: eliminar los comentarios por deefecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -47,20 +48,27 @@ public class ObraResource
         return listEntity2DTO(logica.getObras());
     }
     
+    // TODO: revisar la representación. 
     @GET
     @Path("{id: \\d+}")
     public ObraDTO getObra(@PathParam ("id") Long id){
         return new ObraDTO(logica.getObra(id));
     }
+    
+    // TODO: revisar la representación. Si la representación no tiene relaciones
+    //       como se pueden crear y actualizar las relaciones? 
     @POST
     public ObraDTO createObra(ObraDTO dto){
         return new ObraDTO(logica.createObra(dto.toEntity()));
     } 
+    
+    // TODO: revisar la representación. no se pueden actualizar las relaciones? 
     @PUT
     @Path("{id: \\d+}")
     public ObraDTO updateObra(ObraDTO dto){
         return new ObraDTO(logica.updateObra(dto.toEntity()));
     }
+    
     @DELETE
     @Path("{id: \\d+}")
     public void deleteObra(@PathParam("id") Long id){

@@ -25,6 +25,8 @@ private String ruta;
 @Temporal(TemporalType.DATE)
 private Date fecha;
 
+// TODO: Al parecer Foto no se relaciona con nada. Incluir las relaciones
+
     public String getUrl() {
         return url;
     }
@@ -33,11 +35,13 @@ private Date fecha;
         this.url = url;
     }
 
+    // TODO: Eliminar métodos que sobre-escriben el método pero no hacen nada
     @Override
     public int getId() {
         return super.getId(); //To change body of generated methods, choose Tools | Templates.
     }
 
+    // TODO: Eliminar métodos que sobre-escriben el método pero no hacen nada
     @Override
     public void setId(int id) {
         super.setId(id); //To change body of generated methods, choose Tools | Templates.
@@ -59,6 +63,6 @@ private Date fecha;
         this.ruta = ruta;
     }
 
-
+    // TODO: incluir métodos para manipular las relaciones
 
 }

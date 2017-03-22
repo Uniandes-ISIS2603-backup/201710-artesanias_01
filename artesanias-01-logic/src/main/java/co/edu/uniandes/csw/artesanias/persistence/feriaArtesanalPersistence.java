@@ -1,7 +1,9 @@
-    /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+// TODO: Eliminar los comentarios por defecto  
+/*
+ *
+ *  To change this license header, choose License Headers in Project Properties.
+ *  To change this template file, choose Tools | Templates
+ *  and open the template in the editor.
  */
 package co.edu.uniandes.csw.artesanias.persistence;
 
@@ -25,10 +27,14 @@ import javax.persistence.TypedQuery;
  * @author ds.tapia10
  */
 @Stateless
+// TODO: Crear una clase persistencia para cada clase
 public class feriaArtesanalPersistence {
     @PersistenceContext(unitName="feriaPU")
     protected EntityManager em;
     
+    // TODO: Indentar apropiadamente el código de las clases
+    
+    // TODO: COnsiderar las relaciones al momento de crear y actualizar las relaciones
     
         public FeriaArtesanalEntity createFeria (FeriaArtesanalEntity entity) 
         {

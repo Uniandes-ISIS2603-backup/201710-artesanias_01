@@ -28,6 +28,8 @@ private String comentario;
 
 @Temporal(TemporalType.DATE)
 private Date fecha;
+
+// TODO: implementar las relaciones en las entidades
 //asociaciones
 //one to many
 private ObraEntity obra;
@@ -57,7 +59,7 @@ private ObraEntity obra;
         this.fecha = fecha;
     }
     
-    
+    // TODO: implementar getObra y setObra
     
     
 

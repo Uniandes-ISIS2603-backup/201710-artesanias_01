@@ -30,9 +30,12 @@ public class StandEntity implements Serializable{
     private String caracteristicas;
     
     //asociaciones
+    // TODO: implementar las asociaciones
+    // TODO: revisar esta relación OneToOne: un pabellón solo tiene un stand ?
     //uno a uno
     private PabellonEntity pabellon;
    
+    // TODO: revisar esta relacion OneToOne
     private ReservadoEntity reservado;
     
 
@@ -68,8 +71,8 @@ public class StandEntity implements Serializable{
         this.caracteristicas = caracteristicas;
     }
     
-    
-    
-    
+    // TODO: implementar getPabellon y setPabellon
+    // TODO: implementar getReservas y setReservas
+        
     
 }

@@ -45,23 +45,27 @@ public class FeriaArtesanalResource {
         return listEntity2DTO(logica.getFerias());
     }
      
+    // TODO: revisar otra representación para GET con un id
     @GET
     @Path("{id: \\d+}")
     public FeriaArtesanalDTO getFeria(@PathParam ("id") Long id){
         return new FeriaArtesanalDTO(logica.getFeria(id));
     }
     
+    // TODO: revisar otra representación. Si no se tienen datos de las relaciones
+    //       como se pueden crear o actualzar las relaciones en la BD
     @POST
-    
     public FeriaArtesanalDTO createFeria(FeriaArtesanalDTO dto){
         return new FeriaArtesanalDTO(logica.createFeria(dto.toEntity()));
     }
     
+    // TODO: revisar si no se pueden actualizar las relaciones
     @PUT
     @Path("{id: \\d+}")
     public FeriaArtesanalDTO updateFeria(FeriaArtesanalDTO dto){
         return new FeriaArtesanalDTO(logica.updateFeria(dto.toEntity()));
     }
+    
     @DELETE
     @Path("{id: \\d+}")
     public void deleteFeria(@PathParam("id") Long id){

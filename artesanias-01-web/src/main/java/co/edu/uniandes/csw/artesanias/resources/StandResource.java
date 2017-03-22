@@ -1,3 +1,4 @@
+// TODO: eliminar los mensajes por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -47,20 +48,26 @@ public class StandResource
         return listEntity2DTO(logica.getStands());
     }
     
+    // TODO: revisar la representación
     @GET
     @Path("{id: \\d+}")
     public StandDTO getStand(@PathParam ("id") Long id){
         return new StandDTO(logica.getStand(id));
     }
+    
+    // TODO: revisar la representación
     @POST
     public StandDTO createStand(StandDTO dto){
         return new StandDTO(logica.createStand(dto.toEntity()));
     } 
+    
+    // TODO: revisar la representación
     @PUT
     @Path("{id: \\d+}")
     public StandDTO updateStand(StandDTO dto){
         return new StandDTO(logica.updateStand(dto.toEntity()));
     }
+    
     @DELETE
     @Path("{id: \\d+}")
     public void deleteStand(@PathParam("id") Long id){

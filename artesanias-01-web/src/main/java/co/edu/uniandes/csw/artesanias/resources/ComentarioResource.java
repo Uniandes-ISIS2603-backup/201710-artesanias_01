@@ -1,3 +1,4 @@
+// TODO: eliminar los comentarios por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +16,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+// TODO: Eliminar los import no utilizados
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -47,11 +49,15 @@ public class ComentarioResource
         return listEntity2DTO(logica.getComentarios());
     }
     
+    // TODO: definir una representación detallada para GET con un id
     @GET
     @Path("{id: \\d+}")
     public ComentarioDTO getComentario(@PathParam ("id") Long id){
         return new ComentarioDTO(logica.getComentario(id));
     }
+    
+    // TODO: revisar la representación. Como se pueden crear/actualizar los 
+    //       comentarios si no tienen los datos de las relaciones?
     @POST
     public ComentarioDTO createComentario(ComentarioDTO dto){
         return new ComentarioDTO(logica.createComentario(dto.toEntity()));

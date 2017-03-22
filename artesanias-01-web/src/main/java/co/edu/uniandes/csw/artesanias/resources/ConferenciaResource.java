@@ -1,3 +1,4 @@
+// TODO: Eliminar los comentarios por defecti
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -47,20 +48,28 @@ public class ConferenciaResource
         return listEntity2DTO(logica.getConferencias());
     }
     
+    // TODO: revisar otra representación para getConferencia
     @GET
     @Path("{id: \\d+}")
     public ConferenciaDTO getConferencia(@PathParam ("id") Long id){
+        // TODO: si no existe el id debe retornar un error / código 404
         return new ConferenciaDTO(logica.getConferencia(id));
     }
+    
+    // TODO: revisar la representación. si ConferenciaDTO no tiene relaciones
+    //       como se pueden crear y acualizar las relaciones en la base de datos ?
     @POST
     public ConferenciaDTO createConferencia(ConferenciaDTO dto){
         return new ConferenciaDTO(logica.createConferencia(dto.toEntity()));
     } 
+    
+    // TODO: revisar si no se pueden actualizar las relaciones 
     @PUT
     @Path("{id: \\d+}")
     public ConferenciaDTO updateConferencia(ConferenciaDTO dto){
         return new ConferenciaDTO(logica.updateConferencia(dto.toEntity()));
     }
+    
     @DELETE
     @Path("{id: \\d+}")
     public void deleteConferencia(@PathParam("id") Long id){

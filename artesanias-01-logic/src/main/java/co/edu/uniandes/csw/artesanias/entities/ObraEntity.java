@@ -35,13 +35,18 @@ private int rating;
 private String material;
 
 private String tecnica;
+
 //asociaciones
+// TODO: implementar la relación en la entidad ComentarioEntity
 @OneToMany (mappedBy="Obra", cascade= CascadeType.ALL, orphanRemoval = true)
 private List<ComentarioEntity> comentarios= new ArrayList<>();
 
+// TODO: incluir la relación ManyToOne en FotoEntity
 @OneToMany(mappedBy="Obra", cascade= CascadeType.ALL, orphanRemoval = true)
 private List<FotoEntity> fotos= new ArrayList<>();
 
+// TODO: No es claro por que un artesano solo tiene una única obra
+//       Si tiene una relación OneToMany, el contrario no debería ser ManyToOne
 //one to one
 @OneToOne
 private UsuarioEntity artesano;
@@ -88,5 +93,7 @@ private UsuarioEntity artesano;
         this.tecnica = tecnica;
     }
     
+    // TODO: implementar getComentarios y setComentarios
+    // TODO: implementar getFotos y setFotos
     
 }

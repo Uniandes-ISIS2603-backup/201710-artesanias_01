@@ -1,3 +1,4 @@
+// TODO: eliminar mensajes por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -47,20 +48,26 @@ public class ReservaResource
         return listEntity2DTO(logica.getReservados());
     }
     
+    // TODO: revisar la representación
     @GET
     @Path("{id: \\d+}")
     public CrearReservaDTO getReservado(@PathParam ("id") Long id){
         return new CrearReservaDTO(logica.getReservado(id));
     }
+    
+    // TODO: revisar la representación
     @POST
     public CrearReservaDTO createReservado(CrearReservaDTO dto){
         return new CrearReservaDTO(logica.createReservado(dto.toEntity()));
     } 
+    
+    // TODO: revisar la representación
     @PUT
     @Path("{id: \\d+}")
     public CrearReservaDTO updateReservado(CrearReservaDTO dto){
         return new CrearReservaDTO(logica.updateReservado(dto.toEntity()));
     }
+    
     @DELETE
     @Path("{id: \\d+}")
     public void deleteReservado(@PathParam("id") Long id){

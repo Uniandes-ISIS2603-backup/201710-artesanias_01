@@ -1,3 +1,4 @@
+// TODO: eliminar los comentarios por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,6 +7,7 @@
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.ComentarioEntity;
+// TODO: eliminar los "import" que no son necesarios
 import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
 import java.util.List;
 import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
@@ -18,6 +20,8 @@ import javax.inject.Inject;
  */
 @Stateless
 public class ComentarioLogic {
+    
+    // TODO: implementar las validaciones de negocio
     
     @Inject private feriaArtesanalPersistence persistence;
     
