@@ -32,7 +32,7 @@ public enum EstadoEnum{
     CANCELADO;
 }
 
-// TODO: definir la forma de implementar la persistencia
+// TODO: definir la forma de implementar la persistencia     
 private EstadoEnum estado;
 
 //asociaciones
@@ -78,7 +78,25 @@ private UsuarioEntity artesano;
     // TODO: implementar los métodos getStand y setStand
     // TODO: implementar los métodos getArtesano y setArtesano
 
+    public StandEntity getStand()
+    {
+        return stand;
+    }
     
+    public void setStand(StandEntity stand)
+    {
+        this.stand = stand;
+    }
+    
+    public UsuarioEntity getArtesano()
+    {
+        return artesano;
+    }
+    
+    public void setArtesano(UsuarioEntity artesano)
+    {
+        this.artesano = artesano;
+    }
     
 
 }
