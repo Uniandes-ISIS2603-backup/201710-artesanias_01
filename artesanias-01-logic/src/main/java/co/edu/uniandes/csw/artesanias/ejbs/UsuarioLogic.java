@@ -7,6 +7,7 @@
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.UsuarioEntity;
+import co.edu.uniandes.csw.artesanias.persistence.UsuarioPersistence;
 import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
 import java.util.List;
 import javax.inject.Inject;
@@ -21,7 +22,7 @@ public class UsuarioLogic
 {
     // TODO: implementar las validaciones de negocio
     
-    @Inject private feriaArtesanalPersistence persistence;
+    @Inject private UsuarioPersistence persistence;
     
     public List<UsuarioEntity> getUsuarios(){
         return persistence.findAllUsuarios();
