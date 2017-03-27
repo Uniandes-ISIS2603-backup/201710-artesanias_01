@@ -1,14 +1,7 @@
-// TODO: eliminar los comentarios por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.UsuarioEntity;
 import co.edu.uniandes.csw.artesanias.persistence.UsuarioPersistence;
-import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ejb.Stateless;

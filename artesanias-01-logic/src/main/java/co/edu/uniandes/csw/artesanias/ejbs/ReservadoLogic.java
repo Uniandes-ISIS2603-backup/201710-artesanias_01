@@ -1,13 +1,7 @@
-// TODO: eliminar los comentarios por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.ReservadoEntity;
-import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
+import co.edu.uniandes.csw.artesanias.persistence.ReservadoPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -21,7 +15,7 @@ public class ReservadoLogic {
     
     // TODO: implementar las validaciones de negocio
     
-    @Inject private feriaArtesanalPersistence persistence;
+    @Inject private ReservadoPersistence persistence;
     
     public ReservadoEntity createReservado(ReservadoEntity entity){
         return persistence.createReservado(entity);

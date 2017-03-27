@@ -88,6 +88,5 @@ public class FeriaArtesanalDTO implements Serializable{
     public void setFechaFin(Date fechaFin) {
         this.fechaFin = fechaFin;
     }
-     
-    
+       
 }

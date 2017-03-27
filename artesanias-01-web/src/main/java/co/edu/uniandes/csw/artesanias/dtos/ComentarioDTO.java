@@ -11,8 +11,6 @@ package co.edu.uniandes.csw.artesanias.dtos;
  * @author jlake
  */
 import co.edu.uniandes.csw.artesanias.entities.ComentarioEntity;
-// TODO: Eliminar los import no utilizados
-import co.edu.uniandes.csw.artesanias.entities.StandEntity;
 import java.io.Serializable;
 import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -66,5 +64,5 @@ public class ComentarioDTO implements Serializable {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-
+    
 }

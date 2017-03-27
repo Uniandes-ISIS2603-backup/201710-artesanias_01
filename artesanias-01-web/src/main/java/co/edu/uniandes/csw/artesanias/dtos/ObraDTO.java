@@ -11,8 +11,6 @@ package co.edu.uniandes.csw.artesanias.dtos;
  * @author jlake
  */
 import co.edu.uniandes.csw.artesanias.entities.ObraEntity;
-// TODO: eliminar los import no utilizados
-import co.edu.uniandes.csw.artesanias.entities.StandEntity;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -89,6 +87,5 @@ public class ObraDTO implements Serializable{
     public void setTecnica(String tecnica) {
         this.tecnica = tecnica;
     }
-    
-    
+        
 }

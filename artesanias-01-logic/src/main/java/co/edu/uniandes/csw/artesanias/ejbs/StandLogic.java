@@ -1,13 +1,7 @@
-// TODO: eliminar los comentarios por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.StandEntity;
-import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
+import co.edu.uniandes.csw.artesanias.persistence.StandPersistence;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ejb.Stateless;
@@ -21,7 +15,7 @@ public class StandLogic
 {
     // TODO: implementar las validaciones de negocio
     
-    @Inject private feriaArtesanalPersistence persistence;
+    @Inject private StandPersistence persistence;
     
     public List<StandEntity> getStands(){
         return persistence.findAllStands();

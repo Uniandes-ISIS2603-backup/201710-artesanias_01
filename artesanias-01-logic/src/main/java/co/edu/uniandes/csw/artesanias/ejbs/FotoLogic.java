@@ -1,9 +1,3 @@
-// TODO: eliminar los comentarios por defecto
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
@@ -20,17 +14,17 @@ public class FotoLogic {
     
     // TODO: implementar las validaciones de negocio
     
-     @Inject private FotoPersistence persistence;
+    @Inject private FotoPersistence persistence;
      
-     public FotoEntity createFoto(FotoEntity entity){
-         return persistence.createFoto(entity);
-     }
+    public FotoEntity createFoto(FotoEntity entity){
+        return persistence.createFoto(entity);
+    }
      
-     public FotoEntity getFoto(Long id){
-         return persistence.findFoto(id);
-     }
+    public FotoEntity getFoto(Long id){
+        return persistence.findFoto(id);
+    }
      
-     public void deleteFoto(Long id){
-         persistence.deleteFoto(id);
-     }        
+    public void deleteFoto(Long id){
+        persistence.deleteFoto(id);
+    }        
 }
