@@ -11,9 +11,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 // TODO: eliminar los "import" que no se usan
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 /**
@@ -24,10 +21,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class UsuarioEntity extends BaseEntity implements Serializable{
     
-    // TODO: eliminar código en comentarios que no se usa
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
+ 
     
     private int edad;
     
@@ -41,12 +35,13 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
     
  // TODO: implementar la relación con FeriaArtesanal
  //asociaciones
+ @OneToMany    
  private FeriaArtesanalEntity feria;
  
  // TODO: revisar el nombre "reservado". No sería mejor "reservas"?
  // TODO: revisar el tipo: OneToMany no requiere una colección?
  @OneToMany
- private ReservadoEntity reservado;
+ private ReservadoEntity reservas;
  
  @OneToMany(mappedBy ="Usuario", cascade = CascadeType.ALL, orphanRemoval = true)
  private List<ObraEntity> obras= new ArrayList<>();
@@ -55,10 +50,7 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
  @OneToMany
  private ConferenciaEntity conferencia;
  
-// TODO: eliminar el códgo innecesario, en comentarios
-//    public Long getId() {
-//        return id;
-//    }
+
 
     public int getEdad() {
         return edad;
@@ -105,5 +97,37 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
     }
     
     // TODO: implemenentar los métodos getXXX y setXXX para las relaciones
+
+    public ConferenciaEntity getConferencia() {
+        return conferencia;
+    }
+
+    public void setConferencia(ConferenciaEntity conferencia) {
+        this.conferencia = conferencia;
+    }
+
+    public FeriaArtesanalEntity getFeria() {
+        return feria;
+    }
+
+    public void setFeria(FeriaArtesanalEntity feria) {
+        this.feria = feria;
+    }
+
+    public List<ObraEntity> getObras() {
+        return obras;
+    }
+
+    public void setObras(List<ObraEntity> obras) {
+        this.obras = obras;
+    }
+
+    public ReservadoEntity getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(ReservadoEntity reservas) {
+        this.reservas = reservas;
+    }
     
 }
