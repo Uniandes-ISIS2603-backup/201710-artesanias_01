@@ -7,7 +7,7 @@
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.ObraEntity;
-import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
+import co.edu.uniandes.csw.artesanias.persistence.ObraPersistence;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ejb.Stateless;
@@ -21,7 +21,8 @@ public class ObraLogic
 {
     // TODO: implementar las validaciones de negocio
 
-    @Inject private feriaArtesanalPersistence persistence;
+    @Inject private ObraPersistence persistence;
+    
     public List<ObraEntity> getObras(){
         return persistence.findAllObras();
     }

@@ -7,10 +7,8 @@
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.ComentarioEntity;
-// TODO: eliminar los "import" que no son necesarios
-import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
+import co.edu.uniandes.csw.artesanias.persistence.ComentarioPersistence;
 import java.util.List;
-import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
@@ -23,7 +21,7 @@ public class ComentarioLogic {
     
     // TODO: implementar las validaciones de negocio
     
-    @Inject private feriaArtesanalPersistence persistence;
+    @Inject private ComentarioPersistence persistence;
     
      public List<ComentarioEntity> getComentarios(){
         return persistence.findAllComentarios();

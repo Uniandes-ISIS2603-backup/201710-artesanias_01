@@ -7,7 +7,7 @@
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.PabellonEntity;
-import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
+import co.edu.uniandes.csw.artesanias.persistence.PabellonPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -21,7 +21,8 @@ public class PabellonLogic
 {
     // TODO: implementar las validaciones de negocio
     
-    @Inject private feriaArtesanalPersistence persistence;
+    @Inject private PabellonPersistence persistence;
+    
     public List<PabellonEntity> getPabellones(){
         return persistence.findAllPabellones();
     }

@@ -7,7 +7,7 @@
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
-import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
+import co.edu.uniandes.csw.artesanias.persistence.FotoPersistence;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
@@ -20,7 +20,7 @@ public class FotoLogic {
     
     // TODO: implementar las validaciones de negocio
     
-     @Inject private feriaArtesanalPersistence persistence;
+     @Inject private FotoPersistence persistence;
      
      public FotoEntity createFoto(FotoEntity entity){
          return persistence.createFoto(entity);

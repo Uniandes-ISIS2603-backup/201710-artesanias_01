@@ -7,7 +7,7 @@
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.ConferenciaEntity;
-import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
+import co.edu.uniandes.csw.artesanias.persistence.ConferenciaPersistence;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ejb.Stateless;
@@ -21,7 +21,7 @@ public class ConferenciaLogic
 {
     // TODO: implementar las validaciones de negocio
     
-    @Inject private feriaArtesanalPersistence persistence;
+    @Inject private ConferenciaPersistence persistence;
     
     public List<ConferenciaEntity> getConferencias(){
         return persistence.findAllConferencias();
