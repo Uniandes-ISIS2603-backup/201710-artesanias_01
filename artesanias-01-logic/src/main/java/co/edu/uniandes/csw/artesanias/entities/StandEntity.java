@@ -35,10 +35,10 @@ public class StandEntity implements Serializable{
     // TODO: implementar las asociaciones
     // TODO: revisar esta relación OneToOne: un pabellón solo tiene un stand ?
     @ManyToOne
-    private PabellonEntity pabellon = new PabellonEntity();
+    private PabellonEntity pabellon;
    
     @OneToOne
-    private ReservadoEntity reservado = new ReservadoEntity();
+    private ReservasEntity reservado;
     
 
     public int getNumeroStand() {
