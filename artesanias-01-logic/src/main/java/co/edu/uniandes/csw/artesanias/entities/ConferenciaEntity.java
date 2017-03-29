@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.Enumeration;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -34,6 +35,25 @@ private Date fechaInicio;
 
 @Temporal(TemporalType.DATE)
 private Date fechaFin;
+
+
+// TODO: definir la persistencia de la enumeración
+private EnumTemasConferencia tema;
+
+private int rating;
+
+// TODO: implementar las asociaciones entre las entidades
+//asociaciones
+
+//Asociacion con los usuarios
+@ManyToOne
+private UsuarioEntity conferencista = new UsuarioEntity();
+
+//Asociacion con la feria
+@ManyToOne
+private FeriaArtesanalEntity feria = new FeriaArtesanalEntity();
+
+
 
 public enum EnumTemasConferencia{
      
@@ -74,17 +94,6 @@ public enum EnumTemasConferencia{
       }
   };
 }
-// TODO: definir la persistencia de la enumeración
-private EnumTemasConferencia tema;
-
-private int rating;
-
-// TODO: implementar las asociaciones entre las entidades
-//asociaciones
-//one to one
-private FeriaArtesanalEntity feria;
-
-private UsuarioEntity conferencista;
 
 //Setters y getters
 

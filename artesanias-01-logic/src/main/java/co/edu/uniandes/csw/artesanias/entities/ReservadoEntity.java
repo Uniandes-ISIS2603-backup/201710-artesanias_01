@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -38,12 +40,15 @@ private EstadoEnum estado;
 //asociaciones
 
 // TODO: implementar las asociaciones
-// TODO: revisar esta relación OneToOne: un stand solo puede tener una reserva (toda la vida?)
-//one to one
-private StandEntity stand;
+// TODO: revisar esta relación OneToOne: un stand solo puede tener una reserva (toda la vida?)\
+//Asociacion con Stand
+@OneToOne
+private StandEntity stand = new StandEntity();
 
 // TODO: implementar la asociación con Usuario
-private UsuarioEntity artesano;
+//Asociacion con Usuario
+@ManyToOne
+private UsuarioEntity artesano = new UsuarioEntity();
 
 
 

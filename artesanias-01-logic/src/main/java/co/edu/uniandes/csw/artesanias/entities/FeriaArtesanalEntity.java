@@ -43,14 +43,17 @@ public class FeriaArtesanalEntity extends BaseEntity implements Serializable{
     private String lugar;
     
 //asociaciones
+//Asociacion con los pabellones
 @OneToMany(mappedBy="FeriaArtesanal", cascade = CascadeType.ALL, orphanRemoval = true)
 private List<PabellonEntity> pabellones= new ArrayList<>();
 
+//Asociacion con la Feria Artesanal
 @OneToMany(mappedBy = "FeriaArtesanal", cascade = CascadeType.ALL, orphanRemoval = true)
 private List<ConferenciaEntity> conferencias= new ArrayList<>();
 
-@OneToMany
-private UsuarioEntity usuarios;
+//Asociacion con los usuarios
+@OneToMany(mappedBy ="FeriaArtesanal", cascade = CascadeType.ALL, orphanRemoval = true)
+ private List<UsuarioEntity> usuarios = new ArrayList<>();
 
 // TODO: remover los métodos que están entre comentarios
 //    public Integer getId(){

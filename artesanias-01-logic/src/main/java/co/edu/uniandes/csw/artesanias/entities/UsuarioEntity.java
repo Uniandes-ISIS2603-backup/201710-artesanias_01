@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 // TODO: eliminar los "import" que no se usan
 import javax.persistence.OneToMany;
 
@@ -35,20 +36,20 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
     
  // TODO: implementar la relación con FeriaArtesanal
  //asociaciones
- @OneToMany    
- private FeriaArtesanalEntity feria;
+ @ManyToOne
+ private FeriaArtesanalEntity feria = new FeriaArtesanalEntity();
  
  // TODO: revisar el nombre "reservado". No sería mejor "reservas"?
  // TODO: revisar el tipo: OneToMany no requiere una colección?
- @OneToMany
+ @OneToMany(mappedBy ="usuario", cascade = CascadeType.ALL, orphanRemoval = true)
  private ReservadoEntity reservas;
  
- @OneToMany(mappedBy ="Usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+ @OneToMany(mappedBy ="usuario", cascade = CascadeType.ALL, orphanRemoval = true)
  private List<ObraEntity> obras= new ArrayList<>();
  
  // TODO: revisar el tipo: OneToMany no requirere una coleccion?
- @OneToMany
- private ConferenciaEntity conferencia;
+ @OneToMany(mappedBy ="usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+ private List<ConferenciaEntity> conferencias = new ArrayList<>();
  
 
 

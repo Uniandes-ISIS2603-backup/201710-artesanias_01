@@ -15,6 +15,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -36,14 +37,21 @@ private String material;
 
 private String tecnica;
 
+
+
 //asociaciones
 // TODO: implementar la relación en la entidad ComentarioEntity
-@OneToMany (mappedBy="Obra", cascade= CascadeType.ALL, orphanRemoval = true)
+//Asociacion con los comentarios
+@OneToMany (mappedBy="obra", cascade= CascadeType.ALL, orphanRemoval = true)
 private List<ComentarioEntity> comentarios= new ArrayList<>();
 
 // TODO: incluir la relación ManyToOne en FotoEntity
-@OneToMany(mappedBy="Obra", cascade= CascadeType.ALL, orphanRemoval = true)
+//Asociacion con las fotods
+@OneToMany(mappedBy="obra", cascade= CascadeType.ALL, orphanRemoval = true)
 private List<FotoEntity> fotos= new ArrayList<>();
+
+@ManyToOne
+private UsuarioEntity usuario = new UsuarioEntity();
 
 // TODO: No es claro por que un artesano solo tiene una única obra
 //       Si tiene una relación OneToMany, el contrario no debería ser ManyToOne

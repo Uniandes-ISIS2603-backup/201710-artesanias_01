@@ -8,6 +8,7 @@ package co.edu.uniandes.csw.artesanias.entities;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -26,6 +27,10 @@ private String ruta;
 private Date fecha;
 
 // TODO: Al parecer Foto no se relaciona con nada. Incluir las relaciones
+//Relaciones
+// Asociacion con Obra
+@ManyToOne
+private ObraEntity obra = new ObraEntity();
 
     public String getUrl() {
         return url;

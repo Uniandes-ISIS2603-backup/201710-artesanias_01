@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -31,8 +32,8 @@ private Date fecha;
 
 // TODO: implementar las relaciones en las entidades
 //asociaciones
-//one to many
-private ObraEntity obra;
+@ManyToOne
+private ObraEntity obra =  new ObraEntity();
 //metodos setters y getters
 
     public int getId() {

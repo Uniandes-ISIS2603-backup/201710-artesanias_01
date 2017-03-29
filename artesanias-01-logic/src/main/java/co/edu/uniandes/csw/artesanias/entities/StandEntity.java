@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -32,11 +34,11 @@ public class StandEntity implements Serializable{
     //asociaciones
     // TODO: implementar las asociaciones
     // TODO: revisar esta relación OneToOne: un pabellón solo tiene un stand ?
-    //uno a uno
-    private PabellonEntity pabellon;
+    @ManyToOne
+    private PabellonEntity pabellon = new PabellonEntity();
    
-    // TODO: revisar esta relacion OneToOne
-    private ReservadoEntity reservado;
+    @OneToOne
+    private ReservadoEntity reservado = new ReservadoEntity();
     
 
     public int getNumeroStand() {
