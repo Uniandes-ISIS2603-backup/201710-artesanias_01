@@ -99,12 +99,12 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
     
     // TODO: implemenentar los métodos getXXX y setXXX para las relaciones
 
-    public ConferenciaEntity getConferencia() {
-        return conferencia;
+    public List<ConferenciaEntity> getConferencias() {
+        return conferencias;
     }
 
-    public void setConferencia(ConferenciaEntity conferencia) {
-        this.conferencia = conferencia;
+    public void setConferencias(List<ConferenciaEntity> conferencia) {
+        this.conferencias = conferencia;
     }
 
     public FeriaArtesanalEntity getFeria() {
