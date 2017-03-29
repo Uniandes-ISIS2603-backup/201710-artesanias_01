@@ -47,11 +47,11 @@ private int rating;
 
 //Asociacion con los usuarios
 @ManyToOne
-private UsuarioEntity conferencista = new UsuarioEntity();
+private UsuarioEntity conferencista;
 
 //Asociacion con la feria
 @ManyToOne
-private FeriaArtesanalEntity feria = new FeriaArtesanalEntity();
+private FeriaArtesanalEntity feria;
 
 
 

@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import co.edu.uniandes.csw.artesanias.entities.ReservadoEntity;
 
 /**
  *
@@ -38,7 +39,7 @@ public class StandEntity implements Serializable{
     private PabellonEntity pabellon;
    
     @OneToOne
-    private ReservasEntity reservado;
+    private ReservadoEntity reservado;
     
 
     public int getNumeroStand() {

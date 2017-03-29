@@ -33,7 +33,7 @@ private Date fecha;
 // TODO: implementar las relaciones en las entidades
 //asociaciones
 @ManyToOne
-private ObraEntity obra =  new ObraEntity();
+private ObraEntity obra;
 //metodos setters y getters
 
     public int getId() {

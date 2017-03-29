@@ -37,18 +37,18 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
  // TODO: implementar la relación con FeriaArtesanal
  //asociaciones
  @ManyToOne
- private FeriaArtesanalEntity feria = new FeriaArtesanalEntity();
+ private FeriaArtesanalEntity feria;
  
  // TODO: revisar el nombre "reservado". No sería mejor "reservas"?
  // TODO: revisar el tipo: OneToMany no requiere una colección?
- @OneToMany(mappedBy ="usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+ @OneToMany(mappedBy ="artesano", cascade = CascadeType.ALL, orphanRemoval = true)
  private ReservadoEntity reservas;
  
  @OneToMany(mappedBy ="usuario", cascade = CascadeType.ALL, orphanRemoval = true)
  private List<ObraEntity> obras= new ArrayList<>();
  
  // TODO: revisar el tipo: OneToMany no requirere una coleccion?
- @OneToMany(mappedBy ="usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+ @OneToMany(mappedBy ="conferencista", cascade = CascadeType.ALL, orphanRemoval = true)
  private List<ConferenciaEntity> conferencias = new ArrayList<>();
  
 

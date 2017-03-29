@@ -51,13 +51,12 @@ private List<ComentarioEntity> comentarios= new ArrayList<>();
 private List<FotoEntity> fotos= new ArrayList<>();
 
 @ManyToOne
-private UsuarioEntity usuario = new UsuarioEntity();
+private UsuarioEntity usuario;
 
 // TODO: No es claro por que un artesano solo tiene una única obra
 //       Si tiene una relación OneToMany, el contrario no debería ser ManyToOne
 //one to one
-@OneToOne
-private UsuarioEntity artesano;
+
 
 //metodos setters y getters
 

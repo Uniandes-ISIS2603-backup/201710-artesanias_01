@@ -35,7 +35,7 @@ public class PabellonEntity extends BaseEntity implements Serializable{
     // TODO: implementar las otras relaciones
     // TODO: revisar esta relación OneToOne: una feria solo tiene un único pabellón?
     @ManyToOne
-    private FeriaArtesanalEntity feriaArtesanal = new FeriaArtesanalEntity();
+    private FeriaArtesanalEntity feria;
     
     private String tema;
 

@@ -30,7 +30,7 @@ private Date fecha;
 //Relaciones
 // Asociacion con Obra
 @ManyToOne
-private ObraEntity obra = new ObraEntity();
+private ObraEntity obra;
 
     public String getUrl() {
         return url;

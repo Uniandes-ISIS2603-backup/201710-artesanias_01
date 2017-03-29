@@ -43,12 +43,12 @@ private EstadoEnum estado;
 // TODO: revisar esta relación OneToOne: un stand solo puede tener una reserva (toda la vida?)\
 //Asociacion con Stand
 @OneToOne
-private StandEntity stand = new StandEntity();
+private StandEntity stand;
 
 // TODO: implementar la asociación con Usuario
 //Asociacion con Usuario
 @ManyToOne
-private UsuarioEntity artesano = new UsuarioEntity();
+private UsuarioEntity artesano;
 
 
 
