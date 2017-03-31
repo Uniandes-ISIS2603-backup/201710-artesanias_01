@@ -7,6 +7,7 @@ package co.edu.uniandes.csw.artesanias.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -41,8 +42,8 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
  
  // TODO: revisar el nombre "reservado". No sería mejor "reservas"?
  // TODO: revisar el tipo: OneToMany no requiere una colección?
- @OneToMany(mappedBy ="artesano", cascade = CascadeType.ALL, orphanRemoval = true)
- private ReservadoEntity reservas;
+ @OneToMany(targetEntity = ReservadoEntity.class , mappedBy ="artesano", cascade = CascadeType.ALL, orphanRemoval = true)
+ private Collection<ReservadoEntity> reservas;
  
  @OneToMany(mappedBy ="usuario", cascade = CascadeType.ALL, orphanRemoval = true)
  private List<ObraEntity> obras= new ArrayList<>();
@@ -123,11 +124,11 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
         this.obras = obras;
     }
 
-    public ReservadoEntity getReservas() {
+    public Collection<ReservadoEntity> getReservas() {
         return reservas;
     }
 
-    public void setReservas(ReservadoEntity reservas) {
+    public void setReservas(List<ReservadoEntity> reservas) {
         this.reservas = reservas;
     }
     

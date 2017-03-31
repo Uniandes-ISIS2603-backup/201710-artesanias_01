@@ -52,7 +52,7 @@ private List<PabellonEntity> pabellones= new ArrayList<>();
 private List<ConferenciaEntity> conferencias= new ArrayList<>();
 
 //Asociacion con los usuarios
-@OneToMany(mappedBy ="FeriaArtesanal", cascade = CascadeType.ALL, orphanRemoval = true)
+@OneToMany(mappedBy ="feria", cascade = CascadeType.ALL, orphanRemoval = true)
  private List<UsuarioEntity> usuarios = new ArrayList<>();
 
 // TODO: remover los métodos que están entre comentarios
