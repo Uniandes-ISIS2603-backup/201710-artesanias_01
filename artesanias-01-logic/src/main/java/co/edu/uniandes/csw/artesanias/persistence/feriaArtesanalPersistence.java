@@ -49,11 +49,12 @@ public class feriaArtesanalPersistence {
 
     public FeriaArtesanalEntity updateFeria(FeriaArtesanalEntity entity) {
 
-        return em.merge(entity);
-
+        
+        em.merge(entity);
+        return entity;
     }
 
-    public void deleteFeria(Long id) {
+    public void deleteFeria(Integer id) {
 
         FeriaArtesanalEntity entity = em.find(FeriaArtesanalEntity.class, id);
         em.remove(entity);

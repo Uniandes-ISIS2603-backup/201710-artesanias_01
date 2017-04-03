@@ -25,12 +25,11 @@ import javax.persistence.TemporalType;
  */
 
 @Entity
-public class FeriaArtesanalEntity extends BaseEntity implements Serializable{
+public class FeriaArtesanalEntity  implements Serializable{
     
-//    @Id
-//    @GeneratedValue(strategy=GenerationType.IDENTITY )
-    
-//    private Integer id;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY )
+    private Integer id;
     
     private String nombre;
     
@@ -60,6 +59,13 @@ private List<ConferenciaEntity> conferencias= new ArrayList<>();
 //        return id;
 //    }
     
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getNombre() {
         return nombre;
     }

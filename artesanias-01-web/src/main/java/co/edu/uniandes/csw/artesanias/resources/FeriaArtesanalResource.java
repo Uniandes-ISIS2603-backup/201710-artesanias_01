@@ -68,7 +68,7 @@ public class FeriaArtesanalResource {
     
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteFeria(@PathParam("id") Long id){
+    public void deleteFeria(@PathParam("id") Integer id){
         logica.deleteFeria(id);
     }
 }
