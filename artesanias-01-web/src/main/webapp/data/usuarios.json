@@ -1,0 +1,2367 @@
+[{
+  "id": 1,
+  "nombre": "Samuel Stone",
+  "nacionalidad": "Indonesia",
+  "edad": 83,
+  "boleta": false,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom4",
+      "rating": 2,
+      "material": "acero",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Comercialización de las artesanías",
+      "rating": 0
+    }
+  ],
+  "conferemcias": {
+    "salon": "Lerdahl",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 54077,
+      "estado": "reservado"
+    },
+    {
+      "costo": 90750,
+      "estado": "pagado"
+    },
+    {
+      "costo": 18792,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 94488,
+      "estado": "reservado"
+    },
+    {
+      "costo": 48273,
+      "estado": "pagado"
+    }
+  ]
+}, {
+  "id": 2,
+  "nombre": "Tina Bell",
+  "nacionalidad": "China",
+  "edad": 57,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "NombreRandom2",
+      "rating": 2,
+      "material": "barro",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Historia de las Artesanías",
+      "rating": 1
+    },
+    {
+      "id": 2,
+      "tema": "Otros",
+      "rating": 3
+    },
+    {
+      "id": 3,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 1
+    },
+    {
+      "id": 4,
+      "tema": "Historia de las Artesanías",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "tema": "Artesanías y lujos",
+      "rating": 2
+    }
+  ],
+  "conferemcias": {
+    "salon": "Mockingbird",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 42837,
+      "estado": "reservado"
+    },
+    {
+      "costo": 52492,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 3,
+  "nombre": "Judith Scott",
+  "nacionalidad": "China",
+  "edad": 47,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom5",
+      "rating": 5,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 0,
+      "material": "barro",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom4",
+      "rating": 3,
+      "material": "madera",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom4",
+      "rating": 3,
+      "material": "acero",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "nombreRandom4",
+      "rating": 3,
+      "material": "acero",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "tema": "Historia de las Artesanías",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "tema": "Artesanías y lujos",
+      "rating": 0
+    }
+  ],
+  "conferemcias": {
+    "salon": "Arapahoe",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 7470,
+      "estado": "pagado"
+    },
+    {
+      "costo": 53413,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 4,
+  "nombre": "Stephanie Ray",
+  "nacionalidad": "China",
+  "edad": 75,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom4",
+      "rating": 5,
+      "material": "",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 5,
+      "material": "barro",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom5",
+      "rating": 0,
+      "material": "acero",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom5",
+      "rating": 3,
+      "material": "acero",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Artesanías y lujos",
+      "rating": 2
+    }
+  ],
+  "conferemcias": {
+    "salon": "Steensland",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 62898,
+      "estado": "reservado"
+    },
+    {
+      "costo": 85654,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 60992,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 78057,
+      "estado": "reservado"
+    },
+    {
+      "costo": 98474,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 5,
+  "nombre": "Tammy Williams",
+  "nacionalidad": "Indonesia",
+  "edad": 44,
+  "boleta": true,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom1",
+      "rating": 1,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 2,
+      "material": "madera",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom1",
+      "rating": 2,
+      "material": "acero",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom5",
+      "rating": 4,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Historia de las Artesanías",
+      "rating": 1
+    },
+    {
+      "id": 2,
+      "tema": "Arte y artesanos",
+      "rating": 1
+    },
+    {
+      "id": 3,
+      "tema": "Arte y artesanos",
+      "rating": 3
+    },
+    {
+      "id": 4,
+      "tema": "Artesanías y lujos",
+      "rating": 1
+    },
+    {
+      "id": 5,
+      "tema": "Artesanías y lujos",
+      "rating": 5
+    }
+  ],
+  "conferemcias": {
+    "salon": "Schiller",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 97217,
+      "estado": "reservado"
+    },
+    {
+      "costo": 18752,
+      "estado": "pagado"
+    },
+    {
+      "costo": 56762,
+      "estado": "pagado"
+    },
+    {
+      "costo": 34762,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 6,
+  "nombre": "Bruce Fields",
+  "nacionalidad": "South Africa",
+  "edad": 89,
+  "boleta": true,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom4",
+      "rating": 0,
+      "material": "acero",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Arte y artesanos",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "tema": "Comercialización de las artesanías",
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "tema": "Comercialización de las artesanías",
+      "rating": 1
+    },
+    {
+      "id": 4,
+      "tema": "Otros",
+      "rating": 2
+    }
+  ],
+  "conferemcias": {
+    "salon": "Stoughton",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 71587,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 12159,
+      "estado": "reservado"
+    },
+    {
+      "costo": 75569,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 37662,
+      "estado": "pagado"
+    }
+  ]
+}, {
+  "id": 7,
+  "nombre": "Phillip Crawford",
+  "nacionalidad": "Philippines",
+  "edad": 57,
+  "boleta": true,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom3",
+      "rating": 4,
+      "material": "acero",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom1",
+      "rating": 4,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom5",
+      "rating": 4,
+      "material": "barro",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Artesanías y lujos",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "tema": "Otros",
+      "rating": 3
+    }
+  ],
+  "conferemcias": {
+    "salon": "Porter",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 9795,
+      "estado": "reservado"
+    },
+    {
+      "costo": 88078,
+      "estado": "pagado"
+    }
+  ]
+}, {
+  "id": 8,
+  "nombre": "Nicholas Dean",
+  "nacionalidad": "Czech Republic",
+  "edad": 53,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom5",
+      "rating": 4,
+      "material": "madera",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom5",
+      "rating": 0,
+      "material": "",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom1",
+      "rating": 5,
+      "material": "madera",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom1",
+      "rating": 4,
+      "material": "barro",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Arte y artesanos",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "tema": "Comercialización de las artesanías",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "tema": "Comercialización de las artesanías",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "tema": "Artesanías y lujos",
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "tema": "Historia de las Artesanías",
+      "rating": 2
+    }
+  ],
+  "conferemcias": {
+    "salon": "Ronald Regan",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 61328,
+      "estado": "pagado"
+    },
+    {
+      "costo": 87262,
+      "estado": "reservado"
+    },
+    {
+      "costo": 64228,
+      "estado": "reservado"
+    },
+    {
+      "costo": 45349,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 9,
+  "nombre": "Phyllis Hall",
+  "nacionalidad": "United States",
+  "edad": 87,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom4",
+      "rating": 3,
+      "material": "acero",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom5",
+      "rating": 1,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Arte y artesanos",
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "tema": "Otros",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "tema": "Historia de las Artesanías",
+      "rating": 2
+    },
+    {
+      "id": 4,
+      "tema": "Arte y artesanos",
+      "rating": 1
+    }
+  ],
+  "conferemcias": {
+    "salon": "Vidon",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 44996,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 10,
+  "nombre": "Todd Elliott",
+  "nacionalidad": "Ukraine",
+  "edad": 32,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom5",
+      "rating": 3,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom5",
+      "rating": 4,
+      "material": "barro",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Otros",
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 2
+    }
+  ],
+  "conferemcias": {
+    "salon": "Transport",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 20987,
+      "estado": "reservado"
+    },
+    {
+      "costo": 77225,
+      "estado": "reservado"
+    },
+    {
+      "costo": 58214,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 11,
+  "nombre": "Joe Carter",
+  "nacionalidad": "Peru",
+  "edad": 62,
+  "boleta": true,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom4",
+      "rating": 5,
+      "material": "barro",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 3,
+      "material": "acero",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "NombreRandom2",
+      "rating": 3,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "NombreRandom2",
+      "rating": 5,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "tema": "Otros",
+      "rating": 2
+    }
+  ],
+  "conferemcias": {
+    "salon": "Katie",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 73014,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 85593,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 91448,
+      "estado": "pagado"
+    },
+    {
+      "costo": 33413,
+      "estado": "pagado"
+    },
+    {
+      "costo": 81008,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 12,
+  "nombre": "Kelly Moreno",
+  "nacionalidad": "Indonesia",
+  "edad": 20,
+  "boleta": false,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom5",
+      "rating": 4,
+      "material": "",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 3,
+      "material": "barro",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "NombreRandom2",
+      "rating": 5,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Artesanías y lujos",
+      "rating": 2
+    },
+    {
+      "id": 2,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "tema": "Historia de las Artesanías",
+      "rating": 0
+    },
+    {
+      "id": 4,
+      "tema": "Otros",
+      "rating": 0
+    },
+    {
+      "id": 5,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 4
+    }
+  ],
+  "conferemcias": {
+    "salon": "Bultman",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 71230,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 13,
+  "nombre": "Gloria Kim",
+  "nacionalidad": "China",
+  "edad": 94,
+  "boleta": true,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom5",
+      "rating": 2,
+      "material": "madera",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom3",
+      "rating": 3,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "NombreRandom2",
+      "rating": 0,
+      "material": "",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom3",
+      "rating": 4,
+      "material": "",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Historia de las Artesanías",
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "tema": "Arte y artesanos",
+      "rating": 3
+    }
+  ],
+  "conferemcias": {
+    "salon": "Michigan",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 78024,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 14,
+  "nombre": "Jennifer Stevens",
+  "nacionalidad": "China",
+  "edad": 87,
+  "boleta": false,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom5",
+      "rating": 0,
+      "material": "barro",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 4,
+      "material": "madera",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Historia de las Artesanías",
+      "rating": 1
+    },
+    {
+      "id": 2,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "tema": "Historia de las Artesanías",
+      "rating": 0
+    }
+  ],
+  "conferemcias": {
+    "salon": "Melvin",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 44491,
+      "estado": "reservado"
+    },
+    {
+      "costo": 5041,
+      "estado": "pagado"
+    }
+  ]
+}, {
+  "id": 15,
+  "nombre": "Sandra Bradley",
+  "nacionalidad": "France",
+  "edad": 82,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom4",
+      "rating": 1,
+      "material": "madera",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Historia de las Artesanías",
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "tema": "Arte y artesanos",
+      "rating": 3
+    },
+    {
+      "id": 3,
+      "tema": "Artesanías y lujos",
+      "rating": 2
+    }
+  ],
+  "conferemcias": {
+    "salon": "Dryden",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 15002,
+      "estado": "pagado"
+    },
+    {
+      "costo": 52275,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 81057,
+      "estado": "pagado"
+    },
+    {
+      "costo": 10462,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 16,
+  "nombre": "Roger Cunningham",
+  "nacionalidad": "Indonesia",
+  "edad": 69,
+  "boleta": true,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom3",
+      "rating": 4,
+      "material": "barro",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom5",
+      "rating": 1,
+      "material": "madera",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom3",
+      "rating": 0,
+      "material": "barro",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom3",
+      "rating": 1,
+      "material": "madera",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "tema": "Otros",
+      "rating": 1
+    }
+  ],
+  "conferemcias": {
+    "salon": "Starling",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 12985,
+      "estado": "reservado"
+    },
+    {
+      "costo": 24424,
+      "estado": "reservado"
+    },
+    {
+      "costo": 26552,
+      "estado": "pagado"
+    },
+    {
+      "costo": 86904,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 17,
+  "nombre": "Philip Fox",
+  "nacionalidad": "Liberia",
+  "edad": 74,
+  "boleta": true,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom3",
+      "rating": 0,
+      "material": "barro",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom3",
+      "rating": 1,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom5",
+      "rating": 3,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "NombreRandom2",
+      "rating": 3,
+      "material": "",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "nombreRandom1",
+      "rating": 4,
+      "material": "madera",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Arte y artesanos",
+      "rating": 2
+    },
+    {
+      "id": 2,
+      "tema": "Historia de las Artesanías",
+      "rating": 0
+    }
+  ],
+  "conferemcias": {
+    "salon": "Cambridge",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 69169,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 80392,
+      "estado": "reservado"
+    },
+    {
+      "costo": 58260,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 18,
+  "nombre": "Kathy Dixon",
+  "nacionalidad": "Ukraine",
+  "edad": 49,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom4",
+      "rating": 2,
+      "material": "barro",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom4",
+      "rating": 0,
+      "material": "madera",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Otros",
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 1
+    },
+    {
+      "id": 3,
+      "tema": "Arte y artesanos",
+      "rating": 2
+    },
+    {
+      "id": 4,
+      "tema": "Arte y artesanos",
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "tema": "Otros",
+      "rating": 3
+    }
+  ],
+  "conferemcias": {
+    "salon": "Novick",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 59065,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 98559,
+      "estado": "pagado"
+    },
+    {
+      "costo": 81558,
+      "estado": "reservado"
+    },
+    {
+      "costo": 33095,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 25333,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 19,
+  "nombre": "Harry Parker",
+  "nacionalidad": "Armenia",
+  "edad": 21,
+  "boleta": true,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom1",
+      "rating": 5,
+      "material": "",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 3,
+      "material": "barro",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Otros",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "tema": "Comercialización de las artesanías",
+      "rating": 3
+    }
+  ],
+  "conferemcias": {
+    "salon": "Old Shore",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 8000,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 20,
+  "nombre": "Martin King",
+  "nacionalidad": "Russia",
+  "edad": 35,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom5",
+      "rating": 0,
+      "material": "madera",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom3",
+      "rating": 3,
+      "material": "barro",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom5",
+      "rating": 0,
+      "material": "madera",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom3",
+      "rating": 2,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Artesanías y lujos",
+      "rating": 1
+    },
+    {
+      "id": 2,
+      "tema": "Historia de las Artesanías",
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "tema": "Otros",
+      "rating": 3
+    }
+  ],
+  "conferemcias": {
+    "salon": "Arapahoe",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 21293,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 96027,
+      "estado": "pagado"
+    },
+    {
+      "costo": 75478,
+      "estado": "reservado"
+    },
+    {
+      "costo": 82631,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 73768,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 21,
+  "nombre": "Lois Russell",
+  "nacionalidad": "Indonesia",
+  "edad": 93,
+  "boleta": false,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom1",
+      "rating": 3,
+      "material": "madera",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom3",
+      "rating": 2,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom3",
+      "rating": 0,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom3",
+      "rating": 5,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Artesanías y lujos",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "tema": "Historia de las Artesanías",
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "tema": "Arte y artesanos",
+      "rating": 2
+    },
+    {
+      "id": 4,
+      "tema": "Historia de las Artesanías",
+      "rating": 2
+    }
+  ],
+  "conferemcias": {
+    "salon": "Leroy",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 74628,
+      "estado": "reservado"
+    },
+    {
+      "costo": 76742,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 22,
+  "nombre": "Jose Kennedy",
+  "nacionalidad": "Indonesia",
+  "edad": 57,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom4",
+      "rating": 4,
+      "material": "madera",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "tema": "Artesanías y lujos",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "tema": "Arte y artesanos",
+      "rating": 3
+    },
+    {
+      "id": 4,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 5
+    }
+  ],
+  "conferemcias": {
+    "salon": "Gale",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 54954,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 6027,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 10983,
+      "estado": "reservado"
+    },
+    {
+      "costo": 58019,
+      "estado": "pagado"
+    }
+  ]
+}, {
+  "id": 23,
+  "nombre": "Joan Riley",
+  "nacionalidad": "Luxembourg",
+  "edad": 86,
+  "boleta": false,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom3",
+      "rating": 4,
+      "material": "",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom1",
+      "rating": 2,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom3",
+      "rating": 2,
+      "material": "barro",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom3",
+      "rating": 1,
+      "material": "",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "NombreRandom2",
+      "rating": 5,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Comercialización de las artesanías",
+      "rating": 2
+    },
+    {
+      "id": 2,
+      "tema": "Artesanías y lujos",
+      "rating": 2
+    },
+    {
+      "id": 3,
+      "tema": "Artesanías y lujos",
+      "rating": 0
+    },
+    {
+      "id": 4,
+      "tema": "Artesanías y lujos",
+      "rating": 4
+    }
+  ],
+  "conferemcias": {
+    "salon": "Gerald",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 80966,
+      "estado": "reservado"
+    },
+    {
+      "costo": 7088,
+      "estado": "reservado"
+    },
+    {
+      "costo": 82410,
+      "estado": "reservado"
+    },
+    {
+      "costo": 24335,
+      "estado": "pagado"
+    }
+  ]
+}, {
+  "id": 24,
+  "nombre": "Jason Cox",
+  "nacionalidad": "United States",
+  "edad": 25,
+  "boleta": false,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom1",
+      "rating": 5,
+      "material": "barro",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 3,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "NombreRandom2",
+      "rating": 0,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom1",
+      "rating": 4,
+      "material": "",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "nombreRandom4",
+      "rating": 5,
+      "material": "barro",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Historia de las Artesanías",
+      "rating": 4
+    }
+  ],
+  "conferemcias": {
+    "salon": "Bobwhite",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 53670,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 84660,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 72198,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 31966,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 47645,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 25,
+  "nombre": "Randy Gray",
+  "nacionalidad": "China",
+  "edad": 52,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom3",
+      "rating": 1,
+      "material": "barro",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom5",
+      "rating": 1,
+      "material": "",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 4
+    }
+  ],
+  "conferemcias": {
+    "salon": "Lakeland",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 79219,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 11010,
+      "estado": "reservado"
+    },
+    {
+      "costo": 75128,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 26,
+  "nombre": "Phillip Martinez",
+  "nacionalidad": "Russia",
+  "edad": 20,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom5",
+      "rating": 2,
+      "material": "",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 4,
+      "material": "acero",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 1
+    },
+    {
+      "id": 2,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "tema": "Historia de las Artesanías",
+      "rating": 0
+    }
+  ],
+  "conferemcias": {
+    "salon": "Talisman",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 16982,
+      "estado": "reservado"
+    },
+    {
+      "costo": 21041,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 6674,
+      "estado": "cancelado"
+    }
+  ]
+}, {
+  "id": 27,
+  "nombre": "Evelyn Welch",
+  "nacionalidad": "China",
+  "edad": 25,
+  "boleta": true,
+  "administrador": false,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "NombreRandom2",
+      "rating": 3,
+      "material": "barro",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom3",
+      "rating": 5,
+      "material": "barro",
+      "tecnica": "tecnicaRandom4",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Historia de las Artesanías",
+      "rating": 1
+    }
+  ],
+  "conferemcias": {
+    "salon": "Steensland",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 97504,
+      "estado": "reservado"
+    },
+    {
+      "costo": 52488,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 47233,
+      "estado": "pagado"
+    },
+    {
+      "costo": 56319,
+      "estado": "pagado"
+    },
+    {
+      "costo": 98583,
+      "estado": "pagado"
+    }
+  ]
+}, {
+  "id": 28,
+  "nombre": "Nancy Elliott",
+  "nacionalidad": "Finland",
+  "edad": 21,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom1",
+      "rating": 2,
+      "material": "barro",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "NombreRandom2",
+      "rating": 1,
+      "material": "acero",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom4",
+      "rating": 5,
+      "material": "acero",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "NombreRandom2",
+      "rating": 3,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "tema": "Arte y artesanos",
+      "rating": 1
+    },
+    {
+      "id": 3,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 1
+    }
+  ],
+  "conferemcias": {
+    "salon": "Comanche",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 64242,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 47947,
+      "estado": "reservado"
+    },
+    {
+      "costo": 92728,
+      "estado": "reservado"
+    }
+  ]
+}, {
+  "id": 29,
+  "nombre": "Scott Ross",
+  "nacionalidad": "Sweden",
+  "edad": 57,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom3",
+      "rating": 4,
+      "material": "barro",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom4",
+      "rating": 3,
+      "material": "barro",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 2
+    },
+    {
+      "id": 2,
+      "tema": "Comercialización de las artesanías",
+      "rating": 2
+    },
+    {
+      "id": 3,
+      "tema": "Otros",
+      "rating": 0
+    },
+    {
+      "id": 4,
+      "tema": "Comercialización de las artesanías",
+      "rating": 4
+    }
+  ],
+  "conferemcias": {
+    "salon": "Dawn",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 31703,
+      "estado": "reservado"
+    },
+    {
+      "costo": 66016,
+      "estado": "pagado"
+    },
+    {
+      "costo": 98192,
+      "estado": "cancelado"
+    },
+    {
+      "costo": 22526,
+      "estado": "reservado"
+    },
+    {
+      "costo": 76769,
+      "estado": "pagado"
+    }
+  ]
+}, {
+  "id": 30,
+  "nombre": "Irene Hawkins",
+  "nacionalidad": "China",
+  "edad": 37,
+  "boleta": false,
+  "administrador": true,
+  "obras": [
+    {
+      "id": 1,
+      "nombre": "nombreRandom5",
+      "rating": 5,
+      "material": "acero",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "nombreRandom1",
+      "rating": 2,
+      "material": "fibras",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "nombreRandom5",
+      "rating": 3,
+      "material": "acero",
+      "tecnica": "tecnicaRandom1",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "nombreRandom3",
+      "rating": 1,
+      "material": "barro",
+      "tecnica": "tecnicaRandom2",
+      "foto": [
+        {
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "nombreRandom3",
+      "rating": 2,
+      "material": "madera",
+      "tecnica": "tecnicaRandom3",
+      "foto": [
+        {
+        }
+      ]
+    }
+  ],
+  "conferencias": [
+    {
+      "id": 1,
+      "tema": "Negocios en internet para artesanos",
+      "rating": 0
+    }
+  ],
+  "conferemcias": {
+    "salon": "Valley Edge",
+    "fechaInicio": "error: invalid date \"31/12/2017\"",
+    "fechaFin": "error: invalid date \"31/12/2017\""
+  },
+  "reservas": [
+    {
+      "costo": 37471,
+      "estado": "pagado"
+    },
+    {
+      "costo": 19934,
+      "estado": "pagado"
+    }
+  ]
+}]
