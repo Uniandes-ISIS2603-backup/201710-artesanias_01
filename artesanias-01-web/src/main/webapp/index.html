@@ -21,6 +21,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+//Autor: Felipe Velásquez (f.velasquez11/SarkFox)
 -->
 <html>
     <head>
@@ -32,12 +35,12 @@ SOFTWARE.
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
         <script src="src/app.js" type="text/javascript"></script>
 
         <!-- Usuario-->
-        <script src="src/modules/usuario/usuario.mod.js" type="text/javascript"></script>
-        <script src="src/modules/usuario/usuario.ctrl.js" type="text/javascript"></script>
+        <script src="src/modules/Usuario/usuario.mod.js" type="text/javascript"></script>
+        <script src="src/modules/Usuario/usuario.ctrl.js" type="text/javascript"></script>
         <!--Cometario-->
         <script src="src/modules/Comentario/Comentario.mod.js" type="text/javascript"></script>
         <!--Conferencia-->
@@ -64,7 +67,7 @@ SOFTWARE.
 
                 <ul class="nav navbar-nav">
 
-                    <li><a ui-sref="usuariosList">Usuarios</a></li>
+                    <li><a ui-sref="a">Usuarios</a></li>
                     <li><a href="">Stands</a></li>
                     <li><a href="">Pabellones</a></li>
                     <li><a href="">Reservas</a></li>
@@ -76,7 +79,7 @@ SOFTWARE.
                 </ul>
             </div>
         </nav>
-        <div ui-view></div>
+        <div ui-view="mainView"></div>
         <div style="border-top: none">
             <hr>
             <div style="margin-top: 200px">

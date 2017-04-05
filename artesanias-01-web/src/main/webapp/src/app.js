@@ -20,21 +20,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+//autor: Felipe Velàsquez (f.velasquez11/SarkFox)
 */
 (function (ng) {
     var app = angular.module('mainApp', [
         // External dependencies
         'ui.router',
         // Internal modules dependencies       
-        'anfitrionModule',
-        'viajeroModule',
-        'resenaModule',
-        'habitacionModule',
-        'disponibilidadModule',
-        'reservaModule',
-        'viviendaModule',
-        'pagoModule'
-
+        'usuarioModule' 
 
         
     ]);
