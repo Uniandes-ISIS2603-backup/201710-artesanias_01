@@ -5,24 +5,5 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <div class="container-fluid">
-    <div class="col-md-4" ng-repeat="usuario in usuariosRecords">
-        <div class="flex-container">
-            <header style="border-color: #000; border-width: 10px">
-                {{usuario.nombre}}
-            </header>
-
-            <article class="article">
-                <div ng-repeat="obra in usuario.obras">
-                    <div class="col-sm-2">
-                        <img style=" min-width: 85px; max-width: 85px; min-height: 85px;max-height: 85px" src="{{obra.foto}}" alt="{{obra.nombre}}">  
-                    </div>
-                </div>
-            </article>
-
-            <footer>
-                País:{{usuario.nacionalidad}}
-            </footer>
-
-        </div>
-    </div>
+    
 </div>
