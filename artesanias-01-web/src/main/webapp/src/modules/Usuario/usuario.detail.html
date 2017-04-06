@@ -4,43 +4,11 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-
-
 <div class="container-fluid">
     <div class="col-md-4" ng-repeat="usuario in usuariosRecords">
-
-        <style> 
-            .flex-container {
-                display: -webkit-flex;
-                display: flex;  
-                -webkit-flex-flow: row wrap;
-                flex-flow: row wrap;
-
-                text-align: center;
-            }
-
-            .flex-container > * {
-                padding: 15px;
-                -webkit-flex: 1 ;
-                flex: 1 100%;
-            }
-
-            .article {
-                text-align: center;
-                background: #a5532d;color:white;
-
-            }
-
-            header {background: #eed055;color:black;width:80px}
-            footer {background: #a5532d;color:white; }
-
-
-
-
-        </style>
         <div class="flex-container">
             <header style="border-color: #000; border-width: 10px">
-                <a ui-sref="usuariosDetail">{{usuario.nombre}}</a>
+                {{usuario.nombre}}
             </header>
 
             <article class="article">
@@ -56,8 +24,5 @@ and open the template in the editor.
             </footer>
 
         </div>
-        <hr>
-    </div>     
+    </div>
 </div>
-
-
