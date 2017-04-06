@@ -8,11 +8,16 @@ and open the template in the editor.
 
 <div class="container-fluid">
     <div class="col-md-3" ng-repeat="usuario in usuariosRecords">
-        <div class="thumbnail">
-            <div style="color: #999999">
-                {{usuario.nombre}}
+        <div class="thumbnail" style="background-color: darkgray">
+            <div style="color: #FFF">
+                
+                {{usuario.nombre}}. Edad: {{usuario.edad}}
+                <br>
+                <div>
+                {{usuario.obras.foto}}
+                </div>
                 <hr>
-                {{usuario.edad}}
+                País:{{usuario.nacionalidad}}
             </div>
         </div>
     </div>     
