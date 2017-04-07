@@ -11,7 +11,7 @@
     mod.constant("reviewsContext", "reviews");
 
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            var basePath = 'src/modules/reviews/';
+            var basePath = 'src/modules/Comentario/';
             $urlRouterProvider.otherwise("/reviewsList");
 
             $stateProvider.state('reviews', {

@@ -5,32 +5,28 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <div class="container-fluid">
-    
+
     <div class="col-md-3" ng-repeat="conferencia in conferenciaRecords">
-        <div class="thumbnail">
-           
-            <div style="color: #999999">
-                 <DIV ALIGN=left>Id Conferencia: </DIV>
-                {{conferencia.id}}
-                <hr>
-                
-            <DIV ALIGN=left>Salon: </DIV>
-                {{conferencia.salon}}
-                <hr>
-            <DIV ALIGN=left>FechaInicio: </DIV>
-                {{conferencua.fechainicio}}
+        <div class="thumbnail" >
+
+            <a ui-sref="conferenciaDetail({conferenciaId:conferencia.id})">
+                <div style="color: #999999">
+                    <DIV ALIGN=left>Numero conferencia: </DIV>
+                    {{conferencia.id}}
                     <hr>
-            <DIV ALIGN=left>FechaFin: </DIV>
-                {{conferencia.fechafin}}
-            <DIV ALIGN="left">tema: </DIV>
-                {{conferencia.tema}}
-            <DIV ALIGN="left">rating: </DIV>
-                {{conferencia.rating}}
-        <img class="img-responsive" ng-src='{{conferencia.image}}' alt="{{dataname}}" />
-            
-            </div>
-            
-            
+
+                    <DIV ALIGN=left>fecha inicio </DIV>
+                    {{conferencia.fechaInicio}}
+                    <hr>
+                    <DIV ALIGN=left>fecha final </DIV>
+                    {{conferencia.fechaFin}}
+                    <hr>
+
+
+
+                </div>
+            </a>
+
         </div>
-    </div>     
+    </div>  
 </div>
