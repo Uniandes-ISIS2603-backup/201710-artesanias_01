@@ -1,4 +1,4 @@
-(function (ng) {
+xfunction (ng) {
     var mod = ng.module("feriaModule", ['ui.router']);
     mod.constant("feriasContext", "api/ferias");
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
