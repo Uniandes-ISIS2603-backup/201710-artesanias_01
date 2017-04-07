@@ -29,7 +29,8 @@ SOFTWARE.
         // Internal modules dependencies       
         'usuarioModule',
         'standModule',
-        'reservasModule'
+        'reservasModule',
+        'conferenciaModule'
         
     ]);
     // Resuelve problemas de las promesas
