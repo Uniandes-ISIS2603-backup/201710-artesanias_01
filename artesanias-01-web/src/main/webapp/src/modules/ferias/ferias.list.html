@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" ng-repeat="ferias in feriasRecords">
+            <div class="thumbnail">
+                <div class="caption text-center">
+                    <p>
+                        Nombre: <a ui-sref="feriaDetail({feriaId: ferias.id})">{{ferias.nombre}}</a>
+                    </p>
+                    <p>Lugar: {{ferias.lugar}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

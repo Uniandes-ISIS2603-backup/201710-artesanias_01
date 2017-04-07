@@ -1,0 +1,30 @@
+[
+    { "id": 1,
+      "nombre":"feria1",
+      "fechaInicio":"01/02/2018",
+      "fechaFin":"28/02/2018",
+      "lugar":"Bogotá",
+      "pabellones":"tema1, tema2, tema3, tema4, tema5"
+    },
+    { "id": 2,
+      "nombre":"feria2",
+      "fechaInicio":"01/04/2018",
+      "fechaFin":"28/04/2018",
+      "lugar":"Medellin",
+      "pabellones":"tema6, tema7, tema8, tema9, tema10"
+    },
+    { "id": 3,
+      "nombre":"feria3",
+      "fechaInicio":"01/06/2018",
+      "fechaFin":"28/06/2018",
+      "lugar":"Cali",
+      "pabellones":"tema11, tema12, tema13, tema14, tema15"
+    },
+    { "id": 4,
+      "nombre":"feria4",
+      "fechaInicio":"01/08/2018",
+      "fechaFin":"28/08/2018",
+      "lugar":"Cartagena",
+      "pabellones":"tema16, tema17, tema18, tema19, tema20"
+    }
+]

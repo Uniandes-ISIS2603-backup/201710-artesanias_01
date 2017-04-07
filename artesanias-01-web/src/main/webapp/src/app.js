@@ -31,7 +31,9 @@ SOFTWARE.
         'standModule',
         'reservasModule',
         'reviewModule',
-        'ObrasModule'
+        'ObrasModule',
+        'pabellonModule',
+        'feriaModule'
         
     ]);
     // Resuelve problemas de las promesas
