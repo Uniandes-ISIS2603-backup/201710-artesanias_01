@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" ng-repeat="pabellones in pabellonesRecords">
+            <div class="thumbnail">
+                <div class="caption text-center">
+                    <p>Tema: {{pabellones.tema}}</p>
+                    <p>
+                       Feria: <a ui-sref="feriaDetail({feriaId: pabellones.idFeria})">{{pabellones.feria}}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
