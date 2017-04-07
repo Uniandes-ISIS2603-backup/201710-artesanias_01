@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="panel panel-default"> 
+    <div class="panel-body">
+    <div class="row">
+        <div class="col-md-3">
+            <dl>     
+                <dt>{{currentUsuario.nombre}}</dt>
+                
+                <hr>
+                <dt>Nacionalidad</dt>
+                <dd>{{currentUsuario.nacionalidad}}</dd>
+          
+                <hr>
+                
+                <dd>{{currentUsuario.informacionTrabajos}}</dd>
+
+            </dl>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="thumb">
+                <div ng-repeat="obra in currentUsuario.obras">
+                    <div class="col-sm-2">
+                        <img style=" min-width: 85px; max-width: 85px; min-height: 85px;max-height: 85px" src="{{obra.foto}}" alt="{{obra.nombre}}">  
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        </div>
+</div>
