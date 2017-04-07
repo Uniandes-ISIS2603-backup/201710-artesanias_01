@@ -28,7 +28,9 @@ SOFTWARE.
         // External dependencies
         'ui.router',
         // Internal modules dependencies       
-        'usuarioModule' 
+        'usuarioModule',
+        'standModule',
+        'reservasModule'
 
         
     ]);
@@ -36,5 +38,5 @@ SOFTWARE.
     //app.config(['$qProvider', function ($qProvider) {
     //        $qProvider.errorOnUnhandledRejections(false);
              
-    //    }]);
+    //   }]);
 })(window.angular);

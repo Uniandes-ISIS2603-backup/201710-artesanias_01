@@ -6,55 +6,55 @@
 
 
 (function (ng) {
-    var mod = ng.module("standModule", ['ui.router']);
+    var mod = ng.module("reservasModule", ['ui.router']);
     
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            var basePath = 'src/modules/stand/';
-            $urlRouterProvider.otherwise("/standList");
+            var basePath = 'src/modules/Reservas/';
+            $urlRouterProvider.otherwise("/reservasList");
 
-            $stateProvider.state('stand', {
-                url: '/stand',
+            $stateProvider.state('reservas', {
+                url: '/reservas',
                 abstract: true,
                 resolve: {
-                    stand: ['$http', function ($http) {
+                    reservas: ['$http', function ($http) {
                         
-                            return $http.get('data/stand.json');
+                            return $http.get('data/reservas.json');
                         }]
                 },
                 views: {
                     'mainView': {
-                        templateUrl: basePath + 'stand.html',
-                        controller: ['$scope', 'stand', function ($scope, stand) {
+                        templateUrl: basePath + 'reservas.html',
+                        controller: ['$scope', 'reservas', function ($scope, reservas) {
                                
-                                $scope.standRecords = stand.data;
+                                $scope.reservasRecords = reservas.data;
                             }]
                     }
                 }
-            }).state('standList', {
+            }).state('reservasList', {
                 url: '/list',
-                parent: 'stand',
+                parent: 'reservas',
                 
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'stand.list.html',
+                        templateUrl: basePath + 'reservas.list.html',
                         
                     }
                 }
             })
             
-            .state('standDetail', {
-                url: '{standId:int}/detail',
-                parent: 'stand',
+            .state('reservasDetail', {
+                url: '{reservasId:int}/detail',
+                parent: 'reservas',
                 param: {
-                standId: null
+                reservasId: null
                 },
                
                 
                 views: {
                     'detailView': {
-                        templateUrl: basePath + 'stand.detail.html',
+                        templateUrl: basePath + 'reservas.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentStand = $scope.standRecords[$params.standId-1];
+                                $scope.currentreservas = $scope.reservasRecords[$params.reservasId-1];
                             }]
                     }
 

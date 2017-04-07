@@ -5,29 +5,30 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <div class="container-fluid">
-    
+
     <div class="col-md-3" ng-repeat="stand in standRecords">
-        <div class="thumbnail">
-           
-            <div style="color: #999999">
-                 <DIV ALIGN=left>Numero Stand: </DIV>
-                {{stand.numeroStand}}
-                <hr>
-                
-            <DIV ALIGN=left>Precio: </DIV>
-                {{stand.precio}}
-                <hr>
-            <DIV ALIGN=left>Tamaño: </DIV>
-                {{stand.tamanio}}
+        <div class="thumbnail" >
+
+            <a ui-sref="standDetail({standId:stand.numeroStand})">
+                <div style="color: #999999">
+                    <DIV ALIGN=left>Numero Stand: </DIV>
+                    {{stand.numeroStand}}
                     <hr>
-            <DIV ALIGN=left>Caracteristicas: </DIV>
-                {{stand.caracteristicas}}
-                
-        <img class="img-responsive" ng-src='{{stand.image}}' alt="{{dataname}}" />
-            
-            </div>
-            
-            
+
+                    <DIV ALIGN=left>Precio: </DIV>
+                    {{stand.precio}}
+                    <hr>
+                    <DIV ALIGN=left>Tamaño: </DIV>
+                    {{stand.tamanio}}
+                    <hr>
+
+                    <DIV ALIGN=center> <img src='{{stand.imagen}}'> </DIV>
+
+
+
+                </div>
+            </a>
+
         </div>
-    </div>     
+    </div>  
 </div>

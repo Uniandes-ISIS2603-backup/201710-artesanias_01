@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="container-fluid">
+
+    <div class="col-md-3" ng-repeat="reservas in reservasRecords">
+        <div class="thumbnail" >
+
+           
+                <div style="color: #999999">
+                    <DIV ALIGN=left>Numero Reserva: </DIV>
+                    {{reservas.id}}
+                    <hr>
+
+                    <DIV ALIGN=left>Numero Stand: </DIV>
+                    {{reservas.idStand}}
+                    <hr>
+                    <DIV ALIGN=left>Estado </DIV>
+                    {{reservas.estado}}
+                    <hr>
+
+
+
+                </div>
+            </a>
+
+        </div>
+    </div>  
+</div>
