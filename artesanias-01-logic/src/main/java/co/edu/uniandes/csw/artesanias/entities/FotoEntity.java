@@ -21,8 +21,6 @@ public class FotoEntity extends BaseEntity implements Serializable{
     
 private String url;    
 
-private String ruta;
-
 @Temporal(TemporalType.DATE)
 private Date fecha;
 
@@ -58,14 +56,6 @@ private ObraEntity obra;
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
-    }
-
-    public String getRuta() {
-        return ruta;
-    }
-
-    public void setRuta(String ruta) {
-        this.ruta = ruta;
     }
 
     // TODO: incluir métodos para manipular las relaciones

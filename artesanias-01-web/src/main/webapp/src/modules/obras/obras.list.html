@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!-- Author: James Lake : jh.lake -->
+<html>
+    <head>
+        <title>Obras</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div ng-repeat="obra in obras">
+            <p>Nombre: {{ obra.nombre }}</p>
+            <p><a ng-href="{{ obra.foto }}">Id: {{ obra.id }}</a></p>
+            <p>Rating:</p>
+            <span 
+                style="border: 1px solid; width:5px; height:5px; position: relative; background-color: yellow;" 
+                ng-repeat="n in [] | range:obra.rating">
+            </span>
+            <div ng-repeat="foto in obra.fotos">
+                <p><img ng-src="{{ foto.url }}"/></p>
+                <p>{{ foto.fecha | date:'medium' }}</p>
+            </div>
+            <hr> 
+        </div>
+    </body>
+</html>
