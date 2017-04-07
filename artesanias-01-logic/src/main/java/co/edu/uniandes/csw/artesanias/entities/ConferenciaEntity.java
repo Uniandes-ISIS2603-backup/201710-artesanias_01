@@ -20,7 +20,7 @@ import javax.persistence.TemporalType;
  * @author da.cortes11
  */
  
-@Entity 
+    @Entity 
 public class ConferenciaEntity  implements Serializable
 {
     
