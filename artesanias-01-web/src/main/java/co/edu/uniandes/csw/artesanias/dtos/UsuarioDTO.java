@@ -8,7 +8,7 @@ package co.edu.uniandes.csw.artesanias.dtos;
 
 /**
  *
- * @author jlake
+ * @author f.velasquez11
  */
 import co.edu.uniandes.csw.artesanias.entities.UsuarioEntity;
 import java.io.Serializable;
