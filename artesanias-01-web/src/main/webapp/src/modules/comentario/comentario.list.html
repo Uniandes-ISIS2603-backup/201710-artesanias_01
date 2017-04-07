@@ -4,30 +4,20 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<div class="container-fluid">
-    
-    <div class="col-md-3" ng-repeat="comentario in comentarioRecords">
-        <div class="thumbnail">
-           
-            <div style="color: #999999">
-                 <DIV ALIGN=left>Id: </DIV>
-                {{comentario.id}}
-                <hr>
-                
-            <DIV ALIGN=left>Comentario: </DIV>
-                {{comentario.comentario}}
-                <hr>
-            <DIV ALIGN=left>Fecha: </DIV>
-                {{comentario.fecha}}
-                    <hr>
-            <DIV ALIGN=left>Obra: </DIV>
-                {{comentario.obra}}
-            
-        <img class="img-responsive" ng-src='{{conferencia.image}}' alt="{{dataname}}" />
-            
-            </div>
-            
-            
-        </div>
-    </div>     
+<div class="container-fluid">   
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>{{currentObra.name}} Reviews </th>                      
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="review in reviewsRecords ">
+                    <td id="{{$index}}-id">{{review.description}}</td>                                  
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>
