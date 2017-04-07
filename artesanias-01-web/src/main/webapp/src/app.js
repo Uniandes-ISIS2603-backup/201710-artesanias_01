@@ -31,7 +31,6 @@ SOFTWARE.
         'usuarioModule',
         'standModule',
         'reservasModule'
-
         
     ]);
     // Resuelve problemas de las promesas
