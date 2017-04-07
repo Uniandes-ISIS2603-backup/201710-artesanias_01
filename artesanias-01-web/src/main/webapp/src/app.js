@@ -28,7 +28,9 @@ SOFTWARE.
         // External dependencies
         'ui.router',
         // Internal modules dependencies       
-        'usuarioModule' 
+        'usuarioModule', 
+        'conferenciaModule',
+        'comentarioModule'
 
         
     ]);

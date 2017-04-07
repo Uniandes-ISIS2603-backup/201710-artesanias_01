@@ -4,13 +4,30 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<div class="container-fluid">
+    
+    <div class="col-md-3" ng-repeat="stand in standRecords">
+        <div class="thumbnail">
+           
+            <div style="color: #999999">
+                 <DIV ALIGN=left>Numero Stand: </DIV>
+                {{stand.numeroStand}}
+                <hr>
+                
+            <DIV ALIGN=left>Precio: </DIV>
+                {{stand.precio}}
+                <hr>
+            <DIV ALIGN=left>Tamaño: </DIV>
+                {{stand.tamanio}}
+                    <hr>
+            <DIV ALIGN=left>Caracteristicas: </DIV>
+                {{stand.caracteristicas}}
+                
+        <img class="img-responsive" ng-src='{{stand.image}}' alt="{{dataname}}" />
+            
+            </div>
+            
+            
+        </div>
+    </div>     
+</div>

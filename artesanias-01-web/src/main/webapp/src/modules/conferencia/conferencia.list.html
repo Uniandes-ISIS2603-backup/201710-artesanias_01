@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="container-fluid">
+    
+    <div class="col-md-3" ng-repeat="conferencia in conferenciaRecords">
+        <div class="thumbnail">
+           
+            <div style="color: #999999">
+                 <DIV ALIGN=left>Id Conferencia: </DIV>
+                {{conferencia.id}}
+                <hr>
+                
+            <DIV ALIGN=left>Salon: </DIV>
+                {{conferencia.salon}}
+                <hr>
+            <DIV ALIGN=left>FechaInicio: </DIV>
+                {{conferencua.fechainicio}}
+                    <hr>
+            <DIV ALIGN=left>FechaFin: </DIV>
+                {{conferencia.fechafin}}
+            <DIV ALIGN="left">tema: </DIV>
+                {{conferencia.tema}}
+            <DIV ALIGN="left">rating: </DIV>
+                {{conferencia.rating}}
+        <img class="img-responsive" ng-src='{{conferencia.image}}' alt="{{dataname}}" />
+            
+            </div>
+            
+            
+        </div>
+    </div>     
+</div>
