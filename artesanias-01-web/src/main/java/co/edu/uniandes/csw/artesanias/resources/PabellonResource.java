@@ -31,6 +31,15 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class PabellonResource {
     @Inject private PabellonLogic logica;
+
+    public PabellonResource() {
+    }
+
+    public PabellonResource(PabellonLogic logica) {
+        this.logica = logica;
+    }
+    
+    
     private List<PabellonDTO> listEntity2DTO(List<PabellonEntity> entityList)
     {
         List<PabellonDTO> list = new ArrayList<>();

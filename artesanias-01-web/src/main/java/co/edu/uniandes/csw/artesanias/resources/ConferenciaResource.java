@@ -32,7 +32,17 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class ConferenciaResource 
 {
+
+    
     @Inject private ConferenciaLogic logica;
+    
+    
+    public ConferenciaResource() {
+    }
+
+    public ConferenciaResource(ConferenciaLogic logica) {
+        this.logica = logica;
+    }
     private List<ConferenciaDTO> listEntity2DTO(List<ConferenciaEntity> entityList)
     {
         List<ConferenciaDTO> list = new ArrayList<>();

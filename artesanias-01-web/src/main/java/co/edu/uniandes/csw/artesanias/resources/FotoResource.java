@@ -30,6 +30,15 @@ import javax.ws.rs.core.MediaType;
 public class FotoResource {
     
     @Inject private FotoLogic logica;
+
+    public FotoResource() {
+    }
+
+    public FotoResource(FotoLogic logica) {
+        this.logica = logica;
+    }
+    
+    
     private List<FotoDTO> listEntity2DTO(List<FotoEntity> entityList)
     {
         List<FotoDTO> list = new ArrayList<>();

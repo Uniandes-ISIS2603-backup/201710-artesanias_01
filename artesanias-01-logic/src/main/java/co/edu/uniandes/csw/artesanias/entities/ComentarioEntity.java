@@ -36,6 +36,18 @@ private Date fecha;
 private ObraEntity obra;
 //metodos setters y getters
 
+    public ComentarioEntity()
+    {
+        
+    }
+
+    public ComentarioEntity(int id, String comentario, Date fecha, ObraEntity obra) {
+        this.id = id;
+        this.comentario = comentario;
+        this.fecha = fecha;
+        this.obra = obra;
+    }
+    
     public int getId() {
         return id;
     }

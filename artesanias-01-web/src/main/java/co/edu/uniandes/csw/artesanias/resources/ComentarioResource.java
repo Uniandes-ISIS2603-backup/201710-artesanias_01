@@ -33,7 +33,17 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class ComentarioResource 
 {
+
+   
+    
      @Inject private ComentarioLogic logica;
+     
+      public ComentarioResource() {
+    }
+
+    public ComentarioResource(ComentarioLogic logica) {
+        this.logica = logica;
+    }
     private List<ComentarioDTO> listEntity2DTO(List<ComentarioEntity> entityList)
     {
         List<ComentarioDTO> list = new ArrayList<>();

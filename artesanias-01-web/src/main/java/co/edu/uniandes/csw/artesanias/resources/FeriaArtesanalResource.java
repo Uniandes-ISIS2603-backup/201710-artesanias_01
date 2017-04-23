@@ -30,6 +30,15 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class FeriaArtesanalResource {
     @Inject private FeriaArtesanalLogic logica;
+
+    public FeriaArtesanalResource() {
+    }
+
+    public FeriaArtesanalResource(FeriaArtesanalLogic logica) {
+        this.logica = logica;
+    }
+    
+    
     
      private List<FeriaArtesanalDTO> listEntity2DTO(List<FeriaArtesanalEntity> entityList)
     {

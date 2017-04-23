@@ -16,6 +16,15 @@ public class ConferenciaLogic
     // TODO: implementar las validaciones de negocio
     
     @Inject private ConferenciaPersistence persistence;
+
+    public ConferenciaLogic() {
+    }
+
+    public ConferenciaLogic(ConferenciaPersistence persistence) {
+        this.persistence = persistence;
+    }
+    
+    
     
     public List<ConferenciaEntity> getConferencias(){
         return persistence.findAllConferencias();

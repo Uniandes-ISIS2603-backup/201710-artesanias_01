@@ -30,6 +30,18 @@ private Date fecha;
 @ManyToOne
 private ObraEntity obra;
 
+    public FotoEntity() {
+    }
+
+    public FotoEntity(String url, Date fecha, ObraEntity obra, int id) {
+        super(id);
+        this.url = url;
+        this.fecha = fecha;
+        this.obra = obra;
+    }
+
+
+
     public String getUrl() {
         return url;
     }

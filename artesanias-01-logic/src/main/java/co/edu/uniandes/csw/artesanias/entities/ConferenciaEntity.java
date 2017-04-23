@@ -53,7 +53,21 @@ private UsuarioEntity conferencista;
 @ManyToOne
 private FeriaArtesanalEntity feria;
 
+    public ConferenciaEntity() {
+    }
 
+    public ConferenciaEntity(int id, String salon, Date fechaInicio, Date fechaFin, EnumTemasConferencia tema, int rating, UsuarioEntity conferencista, FeriaArtesanalEntity feria) {
+        this.id = id;
+        this.salon = salon;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.tema = tema;
+        this.rating = rating;
+        this.conferencista = conferencista;
+        this.feria = feria;
+    }
+
+ 
 
 public enum EnumTemasConferencia{
      

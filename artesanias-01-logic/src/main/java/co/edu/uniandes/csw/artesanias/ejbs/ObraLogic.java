@@ -16,6 +16,15 @@ public class ObraLogic
     // TODO: implementar las validaciones de negocio
 
     @Inject private ObraPersistence persistence;
+
+    public ObraLogic() {
+    }
+
+    public ObraLogic(ObraPersistence persistence) {
+        this.persistence = persistence;
+    }
+    
+    
     
     public List<ObraEntity> getObras(){
         return persistence.findAllObras();

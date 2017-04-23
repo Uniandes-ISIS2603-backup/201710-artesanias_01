@@ -33,6 +33,14 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class UsuarioResource {
    @Inject private UsuarioLogic logic;
+
+    public UsuarioResource() {
+    }
+
+    public UsuarioResource(UsuarioLogic logic) {
+        this.logic = logic;
+    }
+   
    
    private List<UsuarioDTO> listEntity2DTO(List<UsuarioEntity> entityList)
     {

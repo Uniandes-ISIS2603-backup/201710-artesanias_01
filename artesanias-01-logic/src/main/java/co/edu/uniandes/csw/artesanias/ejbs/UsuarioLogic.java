@@ -16,6 +16,16 @@ public class UsuarioLogic
     // TODO: implementar las validaciones de negocio
     
     @Inject private UsuarioPersistence persistence;
+
+    public UsuarioLogic() {
+    }
+
+    public UsuarioLogic(UsuarioPersistence persistence) {
+        this.persistence = persistence;
+    }
+    
+    
+    
     
     public List<UsuarioEntity> getUsuarios(){
         return persistence.findAllUsuarios();

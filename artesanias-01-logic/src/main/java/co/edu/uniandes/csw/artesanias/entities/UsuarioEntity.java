@@ -51,6 +51,19 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
  // TODO: revisar el tipo: OneToMany no requirere una coleccion?
  @OneToMany(mappedBy ="conferencista", cascade = CascadeType.ALL, orphanRemoval = true)
  private List<ConferenciaEntity> conferencias = new ArrayList<>();
+
+    public UsuarioEntity() {
+    }
+
+    public UsuarioEntity(int edad, String nombre, String nacionalidad, boolean boleta, String informacionTrabajos, FeriaArtesanalEntity feria, Collection<ReservadoEntity> reservas) {
+        this.edad = edad;
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        this.boleta = boleta;
+        this.informacionTrabajos = informacionTrabajos;
+        this.feria = feria;
+        this.reservas = reservas;
+    }
  
 
 

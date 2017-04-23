@@ -40,8 +40,21 @@ public class StandEntity implements Serializable{
    
     @OneToOne
     private ReservadoEntity reservado;
+
+    public StandEntity() {
+    }
+
+    public StandEntity(int numeroStand, int tamanio, double precio, String caracteristicas, PabellonEntity pabellon, ReservadoEntity reservado) {
+        this.numeroStand = numeroStand;
+        this.tamanio = tamanio;
+        this.precio = precio;
+        this.caracteristicas = caracteristicas;
+        this.pabellon = pabellon;
+        this.reservado = reservado;
+    }
     
 
+    
     public int getNumeroStand() {
         return numeroStand;
     }

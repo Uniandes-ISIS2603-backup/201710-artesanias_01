@@ -57,6 +57,19 @@ private UsuarioEntity usuario;
 //       Si tiene una relación OneToMany, el contrario no debería ser ManyToOne
 //one to one
 
+    public ObraEntity() {
+    }
+
+    public ObraEntity(int id, String nombre, int rating, String material, String tecnica, UsuarioEntity usuario) {
+        this.id = id;
+        this.nombre = nombre;
+        this.rating = rating;
+        this.material = material;
+        this.tecnica = tecnica;
+        this.usuario = usuario;
+    }
+
+
 
 //metodos setters y getters
 

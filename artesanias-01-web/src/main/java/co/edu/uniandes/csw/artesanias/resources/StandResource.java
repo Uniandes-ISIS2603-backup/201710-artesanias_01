@@ -33,6 +33,15 @@ import javax.ws.rs.core.MediaType;
 public class StandResource 
 {
     @Inject private StandLogic logica;
+
+    public StandResource() {
+    }
+
+    public StandResource(StandLogic logica) {
+        this.logica = logica;
+    }
+    
+    
     private List<StandDTO> listEntity2DTO(List<StandEntity> entityList)
     {
         List<StandDTO> list = new ArrayList<>();

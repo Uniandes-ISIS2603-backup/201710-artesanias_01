@@ -33,6 +33,15 @@ import javax.ws.rs.core.MediaType;
 public class ReservaResource 
 {
       @Inject private ReservadoLogic logica;
+
+    public ReservaResource() {
+    }
+
+    public ReservaResource(ReservadoLogic logica) {
+        this.logica = logica;
+    }
+      
+      
     private List<CrearReservaDTO> listEntity2DTO(List<ReservadoEntity> entityList)
     {
         List<CrearReservaDTO> list = new ArrayList<>();

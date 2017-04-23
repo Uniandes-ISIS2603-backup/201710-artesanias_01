@@ -58,7 +58,19 @@ private List<ConferenciaEntity> conferencias= new ArrayList<>();
 //    public Integer getId(){
 //        return id;
 //    }
+
+    public FeriaArtesanalEntity() {
+    }
+
+    public FeriaArtesanalEntity(Integer id, String nombre, Date fechaInicio, Date fechaFin, String lugar) {
+        this.id = id;
+        this.nombre = nombre;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.lugar = lugar;
+    }
     
+
     public int getId() {
         return id;
     }

@@ -16,6 +16,15 @@ public class FeriaArtesanalLogic
     // TODO: implementar las validaciones de negocio
     
     @Inject private feriaArtesanalPersistence persistence;
+
+    public FeriaArtesanalLogic() {
+    }
+
+    public FeriaArtesanalLogic(feriaArtesanalPersistence persistence) {
+        this.persistence = persistence;
+    }
+    
+    
     public List<FeriaArtesanalEntity> getFerias(){
         return persistence.findAllFerias();
     }

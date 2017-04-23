@@ -16,6 +16,14 @@ public class ComentarioLogic {
     // TODO: implementar las validaciones de negocio
     
     @Inject private ComentarioPersistence persistence;
+
+    public ComentarioLogic() {
+    }
+
+    public ComentarioLogic(ComentarioPersistence persistence) {
+        this.persistence = persistence;
+    }
+    
     
     public List<ComentarioEntity> getComentarios(){
         return persistence.findAllComentarios();

@@ -16,6 +16,15 @@ public class PabellonLogic
     // TODO: implementar las validaciones de negocio
     
     @Inject private PabellonPersistence persistence;
+
+    public PabellonLogic() {
+    }
+
+    public PabellonLogic(PabellonPersistence persistence) {
+        this.persistence = persistence;
+    }
+    
+    
     
     public List<PabellonEntity> getPabellones(){
         return persistence.findAllPabellones();

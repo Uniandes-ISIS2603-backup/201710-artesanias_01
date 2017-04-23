@@ -15,6 +15,15 @@ public class FotoLogic {
     // TODO: implementar las validaciones de negocio
     
     @Inject private FotoPersistence persistence;
+
+    public FotoLogic() {
+    }
+
+    public FotoLogic(FotoPersistence persistence) {
+        this.persistence = persistence;
+    }
+    
+    
      
     public FotoEntity createFoto(FotoEntity entity){
         return persistence.createFoto(entity);

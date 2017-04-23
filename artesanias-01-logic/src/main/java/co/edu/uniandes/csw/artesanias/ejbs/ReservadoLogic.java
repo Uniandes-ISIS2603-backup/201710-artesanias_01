@@ -16,6 +16,15 @@ public class ReservadoLogic {
     // TODO: implementar las validaciones de negocio
     
     @Inject private ReservadoPersistence persistence;
+
+    public ReservadoLogic() {
+    }
+
+    public ReservadoLogic(ReservadoPersistence persistence) {
+        this.persistence = persistence;
+    }
+    
+    
     
     public ReservadoEntity createReservado(ReservadoEntity entity){
         return persistence.createReservado(entity);

@@ -33,6 +33,15 @@ import javax.ws.rs.core.MediaType;
 public class ObraResource 
 {
      @Inject private ObraLogic logica;
+
+    public ObraResource() {
+    }
+
+    public ObraResource(ObraLogic logica) {
+        this.logica = logica;
+    }
+     
+     
     private List<ObraDTO> listEntity2DTO(List<ObraEntity> entityList)
     {
         List<ObraDTO> list = new ArrayList<>();

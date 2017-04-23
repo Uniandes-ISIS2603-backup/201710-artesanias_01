@@ -16,6 +16,15 @@ public class StandLogic
     // TODO: implementar las validaciones de negocio
     
     @Inject private StandPersistence persistence;
+
+    public StandLogic() {
+    }
+
+    public StandLogic(StandPersistence persistence) {
+        this.persistence = persistence;
+    }
+    
+    
     
     public List<StandEntity> getStands(){
         return persistence.findAllStands();

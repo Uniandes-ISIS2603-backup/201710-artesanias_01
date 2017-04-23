@@ -50,6 +50,17 @@ private StandEntity stand;
 @ManyToOne
 private UsuarioEntity artesano;
 
+    public ReservadoEntity() {
+    }
+
+    public ReservadoEntity(int id, double costo, EstadoEnum estado, StandEntity stand, UsuarioEntity artesano) {
+        this.id = id;
+        this.costo = costo;
+        this.estado = estado;
+        this.stand = stand;
+        this.artesano = artesano;
+    }
+
 
 
 //metodos

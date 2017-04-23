@@ -39,6 +39,15 @@ public class PabellonEntity extends BaseEntity implements Serializable{
     
     private String tema;
 
+    public PabellonEntity() {
+    }
+
+    public PabellonEntity(FeriaArtesanalEntity feria, String tema, int id) {
+        super(id);
+        this.feria = feria;
+        this.tema = tema;
+    }
+
     
 
     public String getTema() {
