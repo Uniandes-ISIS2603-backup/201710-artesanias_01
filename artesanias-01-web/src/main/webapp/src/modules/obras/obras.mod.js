@@ -9,7 +9,7 @@
     var mod = ng.module("obrasModule", ['ui.router']);
     
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            var basePath = 'src/modules/Obras/';
+            var basePath = 'src/modules/obras/';
             $urlRouterProvider.otherwise("/obrasList");
 
             $stateProvider.state('obraDetail', {
