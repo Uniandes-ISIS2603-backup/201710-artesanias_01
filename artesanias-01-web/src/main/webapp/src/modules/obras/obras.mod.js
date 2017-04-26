@@ -31,7 +31,10 @@
                 views: {
                     'mainView': {
                         templateUrl: basePath + 'obras.html',
-                        controller: "ObrasController"
+                        controller: ['$stateProvider', '$scope', 'obra', function ($stateProvider, $scope, obra) {
+                                console.log("Muestra una obra");
+                                $scope.obra = obra.data;
+                            }]
                     }
                 }
             }).state('obrasList', {
@@ -39,7 +42,7 @@
                 resolve: {
                     obras: ['$http', function ($http) {
                             console.log("Estoy cargando lista de obras");
-                            return $http.get('data/obras.json');
+                            return $http.get('./data/obras.json');
                         }]
                 },
                 views: {
