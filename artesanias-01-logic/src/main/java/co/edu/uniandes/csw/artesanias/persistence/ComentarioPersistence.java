@@ -45,4 +45,8 @@ public class ComentarioPersistence {
         ComentarioEntity entity = em.find(ComentarioEntity.class, id);
         em.remove(entity);
     }
+    
+    public ComentarioEntity update(ComentarioEntity entity) {
+        return em.merge(entity);
+    }
 }

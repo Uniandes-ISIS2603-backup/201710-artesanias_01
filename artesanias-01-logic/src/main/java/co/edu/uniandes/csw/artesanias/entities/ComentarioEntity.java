@@ -23,7 +23,7 @@ import javax.persistence.ManyToOne;
 public class ComentarioEntity implements Serializable{
 
 @Id 
-private int id;
+private Long id;
 
 private String comentario;
 
@@ -41,18 +41,18 @@ private ObraEntity obra;
         
     }
 
-    public ComentarioEntity(int id, String comentario, Date fecha, ObraEntity obra) {
+    public ComentarioEntity(long id, String comentario, Date fecha, ObraEntity obra) {
         this.id = id;
         this.comentario = comentario;
         this.fecha = fecha;
         this.obra = obra;
     }
     
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
