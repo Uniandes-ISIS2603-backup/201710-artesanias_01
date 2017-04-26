@@ -6,7 +6,7 @@
 //Author: James Lake . jh.lake
 
 (function (ng) {
-    var mod = ng.module("ObrasModule", ['ui.router']);
+    var mod = ng.module("obrasModule", ['ui.router']);
     
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             var basePath = 'src/modules/Obras/';

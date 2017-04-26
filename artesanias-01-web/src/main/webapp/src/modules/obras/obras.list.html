@@ -14,7 +14,7 @@ and open the template in the editor.
     <body>
         <div ng-repeat="obra in obras">
             <p>Nombre: {{ obra.nombre }}</p>
-            <p><a ng-href="{{ obra.foto }}">Id: {{ obra.id }}</a></p>
+            <p><a ui-sref="obraDetail({obraId:obra.id})">{{ obra.foto }}</a>Id: {{ obra.id }}</p>
             <p>Rating:</p>
             <span 
                 style="border: 1px solid; width:5px; height:5px; position: relative; background-color: yellow;" 
