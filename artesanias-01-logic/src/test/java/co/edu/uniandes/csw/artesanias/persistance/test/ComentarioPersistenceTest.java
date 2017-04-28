@@ -119,7 +119,7 @@ public class ComentarioPersistenceTest {
           boolean found = false;
           for(ComentarioEntity entity:data){
               //verificar por que con el id no sirve
-              if(ent.getComentario().equals(entity.getComentario())){
+              if(ent.getId().equals(entity.getId())){
                   found=true;
               }
           }
@@ -153,8 +153,6 @@ public class ComentarioPersistenceTest {
         ComentarioEntity newEntity= factory.manufacturePojo(ComentarioEntity.class);
         newEntity.setId(entity.getId());
         
-        //revisar los id de que tipo de dato estan declarados
-        //revisar lo metodos que faltan en los persistence
         comentarioPersistence.update(newEntity);
         ComentarioEntity resp= em.find(ComentarioEntity.class,entity.getId());
         Assert.assertEquals(newEntity.getFecha(), resp.getFecha() );

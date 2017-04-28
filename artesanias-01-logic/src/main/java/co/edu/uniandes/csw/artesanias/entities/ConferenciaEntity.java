@@ -26,7 +26,7 @@ public class ConferenciaEntity  implements Serializable
     
     //Atributos
 @Id
-private int id;
+private Long id;
 
 private String salon;
 
@@ -56,7 +56,7 @@ private FeriaArtesanalEntity feria;
     public ConferenciaEntity() {
     }
 
-    public ConferenciaEntity(int id, String salon, Date fechaInicio, Date fechaFin, EnumTemasConferencia tema, int rating, UsuarioEntity conferencista, FeriaArtesanalEntity feria) {
+    public ConferenciaEntity(Long id, String salon, Date fechaInicio, Date fechaFin, EnumTemasConferencia tema, int rating, UsuarioEntity conferencista, FeriaArtesanalEntity feria) {
         this.id = id;
         this.salon = salon;
         this.fechaInicio = fechaInicio;
@@ -111,11 +111,11 @@ public enum EnumTemasConferencia{
 
 //Setters y getters
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -160,6 +160,25 @@ public enum EnumTemasConferencia{
     }
  
     // TODO: implementar getFeria y setFeria
+    
+    
     // TODO: implementar getConferencias y setConferencista
+
+    public FeriaArtesanalEntity getFeria() {
+        return feria;
+    }
+
+    public void setFeria(FeriaArtesanalEntity feria) {
+        this.feria = feria;
+    }
+
+    public UsuarioEntity getConferencista() {
+        return conferencista;
+    }
+
+    public void setConferencista(UsuarioEntity conferencista) {
+        this.conferencista = conferencista;
+    }
+    
 
 }

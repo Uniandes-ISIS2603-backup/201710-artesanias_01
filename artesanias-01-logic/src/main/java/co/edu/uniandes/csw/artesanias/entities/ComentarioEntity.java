@@ -41,18 +41,18 @@ private ObraEntity obra;
         
     }
 
-    public ComentarioEntity(long id, String comentario, Date fecha, ObraEntity obra) {
+    public ComentarioEntity(Long id, String comentario, Date fecha, ObraEntity obra) {
         this.id = id;
         this.comentario = comentario;
         this.fecha = fecha;
         this.obra = obra;
     }
     
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -73,6 +73,14 @@ private ObraEntity obra;
     }
     
     // TODO: implementar getObra y setObra
+
+    public ObraEntity getObra() {
+        return obra;
+    }
+
+    public void setObra(ObraEntity obra) {
+        this.obra = obra;
+    }
     
     
 

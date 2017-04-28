@@ -5,6 +5,7 @@ import co.edu.uniandes.csw.artesanias.persistence.ComentarioPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import reactor.util.Assert;
 
 /**
  *
@@ -14,14 +15,13 @@ import javax.inject.Inject;
 public class ComentarioLogic {
     
     // TODO: implementar las validaciones de negocio
+    private final ComentarioPersistence persistence;
+    @Inject
     
-    @Inject private ComentarioPersistence persistence;
-
-    public ComentarioLogic() {
-    }
-
+    
     public ComentarioLogic(ComentarioPersistence persistence) {
-        this.persistence = persistence;
+    Assert.notNull(persistence, "My persistance must not be null");
+    this.persistence = persistence;
     }
     
     
@@ -39,5 +39,9 @@ public class ComentarioLogic {
      
     public void deleteComentario(Long id){
         persistence.deleteComentario(id);
+    }
+    
+    public ComentarioEntity updateComentario(ComentarioEntity entity) {
+        return persistence.update(entity);
     }
 }

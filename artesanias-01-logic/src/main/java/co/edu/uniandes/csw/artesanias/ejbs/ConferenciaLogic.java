@@ -5,6 +5,7 @@ import co.edu.uniandes.csw.artesanias.persistence.ConferenciaPersistence;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ejb.Stateless;
+import reactor.util.Assert;
 
 /**
  *
@@ -15,12 +16,15 @@ public class ConferenciaLogic
 {
     // TODO: implementar las validaciones de negocio
     
-    @Inject private ConferenciaPersistence persistence;
+    private ConferenciaPersistence persistence;
+    
+    @Inject 
 
     public ConferenciaLogic() {
     }
 
     public ConferenciaLogic(ConferenciaPersistence persistence) {
+        Assert.notNull(persistence, "My conference persistance must not be null");
         this.persistence = persistence;
     }
     
