@@ -5,6 +5,7 @@ import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ejb.Stateless;
+import org.springframework.util.Assert;
 
 /**
  *
@@ -15,12 +16,11 @@ public class FeriaArtesanalLogic
 {
     // TODO: implementar las validaciones de negocio
     
-    @Inject private feriaArtesanalPersistence persistence;
-
-    public FeriaArtesanalLogic() {
-    }
-
+    private final feriaArtesanalPersistence persistence;
+    @Inject 
+  
     public FeriaArtesanalLogic(feriaArtesanalPersistence persistence) {
+        Assert.notNull(persistence,"My persistence will not be null");
         this.persistence = persistence;
     }
     

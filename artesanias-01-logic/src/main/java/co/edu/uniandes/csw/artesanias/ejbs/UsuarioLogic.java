@@ -5,6 +5,7 @@ import co.edu.uniandes.csw.artesanias.persistence.UsuarioPersistence;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ejb.Stateless;
+import reactor.util.Assert;
 
 /**
  *
@@ -14,13 +15,10 @@ import javax.ejb.Stateless;
 public class UsuarioLogic 
 {
     // TODO: implementar las validaciones de negocio
-    
-    @Inject private UsuarioPersistence persistence;
-
-    public UsuarioLogic() {
-    }
-
+    private final UsuarioPersistence persistence;
+    @Inject 
     public UsuarioLogic(UsuarioPersistence persistence) {
+        Assert.notNull(persistence,"My persistance will not be null");
         this.persistence = persistence;
     }
     

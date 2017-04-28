@@ -21,6 +21,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import reactor.util.Assert;
 
 /**
  *
@@ -32,12 +33,10 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class ReservaResource 
 {
-      @Inject private ReservadoLogic logica;
-
-    public ReservaResource() {
-    }
-
+    private final ReservadoLogic logica;  
+    @Inject
     public ReservaResource(ReservadoLogic logica) {
+        Assert.notNull(logica, "My logica must not be null");
         this.logica = logica;
     }
       

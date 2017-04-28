@@ -5,6 +5,7 @@ import co.edu.uniandes.csw.artesanias.persistence.ReservadoPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import reactor.util.Assert;
 
 /**
  *
@@ -15,12 +16,10 @@ public class ReservadoLogic {
     
     // TODO: implementar las validaciones de negocio
     
-    @Inject private ReservadoPersistence persistence;
-
-    public ReservadoLogic() {
-    }
-
+    private final ReservadoPersistence persistence;
+    @Inject 
     public ReservadoLogic(ReservadoPersistence persistence) {
+        Assert.notNull(persistence,"My persistance will not be null");
         this.persistence = persistence;
     }
     

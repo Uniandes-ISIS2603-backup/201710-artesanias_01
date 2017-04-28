@@ -5,6 +5,7 @@ import co.edu.uniandes.csw.artesanias.persistence.ObraPersistence;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ejb.Stateless;
+import reactor.util.Assert;
 
 /**
  *
@@ -15,12 +16,10 @@ public class ObraLogic
 {
     // TODO: implementar las validaciones de negocio
 
-    @Inject private ObraPersistence persistence;
-
-    public ObraLogic() {
-    }
-
+    private final ObraPersistence persistence;
+    @Inject 
     public ObraLogic(ObraPersistence persistence) {
+        Assert.notNull(persistence,"My persistance will not be null");
         this.persistence = persistence;
     }
     

@@ -5,6 +5,7 @@ import co.edu.uniandes.csw.artesanias.persistence.PabellonPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import reactor.util.Assert;
 
 /**
  *
@@ -15,12 +16,10 @@ public class PabellonLogic
 {
     // TODO: implementar las validaciones de negocio
     
-    @Inject private PabellonPersistence persistence;
-
-    public PabellonLogic() {
-    }
-
+    private final PabellonPersistence persistence;
+    @Inject 
     public PabellonLogic(PabellonPersistence persistence) {
+        Assert.notNull(persistence,"My persistence will not be null");
         this.persistence = persistence;
     }
     

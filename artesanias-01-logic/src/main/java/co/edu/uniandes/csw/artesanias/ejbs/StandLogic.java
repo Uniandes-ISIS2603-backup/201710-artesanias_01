@@ -5,6 +5,7 @@ import co.edu.uniandes.csw.artesanias.persistence.StandPersistence;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ejb.Stateless;
+import reactor.util.Assert;
 
 /**
  *
@@ -14,13 +15,10 @@ import javax.ejb.Stateless;
 public class StandLogic 
 {
     // TODO: implementar las validaciones de negocio
-    
-    @Inject private StandPersistence persistence;
-
-    public StandLogic() {
-    }
-
+    private final StandPersistence persistence;
+    @Inject 
     public StandLogic(StandPersistence persistence) {
+        Assert.notNull(persistence,"My persistance will not be null");
         this.persistence = persistence;
     }
     

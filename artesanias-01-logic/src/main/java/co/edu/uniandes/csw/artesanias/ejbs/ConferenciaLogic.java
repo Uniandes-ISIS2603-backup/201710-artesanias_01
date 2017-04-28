@@ -16,13 +16,9 @@ public class ConferenciaLogic
 {
     // TODO: implementar las validaciones de negocio
     
-    private ConferenciaPersistence persistence;
+    private final ConferenciaPersistence persistence;
     
     @Inject 
-
-    public ConferenciaLogic() {
-    }
-
     public ConferenciaLogic(ConferenciaPersistence persistence) {
         Assert.notNull(persistence, "My conference persistance must not be null");
         this.persistence = persistence;

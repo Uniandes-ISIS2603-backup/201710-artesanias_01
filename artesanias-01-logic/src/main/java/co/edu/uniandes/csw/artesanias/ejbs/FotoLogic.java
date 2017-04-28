@@ -4,6 +4,7 @@ import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
 import co.edu.uniandes.csw.artesanias.persistence.FotoPersistence;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import reactor.util.Assert;
 
 /**
  *
@@ -14,12 +15,10 @@ public class FotoLogic {
     
     // TODO: implementar las validaciones de negocio
     
-    @Inject private FotoPersistence persistence;
-
-    public FotoLogic() {
-    }
-
+    private final FotoPersistence persistence;
+    @Inject 
     public FotoLogic(FotoPersistence persistence) {
+        Assert.notNull(persistence,"My persistence will not be null");
         this.persistence = persistence;
     }
     

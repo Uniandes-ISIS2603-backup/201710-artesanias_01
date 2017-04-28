@@ -52,7 +52,7 @@ public class ConferenciaPersistenceTest {
     /**
      * @generated
      */
-    @PersistenceContext
+    @PersistenceContext(unitName="employeePU")
     private EntityManager em;
 
     /**

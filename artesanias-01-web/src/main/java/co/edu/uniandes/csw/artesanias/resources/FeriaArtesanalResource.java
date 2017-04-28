@@ -20,6 +20,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import reactor.util.Assert;
 
 /**
  *
@@ -29,12 +30,10 @@ import javax.ws.rs.core.MediaType;
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class FeriaArtesanalResource {
-    @Inject private FeriaArtesanalLogic logica;
-
-    public FeriaArtesanalResource() {
-    }
-
+    private final FeriaArtesanalLogic logica;
+    @Inject 
     public FeriaArtesanalResource(FeriaArtesanalLogic logica) {
+        Assert.notNull(logica, "My persistance must not be null");
         this.logica = logica;
     }
     

@@ -23,18 +23,17 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import reactor.util.Assert;
 
 @Path("/fotos")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class FotoResource {
     
-    @Inject private FotoLogic logica;
-
-    public FotoResource() {
-    }
-
+    private final FotoLogic logica;
+    @Inject 
     public FotoResource(FotoLogic logica) {
+        Assert.notNull(logica, "My persistance must not be null");
         this.logica = logica;
     }
     
