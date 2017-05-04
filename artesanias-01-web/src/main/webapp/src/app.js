@@ -26,14 +26,15 @@ SOFTWARE.
     var app = angular.module('mainApp', [
         // External dependencies
         'ui.router',
-        // Internal modules dependencies       
+        // Internal modules dependencies 
         'usuarioModule',
         'standModule',
         'reservasModule',
         'conferenciaModule',
         'pabellonModule',
         'feriaModule',
-        'obrasModule'
+        'obrasModule',
+        
         
     ]);
     // Resuelve problemas de las promesas
