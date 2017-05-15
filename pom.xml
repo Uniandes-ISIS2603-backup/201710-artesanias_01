@@ -88,6 +88,21 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+              <artifactId>maven-surefire-plugin</artifactId>
+              <version>2.12</version>   
+                <configuration>
+                     <forkMode>always</forkMode>
+                     <classpathDependencyExcludes>
+                       <classpathDependencyExcludes>               
+                        javax.servlet:servlet-api
+                       </classpathDependencyExcludes>
+                     <classpathDependencyExcludes>
+                     org.apache.felix:javax.servlet
+                     </classpathDependencyExcludes>
+                     <classpathDependencyExcludes>
+                 </configuration>
+             </plugin>
         </plugins>
     </build>
 </project>
