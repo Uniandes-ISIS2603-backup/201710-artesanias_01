@@ -94,14 +94,14 @@
                 <configuration>
                      <forkMode>always</forkMode>
                      <classpathDependencyExcludes>
-                       <classpathDependencyExcludes>               
+                        <classpathDependencyExcludes>               
                         javax.servlet:servlet-api
-                       </classpathDependencyExcludes>
-                     <classpathDependencyExcludes>
-                     org.apache.felix:javax.servlet
+                        </classpathDependencyExcludes>
+                        <classpathDependencyExcludes>
+                        org.apache.felix:javax.servlet
+                        </classpathDependencyExcludes>
                      </classpathDependencyExcludes>
-                     <classpathDependencyExcludes>
-                 </configuration>
+                </configuration>
              </plugin>
         </plugins>
     </build>
