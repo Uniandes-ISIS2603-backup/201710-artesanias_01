@@ -7,6 +7,7 @@
 
 (function (ng) {
     var mod = ng.module("standModule", ['ui.router']);
+    mod.constant("standContext", "api/stands");
     
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             var basePath = 'src/modules/stand/';
@@ -16,9 +17,9 @@
                 url: '/stand',
                 abstract: true,
                 resolve: {
-                    stand: ['$http', function ($http) {
+                    stand: ['$http', 'standContext', function ($http, standContext) {
                         
-                            return $http.get('data/stand.json');
+                            return $http.get(standContext);
                         }]
                 },
                 views: {
@@ -36,25 +37,27 @@
                 
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'stand.list.html',
+                        templateUrl: basePath + 'stand.list.html'
                         
                     }
                 }
             })
             
             .state('standDetail', {
-                url: '{standId:int}/detail',
+                url: '/{standId:int}/detail',
                 parent: 'stand',
                 param: {
                 standId: null
                 },
+                
+                
                
                 
                 views: {
                     'detailView': {
                         templateUrl: basePath + 'stand.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentStand = $scope.standRecords[$params.standId-1];
+                        controller: ['$scope',  'currentStand', function ($scope,currentStand ) {
+                                $scope.currentStand = currentStand.data;
                             }]
                     }
 

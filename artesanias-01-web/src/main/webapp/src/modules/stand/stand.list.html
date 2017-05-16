@@ -9,7 +9,7 @@ and open the template in the editor.
     <div class="col-md-3" ng-repeat="stand in standRecords">
         <div class="thumbnail" >
 
-            <a ui-sref="standDetail({standId:stand.numeroStand})">
+            
                 <div style="color: #999999">
                     <DIV ALIGN=left>Numero Stand: </DIV>
                     {{stand.numeroStand}}
@@ -21,13 +21,18 @@ and open the template in the editor.
                     <DIV ALIGN=left>Tamaño: </DIV>
                     {{stand.tamanio}}
                     <hr>
+                    
+                     <DIV ALIGN=left>Caracteristicas: </DIV>
+                    {{stand.caracteristica}}
+                    <hr>
+                    
 
                     <DIV ALIGN=center> <img src='{{stand.imagen}}'> </DIV>
 
 
 
                 </div>
-            </a>
+          
 
         </div>
     </div>  

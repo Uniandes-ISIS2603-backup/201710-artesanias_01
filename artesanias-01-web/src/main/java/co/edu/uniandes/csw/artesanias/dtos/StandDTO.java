@@ -20,7 +20,7 @@ public class StandDTO implements Serializable{
     private int numeroStand;
     private int tamanio;
     private double precio;
-    private String características;
+    private String caracteristicas;
 
     public int getNumeroStand() {
         return numeroStand;
@@ -47,11 +47,11 @@ public class StandDTO implements Serializable{
     }
 
     public String getCaracterísticas() {
-        return características;
+        return caracteristicas;
     }
 
     public void setCaracterísticas(String características) {
-        this.características = características;
+        this.caracteristicas = características;
     }
     
     public StandDTO()
@@ -64,7 +64,7 @@ public class StandDTO implements Serializable{
         if(entity !=null){
             this.numeroStand = entity.getNumeroStand();
             this.precio = entity.getPrecio();
-            this.características = entity.getCaracteristicas();
+            this.caracteristicas = entity.getCaracteristicas();
             this.tamanio = entity.getTamanio();
         }
     }
@@ -75,7 +75,7 @@ public class StandDTO implements Serializable{
         entity.setNumeroStand(numeroStand);
         entity.setPrecio(precio);
         entity.setTamanio(tamanio);
-        entity.setCaracteristicas(características);
+        entity.setCaracteristicas(caracteristicas);
         return entity;
     }
     
