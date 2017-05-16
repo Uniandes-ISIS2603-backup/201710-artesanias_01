@@ -42,7 +42,7 @@ private String tecnica;
 //asociaciones
 // TODO: implementar la relación en la entidad ComentarioEntity
 //Asociacion con los comentarios
-@OneToMany (mappedBy="obra", cascade= CascadeType.ALL, orphanRemoval = true)
+@OneToMany (mappedBy="obra", cascade= CascadeType.PERSIST, orphanRemoval = true)
 private List<ComentarioEntity> comentarios= new ArrayList<>();
 
 // TODO: incluir la relación ManyToOne en FotoEntity
@@ -115,5 +115,22 @@ private UsuarioEntity usuario;
     
     // TODO: implementar getComentarios y setComentarios
     // TODO: implementar getFotos y setFotos
+
+    public List<ComentarioEntity> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<ComentarioEntity> comentarios) {
+        this.comentarios = comentarios;
+    }
+
+    public List<FotoEntity> getFotos() {
+        return fotos;
+    }
+
+    public void setFotos(List<FotoEntity> fotos) {
+        this.fotos = fotos;
+    }
+    
     
 }

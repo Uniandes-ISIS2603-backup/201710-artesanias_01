@@ -115,7 +115,24 @@ private List<ConferenciaEntity> conferencias= new ArrayList<>();
     }
  
     // TODO: implementar getPabellones y setPabellones
+    
     // TODO: implementar getConferencas y setConferencias
     // TODO: implementar getUsuarios y setUsuarios
+
+    public List<PabellonEntity> getPabellones() {
+        return pabellones;
+    }
+
+    public void setPabellones(List<PabellonEntity> pabellones) {
+        this.pabellones = pabellones;
+    }
+
+    public List<UsuarioEntity> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<UsuarioEntity> usuarios) {
+        this.usuarios = usuarios;
+    }
        
 }

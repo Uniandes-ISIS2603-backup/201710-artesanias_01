@@ -28,7 +28,7 @@ public class StandEntity implements Serializable{
     
     private int tamanio;
     
-    private double precio;
+    private double price;
     
     private String caracteristicas;
     
@@ -47,7 +47,7 @@ public class StandEntity implements Serializable{
     public StandEntity(int numeroStand, int tamanio, double precio, String caracteristicas, PabellonEntity pabellon, ReservadoEntity reservado) {
         this.numeroStand = numeroStand;
         this.tamanio = tamanio;
-        this.precio = precio;
+        this.price = precio;
         this.caracteristicas = caracteristicas;
         this.pabellon = pabellon;
         this.reservado = reservado;
@@ -64,11 +64,15 @@ public class StandEntity implements Serializable{
     }
 
     public double getPrecio() {
-        return precio;
+        return price;
     }
 
     public String getCaracteristicas() {
         return caracteristicas;
+    }
+    
+        public PabellonEntity getPabellon() {
+        return pabellon;
     }
 
     public void setNumeroStand(int numeroStand) {
@@ -80,11 +84,15 @@ public class StandEntity implements Serializable{
     }
     
     public void setPrecio(double precio) {
-        this.precio = precio;
+        this.price = precio;
     }
 
     public void setCaracteristicas(String caracteristicas) {
         this.caracteristicas = caracteristicas;
+    }
+    
+    public void setPabellon(PabellonEntity pabellon) {
+        this.pabellon = pabellon;
     }
     
     // TODO: implementar getPabellon y setPabellon

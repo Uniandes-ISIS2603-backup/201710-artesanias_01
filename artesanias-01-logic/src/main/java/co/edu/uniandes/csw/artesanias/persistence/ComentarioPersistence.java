@@ -10,6 +10,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 @Stateless
@@ -35,7 +36,7 @@ public class ComentarioPersistence {
     }
 
     public List<ComentarioEntity> findAllComentarios() {
-        TypedQuery<ComentarioEntity> q = em.createQuery("select u from ComentarioEntity u", ComentarioEntity.class);
+        Query q = em.createQuery("select u from ComentarioEntity u");
         return q.getResultList();
 
     }

@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -30,10 +31,10 @@ private Long id;
 
 private String salon;
 
-@Temporal(TemporalType.DATE)
+@Temporal(TemporalType.TIMESTAMP)
 private Date fechaInicio;
 
-@Temporal(TemporalType.DATE)
+@Temporal(TemporalType.TIMESTAMP)
 private Date fechaFin;
 
 
@@ -44,11 +45,11 @@ private int rating;
 
 // TODO: implementar las asociaciones entre las entidades
 //asociaciones
-
+@PodamExclude
 //Asociacion con los usuarios
 @ManyToOne
 private UsuarioEntity conferencista;
-
+@PodamExclude
 //Asociacion con la feria
 @ManyToOne
 private FeriaArtesanalEntity feria;
