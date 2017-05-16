@@ -11,20 +11,23 @@ import java.util.Collection;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 // TODO: eliminar los "import" que no se usan
 import javax.persistence.OneToMany;
 
 /**
  *
- * @author ds.tapia10
+ * @author f.velasquez11
  */
 
 @Entity
-public class UsuarioEntity extends BaseEntity implements Serializable{
-    
- 
-    
+public class UsuarioEntity  implements Serializable{
+   @Id
+   private int id;
+   
     private int edad;
     
     private String nombre;
@@ -144,5 +147,17 @@ public class UsuarioEntity extends BaseEntity implements Serializable{
     public void setReservas(List<ReservadoEntity> reservas) {
         this.reservas = reservas;
     }
-    
+        public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setReservas(Collection<ReservadoEntity> reservas) {
+        this.reservas = reservas;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+ 
 }

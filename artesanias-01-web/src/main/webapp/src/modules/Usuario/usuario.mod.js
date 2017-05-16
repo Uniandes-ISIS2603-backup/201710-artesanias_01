@@ -10,7 +10,7 @@
 
 (function (ng) {
      var mod = ng.module("usuarioModule", ['ui.router']);
-     
+     mod.constant("usuarioContext", "api/usuarios");
      mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
              var basePath = 'src/modules/Usuario/';
              $urlRouterProvider.otherwise("/usuariosList");
@@ -19,28 +19,18 @@
                  url: '/usuarios',
                  abstract: true,
                  resolve: {
-                     usuarios: ['$http', function ($http) {
-                             console.log("Holi");
-                             return $http.get('data/dataUsuarios.json');
-                         }]
+                     usuarios: ['$http', 'usuariosContext', function ($http, usuariosContext) {
+                            return $http.get(usuariosContext);
+                        }]
                  },
                  views: {
                      'mainView': {
-                         templateUrl: basePath + 'usuario.html',
-                         controller: ['$scope', 'usuarios', function ($scope, usuarios) {
-                                 console.log("Holi2");
-                                 $scope.usuariosRecords = usuarios.data;
-                             }]
+                         templateUrl: basePath + 'usuario.html'
                      }
                  }
              }).state('usuariosList', {
                  url: '/usuarios/list',
-                 resolve: {
-                     usuarios: ['$http', function ($http) {
-                             console.log("3");
-                             return $http.get('data/dataUsuarios.json');
-                         }]
-                 },
+                 parent:'usuario',
                  views: {
                      'mainView': {
                          templateUrl: basePath + 'usuario.list.html',
@@ -56,15 +46,18 @@
                  param: {
                      usuarioId: null
                  },
+                 resolve: {
+                    currentUsuario: ['$http', 'usuariosContext', '$stateParams', function ($http, usuariosContext, $params) {
+                            return $http.get(usuariosContext + '/' + $params.usuarioId);
+                        }]
+                },
                  views: {
                      'detailView': {
                          templateUrl: basePath + 'usuario.detail.html',
-                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                         
-                                 $scope.currentUsuario = $scope.usuariosRecords[$params.usuarioId - 1];
-                             }]
-                     }
- 
+                         controller: ['$scope', 'currentUsuario', function ($scope, currentUsuario) {
+                                $scope.currentUsuario = currentUsuario.data;                               
+                            }]
+                     },
                  }
  
              });

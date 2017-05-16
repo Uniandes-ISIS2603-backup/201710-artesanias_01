@@ -22,7 +22,7 @@ import javax.persistence.ManyToOne;
  * @author jlake
  */
 @Entity
-public class PabellonEntity extends BaseEntity implements Serializable{
+public class PabellonEntity implements Serializable{
     
    
     
@@ -37,13 +37,16 @@ public class PabellonEntity extends BaseEntity implements Serializable{
     @ManyToOne
     private FeriaArtesanalEntity feria;
     
+   @Id
+   private int id;
+   
     private String tema;
 
     public PabellonEntity() {
     }
 
     public PabellonEntity(FeriaArtesanalEntity feria, String tema, int id) {
-        super(id);
+        this.id = id;
         this.feria = feria;
         this.tema = tema;
     }
@@ -56,6 +59,9 @@ public class PabellonEntity extends BaseEntity implements Serializable{
 
     public void setTema(String tema) {
         this.tema = tema;
+    }
+    public int getId(){
+        return id;
     }
     
     // TODO: implementar los métodos getStand y setStand

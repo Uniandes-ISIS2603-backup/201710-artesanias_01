@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class FotoDTO {
     
-    private int id;
+    
     private String url;
     private Date fecha;
     
@@ -24,7 +24,7 @@ public class FotoDTO {
     
     public FotoDTO(FotoEntity entity)
     {
-        this.id =entity.getId();
+       
         this.fecha=entity.getFecha();
         this.url=entity.getUrl();
     }
@@ -32,18 +32,10 @@ public class FotoDTO {
     public FotoEntity toEntity()
     {
         FotoEntity entity = new FotoEntity();
-        entity.setId(id);
+        
         entity.setFecha(fecha);
         entity.setUrl(url);
         return entity;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getUrl() {
