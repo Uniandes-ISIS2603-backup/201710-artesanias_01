@@ -3,7 +3,6 @@
   <persistence-unit name="feriaPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <non-jta-data-source>java:app/jdbc/artesanias</non-jta-data-source>
-    <class>co.edu.uniandes.csw.artesanias.entities.BaseEntity</class>
     <class>co.edu.uniandes.csw.artesanias.entities.ComentarioEntity</class>
     <class>co.edu.uniandes.csw.artesanias.entities.ConferenciaEntity</class>
     <class>co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity</class>
@@ -17,9 +16,8 @@
     <validation-mode>NONE</validation-mode>
     <properties>
       <property name="eclipselink.logging.level" value="FINE"/>
-      <property name="eclipselink.ddl-generation" value="create-tables"/>
+      <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
       <property name="eclipselink.cache.type.default" value="NONE"/>
-      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     </properties>
   </persistence-unit>
 </persistence>
