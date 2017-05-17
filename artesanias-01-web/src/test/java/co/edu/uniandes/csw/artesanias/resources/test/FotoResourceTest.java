@@ -102,7 +102,7 @@ public class FotoResourceTest {
     public void insertData() {
         for (int i = 0; i < 3; i++) {
             FotoEntity foto = factory.manufacturePojo(FotoEntity.class);
-            foto.setLongId(i + 1L);
+            foto.setId(i + 1L);
             em.persist(foto);
             oraculo.add(foto);
         }

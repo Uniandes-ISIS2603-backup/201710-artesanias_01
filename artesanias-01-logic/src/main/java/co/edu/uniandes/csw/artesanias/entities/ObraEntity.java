@@ -77,20 +77,12 @@ private UsuarioEntity usuario;
 //metodos setters y getters
 
     @Override
-   public int getId() {
-        return Math.toIntExact(id);
-   }
-   
-   public Long getLongId(){
+   public Long getId(){
        return id;
    }
 
    @Override
-   public void setId(int id){
-       this.id = (long) id;
-   }
-   
-   public void setLongId(Long id) {
+   public void setId(Long id) {
        this.id = id;
    }
 

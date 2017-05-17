@@ -8,6 +8,9 @@ package co.edu.uniandes.csw.artesanias.entities;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -20,7 +23,9 @@ import uk.co.jemos.podam.common.PodamExclude;
 @Entity
 public class FotoEntity extends BaseEntity implements Serializable{
     
-    private Long id;
+@Id
+@GeneratedValue(strategy =GenerationType.IDENTITY)
+private Long id;
     
 private String url;    
 
@@ -55,24 +60,18 @@ private ObraEntity obra;
     }
 
     // TODO: Eliminar métodos que sobre-escriben el método pero no hacen nada
+
     @Override
-    public int getId() {
-        return Math.toIntExact(id); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    public Long getLongId(){
+    public Long getId(){
         return id;
     }
 
     // TODO: Eliminar métodos que sobre-escriben el método pero no hacen nada
     @Override
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = (long)id ; 
     }
 
-    public void setLongId(Long id){
-        this.id = id;
-    }
     
     public Date getFecha() {
         return fecha;

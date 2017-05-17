@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.artesanias.resources;
+package co.edu.uniandes.csw.artesanias.resources.test;
 
 import co.edu.uniandes.csw.artesanias.dtos.ObraDTO;
 import co.edu.uniandes.csw.artesanias.entities.ObraEntity;
+import co.edu.uniandes.csw.artesanias.resources.ObraResource;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
@@ -101,7 +102,7 @@ public class ObraResourceTest {
     public void insertData() {
         for (int i = 0; i < 3; i++) {
             ObraEntity obra = factory.manufacturePojo(ObraEntity.class);
-            obra.setLongId(i + 1L);
+            obra.setId(i + 1L);
             em.persist(obra);
             oraculo.add(obra);
         }

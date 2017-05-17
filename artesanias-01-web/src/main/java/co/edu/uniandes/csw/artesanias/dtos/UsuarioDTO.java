@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class UsuarioDTO implements Serializable{
     
-    private int id;
+    private Long id;
     private String nombre;
     private String informacionTrabajo;
     private String nacionalidad;
@@ -25,11 +25,11 @@ public class UsuarioDTO implements Serializable{
     private boolean boleta;
     private boolean administrador;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

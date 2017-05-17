@@ -28,7 +28,7 @@ public class ObraDTO implements Serializable{
     {
         if(entity !=null)
         {
-            this.id = entity.getLongId();
+            this.id = entity.getId();
             this.nombre = entity.getNombre();
             this.rating = entity.getRating();
             this.materiales = entity.getMaterial();
@@ -39,7 +39,7 @@ public class ObraDTO implements Serializable{
     public ObraEntity toEntity()
     {
         ObraEntity entity = new ObraEntity();
-        entity.setLongId(id);
+        entity.setId(id);
         entity.setMaterial(materiales);
         entity.setRating(rating);
         entity.setTecnica(tecnica);
@@ -47,8 +47,8 @@ public class ObraDTO implements Serializable{
         return entity;
     }
 
-    public int getId() {
-        return Math.toIntExact(id);
+    public Long getId() {
+        return id;
     }
 
     public void setId(int id) {

@@ -121,7 +121,7 @@ public class FotoPersistenceTest {
       //Consigue la segunda foto de la lista y la compara con la segunda foto en la base de datos.
       FotoEntity comp = data.get(1);
       
-      FotoEntity ent = persistence.findFoto(comp.getLongId());
+      FotoEntity ent = persistence.findFoto(comp.getId());
       
       Assert.assertEquals(comp.getId(), ent.getId());
       Assert.assertEquals(comp.getUrl(), ent.getUrl());
@@ -135,7 +135,7 @@ public class FotoPersistenceTest {
 
     //eliminar la segunda obra usando la clase persistencia
     FotoEntity p = data.get(1);
-    persistence.deleteFoto(p.getLongId());
+    persistence.deleteFoto(p.getId());
     // leer esa misma foto usando el EntityManager
     FotoEntity c =em.find(FotoEntity.class, p.getId());
     // la foto que retorna el EntityManager debe ser null

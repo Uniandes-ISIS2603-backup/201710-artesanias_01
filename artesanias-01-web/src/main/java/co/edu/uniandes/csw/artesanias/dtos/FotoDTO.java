@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class FotoDTO {
     
-    private int id;
+    private Long id;
     private String url;
     private Date fecha;
     
@@ -38,11 +38,11 @@ public class FotoDTO {
         return entity;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
