@@ -2,5 +2,9 @@
 /artesanias-web/target/
 /artesanias-01-logic/target/
 /artesanias-01-web/target/
+<<<<<<< OURS
 /artesanias-01-web/src/main/webapp/bower_components/
 /artesanias-01-logic/nbproject/
+=======
+/artesanias-01-web/src/main/webapp/bower_components/
+>>>>>>> THEIRS
