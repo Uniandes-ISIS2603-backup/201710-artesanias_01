@@ -4,38 +4,38 @@
  * and open the template in the editor.
  */
 (function (ng) {
-    var mod = ng.module("reviewModule", ['ui.router']);
+    var mod = ng.module("comentarioModule", ['ui.router']);
 
-    mod.constant("booksContext", "api/reviews");
+    mod.constant("comentarioContext", "api/comentario");
 
-    mod.constant("reviewsContext", "reviews");
+    mod.constant("comentarioContext", "comentarioss");
 
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             var basePath = 'src/modules/Comentario/';
-            $urlRouterProvider.otherwise("/reviewsList");
+            $urlRouterProvider.otherwise("/comentariosList");
 
-            $stateProvider.state('reviews', {
-                url: '/reviews',
+            $stateProvider.state('comentarioss', {
+                url: '/comentarios',
                 abstract: true,
                 parent: 'obrasDetail',
                 resolve: {
-                    reviews: ['$http', 'obrasContext', 'reviewsContext', '$stateParams', function ($http, obrasContext, reviewsContext, $params) {
-                            return $http.get(obrasContext + '/' + $params.obraId + '/' + reviewsContext);
+                    comentario: ['$http', 'obrasContext', function ($http, obrasContext, comentariosContext, $params) {
+                            return $http.get(obrasContext + '/' + $params.obraId + '/' + comentariosContext);
                         }]
                 },
                 views: {
                     'childrenView': {
-                        templateUrl: basePath + 'reviews.html'
+                        templateUrl: basePath + 'comentarios.html'
                     }
                 },
-            }).state('reviewsList', {
+            }).state('comentariosList', {
                 url: '/list',
-                parent: 'reviews',
+                parent: 'comentarios',
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'reviews.list.html',
-                        controller: ['$scope', 'reviews', function ($scope, reviews) {
-                                $scope.reviewsRecords = reviews.data;
+                        templateUrl: basePath + 'comentarios.list.html',
+                        controller: ['$scope', 'comentarios', function ($scope, comentarios) {
+                                $scope.reviewsRecords = comentarios.data;
                             }]
                     }
                 }
