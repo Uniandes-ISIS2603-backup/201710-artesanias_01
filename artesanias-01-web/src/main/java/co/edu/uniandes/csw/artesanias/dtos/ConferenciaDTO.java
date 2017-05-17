@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ConferenciaDTO implements Serializable {
     
-    private Long id;
+    private int id;
     private String salon;
     private Date fechaInicio;
     private Date fechaFin;
@@ -49,11 +49,11 @@ public class ConferenciaDTO implements Serializable {
         return entity;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

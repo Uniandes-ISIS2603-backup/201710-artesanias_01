@@ -27,7 +27,7 @@ public class StandLogic
     public List<StandEntity> getStands(){
         return persistence.findAllStands();
     }
-    public StandEntity getStand(Long id){
+    public StandEntity getStand(int id){
         return persistence.findStand(id);
     }
     
@@ -38,7 +38,7 @@ public class StandLogic
     public StandEntity updateStand(StandEntity entity){
         return persistence.updateStand(entity);
     }
-    public void deleteStand (Long id){
+    public void deleteStand (int id){
         persistence.deleteStand(id);
     }
 }
