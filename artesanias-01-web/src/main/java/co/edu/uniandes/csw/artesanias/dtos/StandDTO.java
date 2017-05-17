@@ -17,16 +17,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class StandDTO implements Serializable{
     
-    private int numeroStand;
+    private Long numeroStand;
     private int tamanio;
     private double precio;
     private String caracteristicas;
 
-    public int getNumeroStand() {
+    public Long getNumeroStand() {
         return numeroStand;
     }
 
-    public void setNumeroStand(int numeroStand) {
+    public void setNumeroStand(Long numeroStand) {
         this.numeroStand = numeroStand;
     }
 

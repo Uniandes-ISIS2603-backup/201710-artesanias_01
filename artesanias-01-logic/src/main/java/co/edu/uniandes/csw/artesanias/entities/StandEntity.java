@@ -24,7 +24,7 @@ public class StandEntity implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int numeroStand;
+    private Long numeroStand;
     
     private int tamanio;
     
@@ -44,7 +44,7 @@ public class StandEntity implements Serializable{
     public StandEntity() {
     }
 
-    public StandEntity(int numeroStand, int tamanio, double precio, String caracteristicas, PabellonEntity pabellon, ReservadoEntity reservado) {
+    public StandEntity(Long numeroStand, int tamanio, double precio, String caracteristicas, PabellonEntity pabellon, ReservadoEntity reservado) {
         this.numeroStand = numeroStand;
         this.tamanio = tamanio;
         this.price = precio;
@@ -55,7 +55,7 @@ public class StandEntity implements Serializable{
     
 
     
-    public int getNumeroStand() {
+    public Long getNumeroStand() {
         return numeroStand;
     }
 
@@ -75,7 +75,7 @@ public class StandEntity implements Serializable{
         return pabellon;
     }
 
-    public void setNumeroStand(int numeroStand) {
+    public void setNumeroStand(Long numeroStand) {
         this.numeroStand = numeroStand;
     }
 
