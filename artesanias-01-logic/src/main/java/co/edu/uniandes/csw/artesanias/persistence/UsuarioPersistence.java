@@ -29,7 +29,7 @@ public class UsuarioPersistence {
         return entity;
     }
 
-    public UsuarioEntity findUsuario(int id) {
+    public UsuarioEntity findUsuario(long id) {
 
         return em.find(UsuarioEntity.class, id);
 
@@ -41,7 +41,7 @@ public class UsuarioPersistence {
 
     }
 
-    public void deleteUsuario(int id) {
+    public void deleteUsuario(long id) {
 
         UsuarioEntity entity = em.find(UsuarioEntity.class, id);
         em.remove(entity);

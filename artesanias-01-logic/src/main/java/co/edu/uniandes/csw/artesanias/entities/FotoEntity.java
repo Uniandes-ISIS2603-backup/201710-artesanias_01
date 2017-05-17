@@ -17,7 +17,7 @@ import javax.persistence.TemporalType;
  * @author da.cortes11
  */
 @Entity
-public class FotoEntity implements Serializable{
+public class FotoEntity extends BaseEntity implements Serializable{
     
 private String url;    
 
@@ -33,8 +33,8 @@ private ObraEntity obra;
     public FotoEntity() {
     }
 
-    public FotoEntity(String url, Date fecha, ObraEntity obra) {
-       
+    public FotoEntity(String url, Date fecha, ObraEntity obra, int id) {
+        super(id);
         this.url = url;
         this.fecha = fecha;
         this.obra = obra;
@@ -51,7 +51,17 @@ private ObraEntity obra;
     }
 
     // TODO: Eliminar métodos que sobre-escriben el método pero no hacen nada
-   
+    @Override
+    public int getId() {
+        return super.getId(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    // TODO: Eliminar métodos que sobre-escriben el método pero no hacen nada
+    @Override
+    public void setId(int id) {
+        super.setId(id); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public Date getFecha() {
         return fecha;
     }

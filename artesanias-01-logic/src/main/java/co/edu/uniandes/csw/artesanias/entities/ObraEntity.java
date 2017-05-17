@@ -22,7 +22,7 @@ import javax.persistence.ManyToOne;
  * @author da.cortes11
  */
 @Entity
-public class ObraEntity implements Serializable
+public class ObraEntity extends BaseEntity implements Serializable
 {
     //Atributos
 @Id
