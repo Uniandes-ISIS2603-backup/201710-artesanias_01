@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.artesanias.resources;
+package co.edu.uniandes.csw.artesanias.resources.test;
 
 import co.edu.uniandes.csw.artesanias.dtos.FotoDTO;
 import co.edu.uniandes.csw.artesanias.entities.FotoEntity;
+import co.edu.uniandes.csw.artesanias.resources.FotoResource;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;

@@ -60,7 +60,7 @@ public class ReservaResource
     @GET
     @Path("{id: \\d+}")
     public CrearReservaDTO getReservado(@PathParam ("id") Long id){
-        return new CrearReservaDTO(logica.getReservado(id));
+        return new CrearReservaDTO(logica.getReservado(Math.toIntExact(id)));
     }
     
     // TODO: revisar la representación
@@ -79,7 +79,7 @@ public class ReservaResource
     @DELETE
     @Path("{id: \\d+}")
     public void deleteReservado(@PathParam("id") Long id){
-        logica.deleteReservado(id);
+        logica.deleteReservado(Math.toIntExact(id));
     }
     
 }
