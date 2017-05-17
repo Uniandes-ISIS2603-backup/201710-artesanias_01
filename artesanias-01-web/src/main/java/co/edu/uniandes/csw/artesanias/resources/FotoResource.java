@@ -30,12 +30,10 @@ import reactor.util.Assert;
 @Produces(MediaType.APPLICATION_JSON)
 public class FotoResource {
     
-    private final FotoLogic logica;
-    @Inject 
-    public FotoResource(FotoLogic logica) {
-        Assert.notNull(logica, "My persistance must not be null");
-        this.logica = logica;
-    }
+    @Inject
+      FotoLogic logica;
+     
+   
     
     
     private List<FotoDTO> listEntity2DTO(List<FotoEntity> entityList)

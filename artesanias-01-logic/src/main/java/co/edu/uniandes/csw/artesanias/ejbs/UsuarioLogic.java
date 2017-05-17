@@ -15,13 +15,14 @@ import reactor.util.Assert;
 public class UsuarioLogic 
 {
     // TODO: implementar las validaciones de negocio
-    private final UsuarioPersistence persistence;
-    @Inject 
-    public UsuarioLogic(UsuarioPersistence persistence) {
-        Assert.notNull(persistence,"My persistance will not be null");
-        this.persistence = persistence;
-    }
-    
+    @Inject
+    private  UsuarioPersistence persistence;
+     
+//    public UsuarioLogic(UsuarioPersistence persistence) {
+//        Assert.notNull(persistence,"My persistance will not be null");
+//        this.persistence = persistence;
+//    }
+//    
     
     
     

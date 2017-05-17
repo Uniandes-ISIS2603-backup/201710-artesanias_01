@@ -24,7 +24,7 @@ public class FotoDTO {
     
     public FotoDTO(FotoEntity entity)
     {
-        this.id =entity.getId();
+        this.id = entity.getId();
         this.fecha=entity.getFecha();
         this.url=entity.getUrl();
     }
@@ -32,7 +32,7 @@ public class FotoDTO {
     public FotoEntity toEntity()
     {
         FotoEntity entity = new FotoEntity();
-        entity.setId(id);
+        entity.setId(Long.valueOf(id));
         entity.setFecha(fecha);
         entity.setUrl(url);
         return entity;

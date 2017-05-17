@@ -33,13 +33,10 @@ import reactor.util.Assert;
 @Produces(MediaType.APPLICATION_JSON)
 public class ObraResource 
 {
-    private final ObraLogic logica;
      @Inject 
-    public ObraResource(ObraLogic logica) {
-        Assert.notNull(logica, "My persistance must not be null");
-        this.logica = logica;
-    }
-     
+      ObraLogic logica;
+    
+  
      
     private List<ObraDTO> listEntity2DTO(List<ObraEntity> entityList)
     {

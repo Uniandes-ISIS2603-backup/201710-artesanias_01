@@ -14,14 +14,14 @@ import reactor.util.Assert;
 public class FotoLogic {
     
     // TODO: implementar las validaciones de negocio
-    
-    private final FotoPersistence persistence;
-    @Inject 
-    public FotoLogic(FotoPersistence persistence) {
-        Assert.notNull(persistence,"My persistence will not be null");
-        this.persistence = persistence;
-    }
-    
+    @Inject
+    private  FotoPersistence persistence;
+     
+//     public FotoLogic(FotoPersistence persistence) {
+//       Assert.notNull(persistence,"My persistence will not be null");
+//        this.persistence = persistence;
+//    }
+//    
     
      
     public FotoEntity createFoto(FotoEntity entity){

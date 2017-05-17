@@ -16,13 +16,13 @@ import reactor.util.Assert;
 public class ObraLogic 
 {
     // TODO: implementar las validaciones de negocio
-
-    private final ObraPersistence persistence;
-    @Inject 
-    public ObraLogic(ObraPersistence persistence) {
-        Assert.notNull(persistence,"My persistance will not be null");
-        this.persistence = persistence;
-    }
+    @Inject
+    private ObraPersistence persistence;
+    
+//    public ObraLogic(ObraPersistence persistence) {
+//        Assert.notNull(persistence,"My persistance will not be null");
+//        this.persistence = persistence;
+//    }
     
     
     

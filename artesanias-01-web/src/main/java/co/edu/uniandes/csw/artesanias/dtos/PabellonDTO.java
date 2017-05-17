@@ -48,7 +48,7 @@ public class PabellonDTO implements Serializable {
     public PabellonEntity toEntity()
     {
         PabellonEntity entity = new PabellonEntity();
-        entity.setId(id);
+        entity.setId(Long.valueOf(id));
         entity.setTema(tema);
         return entity;
     }

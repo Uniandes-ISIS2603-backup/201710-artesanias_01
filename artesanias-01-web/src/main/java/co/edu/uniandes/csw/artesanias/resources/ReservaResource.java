@@ -33,13 +33,10 @@ import reactor.util.Assert;
 @Produces(MediaType.APPLICATION_JSON)
 public class ReservaResource 
 {
-    private final ReservadoLogic logica;  
     @Inject
-    public ReservaResource(ReservadoLogic logica) {
-        Assert.notNull(logica, "My logica must not be null");
-        this.logica = logica;
-    }
-      
+      ReservadoLogic logica;  
+    
+    
       
     private List<CrearReservaDTO> listEntity2DTO(List<ReservadoEntity> entityList)
     {

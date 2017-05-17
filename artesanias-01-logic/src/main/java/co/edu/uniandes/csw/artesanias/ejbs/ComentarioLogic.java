@@ -15,14 +15,15 @@ import reactor.util.Assert;
 public class ComentarioLogic {
     
     // TODO: implementar las validaciones de negocio
-    private final ComentarioPersistence persistence;
     @Inject
+    private  ComentarioPersistence persistence;
     
     
-    public ComentarioLogic(ComentarioPersistence persistence) {
-    Assert.notNull(persistence, "My persistance must not be null");
-    this.persistence = persistence;
-    }
+    
+//    public ComentarioLogic(ComentarioPersistence persistence) {
+//    Assert.notNull(persistence, "My persistance must not be null");
+//    this.persistence = persistence;
+//    }
     
     
     public List<ComentarioEntity> getComentarios(){

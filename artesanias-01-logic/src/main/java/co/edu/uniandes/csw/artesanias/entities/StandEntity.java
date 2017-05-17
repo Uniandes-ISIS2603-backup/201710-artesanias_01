@@ -20,10 +20,8 @@ import co.edu.uniandes.csw.artesanias.entities.ReservadoEntity;
  */
 
 @Entity
-public class StandEntity implements Serializable{
+public class StandEntity extends BaseEntity implements Serializable{
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long numeroStand;
     
     private int tamanio;

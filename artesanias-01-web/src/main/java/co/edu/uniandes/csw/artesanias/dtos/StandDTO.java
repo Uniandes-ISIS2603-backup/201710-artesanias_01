@@ -14,8 +14,8 @@ import co.edu.uniandes.csw.artesanias.entities.StandEntity;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
-public class StandDTO implements Serializable{
+
+public class StandDTO {
     
     private Long numeroStand;
     private int tamanio;
@@ -72,10 +72,10 @@ public class StandDTO implements Serializable{
     public StandEntity toEntity()
     {
         StandEntity entity = new StandEntity();
-        entity.setNumeroStand(numeroStand);
-        entity.setPrecio(precio);
-        entity.setTamanio(tamanio);
-        entity.setCaracteristicas(caracteristicas);
+        entity.setNumeroStand(this.numeroStand);
+        entity.setPrecio(this.precio);
+        entity.setTamanio(this.tamanio);
+        entity.setCaracteristicas(this.caracteristicas);
         return entity;
     }
     

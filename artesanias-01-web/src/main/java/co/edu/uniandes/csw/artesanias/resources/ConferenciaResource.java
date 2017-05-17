@@ -25,7 +25,7 @@ import reactor.util.Assert;
 
 /**
  *
- * @author f.velasquez11
+ * @author jm.munoz14
  */
 
 @Path("/conferencias")
@@ -34,12 +34,10 @@ import reactor.util.Assert;
 public class ConferenciaResource 
 {
 
-    private final ConferenciaLogic logica;
     @Inject 
-    public ConferenciaResource(ConferenciaLogic logica) {
-        Assert.notNull(logica, "My persistance must not be null");
-        this.logica = logica;
-    }
+    ConferenciaLogic logica;
+    
+  
     private List<ConferenciaDTO> listEntity2DTO(List<ConferenciaEntity> entityList)
     {
         List<ConferenciaDTO> list = new ArrayList<>();

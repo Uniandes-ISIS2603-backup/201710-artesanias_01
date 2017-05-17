@@ -33,12 +33,15 @@ import reactor.util.Assert;
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class UsuarioResource {
-    private final UsuarioLogic logic;
+    
+    
     @Inject 
-    public UsuarioResource(UsuarioLogic logic) {
-       Assert.notNull(logic, "My logica must not be null");
-        this.logic = logic;
-    }
+      UsuarioLogic logic;
+    
+//    public UsuarioResource(UsuarioLogic logic) {
+//       Assert.notNull(logic, "My logica must not be null");
+//        this.logic = logic;
+//    }
    
    
    private List<UsuarioDTO> listEntity2DTO(List<UsuarioEntity> entityList)

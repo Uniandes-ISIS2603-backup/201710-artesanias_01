@@ -31,12 +31,10 @@ import reactor.util.Assert;
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class PabellonResource {
-    private final PabellonLogic logica;
     @Inject 
-    public PabellonResource(PabellonLogic logica) {
-        Assert.notNull(logica, "My persistance must not be null");
-        this.logica = logica;
-    }
+      PabellonLogic logica;
+    
+   
     
     
     private List<PabellonDTO> listEntity2DTO(List<PabellonEntity> entityList)

@@ -88,7 +88,7 @@ public class ObraLogicTest {
       em.joinTransaction();
       clearData();
       insertData();
-      obraLogic = new ObraLogic(obraPersistence);
+      
       utx.commit();
     } catch (Exception e) {
       logger.log(Level.FINE, "Error creando datos de prueba", e);

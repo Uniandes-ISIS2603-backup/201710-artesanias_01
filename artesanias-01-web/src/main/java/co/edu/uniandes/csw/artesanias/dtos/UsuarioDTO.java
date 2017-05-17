@@ -99,7 +99,7 @@ public class UsuarioDTO implements Serializable{
     public UsuarioEntity toEntity()
     {
         UsuarioEntity entity = new UsuarioEntity();
-        entity.setId(id);
+        entity.setId(Long.valueOf(id));
         entity.setNombre(nombre);
         entity.setNacionalidad(nacionalidad);
         entity.setInformacionTrabajos(informacionTrabajo);

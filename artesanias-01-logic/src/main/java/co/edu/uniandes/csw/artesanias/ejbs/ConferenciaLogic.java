@@ -15,15 +15,15 @@ import reactor.util.Assert;
 public class ConferenciaLogic 
 {
     // TODO: implementar las validaciones de negocio
+    @Inject
+    private  ConferenciaPersistence persistence;
     
-    private final ConferenciaPersistence persistence;
-    
-    @Inject 
-    public ConferenciaLogic(ConferenciaPersistence persistence) {
-        Assert.notNull(persistence, "My conference persistance must not be null");
-        this.persistence = persistence;
-    }
-    
+     
+//    public ConferenciaLogic(ConferenciaPersistence persistence) {
+//        Assert.notNull(persistence, "My conference persistance must not be null");
+//        this.persistence = persistence;
+//    }
+//    
     
     
     public List<ConferenciaEntity> getConferencias(){

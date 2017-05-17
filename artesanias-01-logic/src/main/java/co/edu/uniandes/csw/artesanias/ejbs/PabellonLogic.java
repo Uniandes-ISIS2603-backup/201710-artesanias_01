@@ -16,12 +16,13 @@ public class PabellonLogic
 {
     // TODO: implementar las validaciones de negocio
     
-    private final PabellonPersistence persistence;
     @Inject 
-    public PabellonLogic(PabellonPersistence persistence) {
-        Assert.notNull(persistence,"My persistence will not be null");
-        this.persistence = persistence;
-    }
+    private  PabellonPersistence persistence;
+    
+//    public PabellonLogic(PabellonPersistence persistence) {
+//        Assert.notNull(persistence,"My persistence will not be null");
+//        this.persistence = persistence;
+//    }
     
     
     

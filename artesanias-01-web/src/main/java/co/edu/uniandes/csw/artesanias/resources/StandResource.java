@@ -33,12 +33,10 @@ import reactor.util.Assert;
 @Produces(MediaType.APPLICATION_JSON)
 public class StandResource 
 {
-    private final StandLogic logica;
     @Inject
-    public StandResource(StandLogic logica) {
-        Assert.notNull(logica, "My logica must not be null");
-        this.logica = logica;
-    }
+     StandLogic logica;
+    
+  
     
     
     private List<StandDTO> listEntity2DTO(List<StandEntity> entityList)

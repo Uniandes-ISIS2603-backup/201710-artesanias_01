@@ -24,18 +24,16 @@ import reactor.util.Assert;
 
 /**
  *
- * @author f.velasquez11
+ * @author jm.munoz14
  */
 @Path("/feria")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class FeriaArtesanalResource {
-    private final FeriaArtesanalLogic logica;
     @Inject 
-    public FeriaArtesanalResource(FeriaArtesanalLogic logica) {
-        Assert.notNull(logica, "My persistance must not be null");
-        this.logica = logica;
-    }
+      FeriaArtesanalLogic logica;
+    
+    
     
     
     

@@ -16,14 +16,15 @@ public class ReservadoLogic {
     
     // TODO: implementar las validaciones de negocio
     
-    private final ReservadoPersistence persistence;
     @Inject 
-    public ReservadoLogic(ReservadoPersistence persistence) {
-        Assert.notNull(persistence,"My persistance will not be null");
-        this.persistence = persistence;
-    }
+    private  ReservadoPersistence persistence;
     
-    
+//    public ReservadoLogic(ReservadoPersistence persistence) {
+//        Assert.notNull(persistence,"My persistance will not be null");
+//        this.persistence = persistence;
+//    }
+//    
+//    
     
     public ReservadoEntity createReservado(ReservadoEntity entity){
         return persistence.createReservado(entity);

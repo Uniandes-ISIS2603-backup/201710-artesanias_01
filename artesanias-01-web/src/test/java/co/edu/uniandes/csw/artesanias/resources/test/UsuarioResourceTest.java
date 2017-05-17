@@ -102,7 +102,7 @@ public class UsuarioResourceTest
     public void insertData() {
         for (int i = 0; i < 3; i++) {
             UsuarioEntity reserva = factory.manufacturePojo(UsuarioEntity.class);
-            reserva.setId(Math.toIntExact(i + 1L));
+            reserva.setId((i + 1L));
             em.persist(reserva);
             oraculo.add(reserva);
         }
