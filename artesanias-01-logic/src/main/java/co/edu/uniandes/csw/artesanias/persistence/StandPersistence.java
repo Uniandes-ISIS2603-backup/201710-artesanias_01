@@ -28,7 +28,7 @@ public class StandPersistence {
         return entity;
     }
 
-    public StandEntity findStand(int id) {
+    public StandEntity findStand(Long id) {
 
         return em.find(StandEntity.class, id);
 
@@ -40,7 +40,7 @@ public class StandPersistence {
 
     }
 
-    public void deleteStand(int id) {
+    public void deleteStand(Long id) {
 
         StandEntity entity = em.find(StandEntity.class, id);
         em.remove(entity);
