@@ -54,7 +54,7 @@ public class feriaArtesanalPersistence {
         return entity;
     }
 
-    public void deleteFeria(Integer id) {
+    public void deleteFeria(Long id) {
 
         FeriaArtesanalEntity entity = em.find(FeriaArtesanalEntity.class, id);
         em.remove(entity);

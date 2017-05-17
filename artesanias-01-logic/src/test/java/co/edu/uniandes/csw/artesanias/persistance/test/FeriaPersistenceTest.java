@@ -6,7 +6,7 @@
 
 package co.edu.uniandes.csw.artesanias.persistance.test;
 
-import co.edu.uniandes.csw.artesanias.ejbs.ReservadoLogic;
+import co.edu.uniandes.csw.artesanias.ejbs.FeriaArtesanalLogic;
 import co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity;
 import co.edu.uniandes.csw.artesanias.persistence.feriaArtesanalPersistence;
 import java.util.ArrayList;
@@ -35,7 +35,7 @@ import java.util.logging.Level;
 //@RunWith(Arquillian.class)
 public class FeriaPersistenceTest {
     
-    private static final Logger logger = Logger.getLogger(ReservadoLogic.class.getName());
+    private static final Logger logger = Logger.getLogger(FeriaArtesanalLogic.class.getName());
 
     @Inject
     feriaArtesanalPersistence persistence;
@@ -98,71 +98,80 @@ public class FeriaPersistenceTest {
         }
     }
         
-    /**
-     * Prueba para crear un Book.
-     *
-     * @generated
-     */
+    
     @Test
     public void createFeriaTest() {   
-        //PodamFactory factory = new PodamFactoryImpl();
-        //FeriaArtesanalEntity newEntity = factory.manufacturePojo(FeriaArtesanalEntity.class);
         
-        //Assert.assertNotNull(newEntity);
-       
-        //FeriaArtesanalEntity result = persistence.createFeria(newEntity);
+        PodamFactory factory = new PodamFactoryImpl();
+        FeriaArtesanalEntity newEntity = factory.manufacturePojo(FeriaArtesanalEntity.class);
+        FeriaArtesanalEntity result = persistence.createFeria(newEntity);
 
-        //Assert.assertNotNull(result);
+        Assert.assertNotNull(result);
 
-        //FeriaArtesanalEntity entity = em.find(FeriaArtesanalEntity.class, result.getId());
+        FeriaArtesanalEntity entity = em.find(FeriaArtesanalEntity.class, result.getId());
                    
-        //Assert.assertEquals(newEntity.getFechaFin(), entity.getFechaFin());
-        //Assert.assertEquals(newEntity.getFechaInicio(), entity.getFechaInicio());
-        //Assert.assertEquals(newEntity.getId(), entity.getId());
-        //Assert.assertEquals(newEntity.getLugar(), entity.getLugar());
-        //Assert.assertEquals(newEntity.getNombre(), entity.getNombre());
-        
-         Assert.assertTrue(true);
+        Assert.assertEquals(newEntity.getFechaFin(), entity.getFechaFin());
+        Assert.assertEquals(newEntity.getFechaInicio(), entity.getFechaInicio());
+        Assert.assertEquals(newEntity.getId(), entity.getId());
+        Assert.assertEquals(newEntity.getLugar(), entity.getLugar());
+        Assert.assertEquals(newEntity.getNombre(), entity.getNombre());
     }
     
-    /**
-     * Prueba para consultar la lista de Books.
-     *
-     * @generated
-     */
+    
     @Test
     public void findFeriaTest() {
-        Assert.assertTrue(true);
+        FeriaArtesanalEntity entity = data.get(0);
+        FeriaArtesanalEntity newEntity = persistence.findFeria(entity.getId());
+        Assert.assertNotNull(newEntity);
+        Assert.assertEquals(newEntity.getFechaFin(), entity.getFechaFin());
+        Assert.assertEquals(newEntity.getFechaInicio(), entity.getFechaInicio());
+        Assert.assertEquals(newEntity.getId(), entity.getId());
+        Assert.assertEquals(newEntity.getLugar(), entity.getLugar());
+        Assert.assertEquals(newEntity.getNombre(), entity.getNombre());
     }
 
-    /**
-     * Prueba para consultar un Book.
-     *
-     * @generated
-     */
+    
     @Test
     public void findAllFeriasTest() {
-        Assert.assertTrue(true);
+        List<FeriaArtesanalEntity> list = persistence.findAllFerias();
+        Assert.assertEquals(data.size(), list.size());
+        for (FeriaArtesanalEntity ent : list) {
+            boolean found = false;
+            for (FeriaArtesanalEntity entity : data) {
+                if (ent.getId().equals(entity.getId())) {
+                    found = true;
+                }
+            }
+            Assert.assertTrue(found);
+        }
     }
     
-    /**
-     * Prueba para eliminar un Book.
-     *
-     * @generated
-     */
+    
     @Test
     public void updateFeriaTest() {
-        Assert.assertTrue(true);        
+        FeriaArtesanalEntity entity = data.get(0);
+        PodamFactory factory = new PodamFactoryImpl();
+        FeriaArtesanalEntity newEntity = factory.manufacturePojo(FeriaArtesanalEntity.class);
+        newEntity.setId(entity.getId());
+
+        persistence.updateFeria(newEntity);
+
+        FeriaArtesanalEntity resp = em.find(FeriaArtesanalEntity.class, entity.getId());
+
+        Assert.assertEquals(newEntity.getFechaFin(), resp.getFechaFin());
+        Assert.assertEquals(newEntity.getFechaInicio(), resp.getFechaInicio());
+        Assert.assertEquals(newEntity.getId(), resp.getId());
+        Assert.assertEquals(newEntity.getLugar(), resp.getLugar());
+        Assert.assertEquals(newEntity.getNombre(), resp.getNombre());        
     }
 
-    /**
-     * Prueba para actualizar un Book.
-     *
-     * @generated
-     */
+    
     @Test
     public void deleteFeriaTest() {
-        Assert.assertTrue(true);
+        FeriaArtesanalEntity entity = data.get(0);
+        persistence.deleteFeria(entity.getId());
+        FeriaArtesanalEntity deleted = em.find(FeriaArtesanalEntity.class, entity.getId());
+        Assert.assertNull(deleted);
     }
     
 }
