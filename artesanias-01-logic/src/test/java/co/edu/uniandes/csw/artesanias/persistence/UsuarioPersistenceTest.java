@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.artesanias.ejbs.test;
+package co.edu.uniandes.csw.artesanias.persistence;
 
-import co.edu.uniandes.csw.artesanias.ejbs.UsuarioLogic;
 import co.edu.uniandes.csw.artesanias.entities.UsuarioEntity;
 import co.edu.uniandes.csw.artesanias.persistence.UsuarioPersistence;
 import java.util.ArrayList;
@@ -26,15 +25,15 @@ import org.junit.runner.RunWith;
 import uk.co.jemos.podam.api.PodamFactory;
 import uk.co.jemos.podam.api.PodamFactoryImpl;
 
+
 /**
  *
  * @author f.velasquez11
  */
-
 @RunWith(Arquillian.class)
-public class UsuarioLogicTest 
+public class UsuarioPersistenceTest 
 {
-     public static final String DEPLOY = "Prueba";
+    public static final String DEPLOY = "Prueba";
 
     /**
      * @generated
@@ -43,7 +42,6 @@ public class UsuarioLogicTest
     public static WebArchive createDeployment() {
         return ShrinkWrap.create(WebArchive.class, DEPLOY + ".war")
                 .addPackage(UsuarioEntity.class.getPackage())
-                .addPackage(UsuarioLogic.class.getPackage())
                 .addPackage(UsuarioPersistence.class.getPackage())
                 .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
                 .addAsWebInfResource("META-INF/beans.xml", "beans.xml");
@@ -53,7 +51,7 @@ public class UsuarioLogicTest
      * @generated
      */
     @Inject
-    private UsuarioLogic usuarioLogic;
+    private UsuarioPersistence usuarioPersistence;
 
     /**
      * @generated
@@ -113,7 +111,6 @@ public class UsuarioLogicTest
         for (int i = 0; i < 3; i++) {
             PodamFactory factory = new PodamFactoryImpl();
             UsuarioEntity entity = factory.manufacturePojo(UsuarioEntity.class);
-
             em.persist(entity);
             data.add(entity);
         }
@@ -127,15 +124,18 @@ public class UsuarioLogicTest
     @Test
     public void createUsuarioTest() {
         PodamFactory factory = new PodamFactoryImpl();
-        UsuarioEntity entity = factory.manufacturePojo(UsuarioEntity.class);
-        UsuarioEntity result = usuarioLogic.createUsuario(entity);
+        UsuarioEntity newEntity = factory.manufacturePojo(UsuarioEntity.class);
+        UsuarioEntity result = usuarioPersistence.createUsuario(newEntity);
+
         Assert.assertNotNull(result);
-        Assert.assertEquals(result.getId(), entity.getId());
-        Assert.assertEquals(result.getNombre(), entity.getNombre());
-        Assert.assertEquals(result.getNacionalidad(), entity.getNacionalidad());
-        Assert.assertEquals(result.getEdad(), entity.getEdad());
-        Assert.assertEquals(result.getFeria(), entity.getFeria());
-        Assert.assertTrue(true);
+
+        UsuarioEntity entity = em.find(UsuarioEntity.class, result.getId());
+
+        Assert.assertEquals(newEntity.getId(), entity.getId());
+        Assert.assertEquals(newEntity.getNombre(), entity.getNombre());
+        Assert.assertEquals(newEntity.getNacionalidad(), entity.getNacionalidad());
+        Assert.assertEquals(newEntity.getEdad(), entity.getEdad());
+        Assert.assertEquals(newEntity.getFeria(), entity.getFeria());
     }
 
     /**
@@ -145,19 +145,17 @@ public class UsuarioLogicTest
      */
     @Test
     public void getUsuariosTest() {
-        List<UsuarioEntity> list = usuarioLogic.getUsuarios();
+        List<UsuarioEntity> list = usuarioPersistence.findAllUsuarios();
         Assert.assertEquals(data.size(), list.size());
-        for (UsuarioEntity entity : list) {
+        for (UsuarioEntity ent : list) {
             boolean found = false;
-            for (UsuarioEntity storedEntity : data) {
-                if (entity.getId() == (storedEntity.getId())) 
-                {
+            for (UsuarioEntity entity : data) {
+                if (ent.getId()==entity.getId()) {
                     found = true;
                 }
             }
             Assert.assertTrue(found);
         }
-        Assert.assertTrue(true);
     }
 
     /**
@@ -168,15 +166,13 @@ public class UsuarioLogicTest
     @Test
     public void getUsuarioTest() {
         UsuarioEntity entity = data.get(0);
-        long num = Math.toIntExact(entity.getId());
-        UsuarioEntity resultEntity = usuarioLogic.getUsuario(num);
-        Assert.assertNotNull(resultEntity);
-       Assert.assertEquals(resultEntity.getId(), entity.getId());
-        Assert.assertEquals(resultEntity.getNombre(), entity.getNombre());
-        Assert.assertEquals(resultEntity.getNacionalidad(), entity.getNacionalidad());
-        Assert.assertEquals(resultEntity.getEdad(), entity.getEdad());
-        Assert.assertEquals(resultEntity.getFeria(), entity.getFeria());
-        Assert.assertTrue(true);
+        UsuarioEntity newEntity = usuarioPersistence.findUsuario(entity.getId());
+        Assert.assertNotNull(newEntity);
+        Assert.assertEquals(newEntity.getId(), entity.getId());
+        Assert.assertEquals(newEntity.getNombre(), entity.getNombre());
+        Assert.assertEquals(newEntity.getNacionalidad(), entity.getNacionalidad());
+        Assert.assertEquals(newEntity.getEdad(), entity.getEdad());
+        Assert.assertEquals(newEntity.getFeria(), entity.getFeria());
     }
 
     /**
@@ -187,11 +183,9 @@ public class UsuarioLogicTest
     @Test
     public void deleteUsuarioTest() {
         UsuarioEntity entity = data.get(0);
-        long num = Math.toIntExact(entity.getId());
-        usuarioLogic.deleteUsuario(num);
+        usuarioPersistence.deleteUsuario(entity.getId());
         UsuarioEntity deleted = em.find(UsuarioEntity.class, entity.getId());
         Assert.assertNull(deleted);
-        Assert.assertTrue(true);
     }
 
     /**
@@ -203,20 +197,17 @@ public class UsuarioLogicTest
     public void updateUsuarioTest() {
         UsuarioEntity entity = data.get(0);
         PodamFactory factory = new PodamFactoryImpl();
-        UsuarioEntity pojoEntity = factory.manufacturePojo(UsuarioEntity.class);
-        pojoEntity.setId(entity.getId());
+        UsuarioEntity newEntity = factory.manufacturePojo(UsuarioEntity.class);
+        newEntity.setId(entity.getId());
 
-        usuarioLogic.updateUsuario(pojoEntity);
+        usuarioPersistence.updateUsuario(newEntity);
 
         UsuarioEntity resp = em.find(UsuarioEntity.class, entity.getId());
-        Assert.assertNotNull(resp);
-        Assert.assertEquals(pojoEntity.getId(), entity.getId());
-        Assert.assertEquals(pojoEntity.getNombre(), entity.getNombre());
-        Assert.assertEquals(pojoEntity.getNacionalidad(), entity.getNacionalidad());
-        Assert.assertEquals(pojoEntity.getEdad(), entity.getEdad());
-        Assert.assertEquals(pojoEntity.getFeria(), entity.getFeria());
-        Assert.assertTrue(true);
-        
+
+        Assert.assertEquals(newEntity.getId(), entity.getId());
+        Assert.assertEquals(newEntity.getNombre(), entity.getNombre());
+        Assert.assertEquals(newEntity.getNacionalidad(), entity.getNacionalidad());
+        Assert.assertEquals(newEntity.getEdad(), entity.getEdad());
+        Assert.assertEquals(newEntity.getFeria(), entity.getFeria());
     }
-    
 }
