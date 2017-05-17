@@ -9,15 +9,20 @@
                 url: '/pabellones',
                 abstract: true,
                 resolve: {
-                    pabellones: ['$http', function ($http) {
-                            return $http.get('data/pabellones.json');
+                    pabellones: ['$http','pabellonesContext', function ($http, pabellonesContext) {
+                            console.log("P-Holi-11");
+                            console.log("pabellonesContext: "+pabellonesContext);
+                            return $http.get(pabellonesContext);
+                            console.log("P-Holi-12");
                         }]
                 },
                 views: {
                     'mainView': {
                         templateUrl: basePath + 'pabellones.html',
                         controller: ['$scope', 'pabellones', function ($scope, pabellones) {
+                                console.log("P-Holi-21");
                                 $scope.pabellonesRecords = pabellones.data;
+                                console.log("P-Holi-22");
                             }]
                     }
                 }
