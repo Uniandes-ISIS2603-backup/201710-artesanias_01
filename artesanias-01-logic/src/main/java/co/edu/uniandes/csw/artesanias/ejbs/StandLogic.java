@@ -14,13 +14,11 @@ import reactor.util.Assert;
 @Stateless
 public class StandLogic 
 {
-    // TODO: implementar las validaciones de negocio
-    private final StandPersistence persistence;
+    // TODO: implementar las validaciones de negocio  
     @Inject 
-    public StandLogic(StandPersistence persistence) {
-        Assert.notNull(persistence,"My persistance will not be null");
-        this.persistence = persistence;
-    }
+    private  StandPersistence persistence;
+  
+
     
     
     
