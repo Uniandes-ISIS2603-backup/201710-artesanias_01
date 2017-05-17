@@ -123,7 +123,7 @@ public class StandPersistenceTest {
         for (StandEntity ent : list) {
             boolean found = false;
             for (StandEntity entity : data) {
-                if (ent.getNumeroStand() == entity.getNumeroStand()) 
+                if (Long.valueOf(ent.getNumeroStand()).equals(Long.valueOf(entity.getNumeroStand()))) 
                 {
                     found = true;
                 }
