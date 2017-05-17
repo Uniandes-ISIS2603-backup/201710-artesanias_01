@@ -12,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.ManyToOne;
-import javax.persistence.Transient;
-import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -29,14 +27,12 @@ private Long id;
 
 private String comentario;
 
-@Temporal(TemporalType.TIMESTAMP)
+@Temporal(TemporalType.DATE)
 private Date fecha;
 
 // TODO: implementar las relaciones en las entidades
 //asociaciones
-@PodamExclude
 @ManyToOne
-//@Transient
 private ObraEntity obra;
 //metodos setters y getters
 

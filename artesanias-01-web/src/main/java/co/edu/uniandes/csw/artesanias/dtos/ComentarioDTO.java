@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ComentarioDTO implements Serializable {
 
-    private Long id;
+    private int id;
     private String comentario;
     private Date fecha;
 
@@ -41,11 +41,11 @@ public class ComentarioDTO implements Serializable {
         return entity;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

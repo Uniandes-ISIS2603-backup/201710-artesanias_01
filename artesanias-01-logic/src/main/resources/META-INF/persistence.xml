@@ -3,16 +3,7 @@
   <persistence-unit name="feriaPU" transaction-type="JTA">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>java:app/jdbc/artesanias</jta-data-source>
-    <class>co.edu.uniandes.csw.artesanias.entities.ComentarioEntity</class>
-    <class>co.edu.uniandes.csw.artesanias.entities.ConferenciaEntity</class>
-    <class>co.edu.uniandes.csw.artesanias.entities.FeriaArtesanalEntity</class>
-    <class>co.edu.uniandes.csw.artesanias.entities.FotoEntity</class>
-    <class>co.edu.uniandes.csw.artesanias.entities.ObraEntity</class>
-    <class>co.edu.uniandes.csw.artesanias.entities.PabellonEntity</class>
-    <class>co.edu.uniandes.csw.artesanias.entities.ReservadooEntity</class>
-    <class>co.edu.uniandes.csw.artesanias.entities.StandEntity</class>
-    <class>co.edu.uniandes.csw.artesanias.entities.UsuariorioEntity</class>
-    <class>co.edu.uniandes.csw.artesanias.entities.BaseEntity</class>
+    
     <properties>
       <property name="eclipselink.logging.level" value="FINE"/>
       <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
