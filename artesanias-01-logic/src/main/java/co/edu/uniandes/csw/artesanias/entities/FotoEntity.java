@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -18,6 +19,8 @@ import javax.persistence.TemporalType;
  */
 @Entity
 public class FotoEntity extends BaseEntity implements Serializable{
+    
+    private Long id;
     
 private String url;    
 
@@ -27,6 +30,7 @@ private Date fecha;
 // TODO: Al parecer Foto no se relaciona con nada. Incluir las relaciones
 //Relaciones
 // Asociacion con Obra
+@PodamExclude
 @ManyToOne
 private ObraEntity obra;
 
@@ -34,7 +38,7 @@ private ObraEntity obra;
     }
 
     public FotoEntity(String url, Date fecha, ObraEntity obra, int id) {
-        super(id);
+        this.id = (long)id;
         this.url = url;
         this.fecha = fecha;
         this.obra = obra;
@@ -53,15 +57,23 @@ private ObraEntity obra;
     // TODO: Eliminar métodos que sobre-escriben el método pero no hacen nada
     @Override
     public int getId() {
-        return super.getId(); //To change body of generated methods, choose Tools | Templates.
+        return Math.toIntExact(id); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public Long getLongId(){
+        return id;
     }
 
     // TODO: Eliminar métodos que sobre-escriben el método pero no hacen nada
     @Override
     public void setId(int id) {
-        super.setId(id); //To change body of generated methods, choose Tools | Templates.
+        this.id = (long)id ; 
     }
 
+    public void setLongId(Long id){
+        this.id = id;
+    }
+    
     public Date getFecha() {
         return fecha;
     }
@@ -72,4 +84,13 @@ private ObraEntity obra;
 
     // TODO: incluir métodos para manipular las relaciones
 
+    public ObraEntity getObra() {
+        return obra;
+    }
+
+    public void setObra(ObraEntity obra) {
+        this.obra = obra;
+    }
+    
+    
 }

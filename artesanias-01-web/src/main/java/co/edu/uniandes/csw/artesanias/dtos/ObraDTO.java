@@ -1,4 +1,3 @@
-// TODO: eliminar los comentarios por defecto
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ObraDTO implements Serializable{
     
-    private int id;
+    private Long id;
     private String nombre;
     private int rating;
     private String materiales;
@@ -29,7 +28,7 @@ public class ObraDTO implements Serializable{
     {
         if(entity !=null)
         {
-            this.id = entity.getId();
+            this.id = entity.getLongId();
             this.nombre = entity.getNombre();
             this.rating = entity.getRating();
             this.materiales = entity.getMaterial();
@@ -40,7 +39,7 @@ public class ObraDTO implements Serializable{
     public ObraEntity toEntity()
     {
         ObraEntity entity = new ObraEntity();
-        entity.setId(id);
+        entity.setLongId(id);
         entity.setMaterial(materiales);
         entity.setRating(rating);
         entity.setTecnica(tecnica);
@@ -49,11 +48,11 @@ public class ObraDTO implements Serializable{
     }
 
     public int getId() {
-        return id;
+        return Math.toIntExact(id);
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.id = (long)id;
     }
 
     public String getNombre() {

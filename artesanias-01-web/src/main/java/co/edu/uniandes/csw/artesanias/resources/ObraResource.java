@@ -67,7 +67,12 @@ public class ObraResource
     //       como se pueden crear y actualizar las relaciones? 
     @POST
     public ObraDTO createObra(ObraDTO dto){
+        try{
         return new ObraDTO(logica.createObra(dto.toEntity()));
+        }catch(Exception e)
+        {
+            return null;
+        }
     } 
     
     // TODO: revisar la representación. no se pueden actualizar las relaciones? 
