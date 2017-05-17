@@ -37,7 +37,7 @@ public class FeriaArtesanalLogic
     public FeriaArtesanalEntity updateFeria(FeriaArtesanalEntity entity){
         return persistence.updateFeria(entity);
     }
-    public void deleteFeria(Integer id){
+    public void deleteFeria(Long id){
         persistence.deleteFeria(id);
     }
     

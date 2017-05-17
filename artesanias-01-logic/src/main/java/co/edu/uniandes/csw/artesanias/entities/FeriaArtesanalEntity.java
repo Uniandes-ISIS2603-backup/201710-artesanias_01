@@ -29,7 +29,7 @@ public class FeriaArtesanalEntity  implements Serializable{
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY )
-    private Integer id;
+    private Long id;
     
     private String nombre;
     
@@ -62,7 +62,7 @@ private List<ConferenciaEntity> conferencias= new ArrayList<>();
     public FeriaArtesanalEntity() {
     }
 
-    public FeriaArtesanalEntity(Integer id, String nombre, Date fechaInicio, Date fechaFin, String lugar) {
+    public FeriaArtesanalEntity(Long id, String nombre, Date fechaInicio, Date fechaFin, String lugar) {
         this.id = id;
         this.nombre = nombre;
         this.fechaInicio = fechaInicio;
@@ -71,11 +71,11 @@ private List<ConferenciaEntity> conferencias= new ArrayList<>();
     }
     
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getNombre() {
