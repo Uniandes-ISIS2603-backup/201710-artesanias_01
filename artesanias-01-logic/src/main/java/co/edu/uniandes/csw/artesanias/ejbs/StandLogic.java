@@ -14,20 +14,18 @@ import reactor.util.Assert;
 @Stateless
 public class StandLogic 
 {
-    // TODO: implementar las validaciones de negocio
-    private final StandPersistence persistence;
+    // TODO: implementar las validaciones de negocio  
     @Inject 
-    public StandLogic(StandPersistence persistence) {
-        Assert.notNull(persistence,"My persistance will not be null");
-        this.persistence = persistence;
-    }
+    private  StandPersistence persistence;
+  
+
     
     
     
     public List<StandEntity> getStands(){
         return persistence.findAllStands();
     }
-    public StandEntity getStand(int id){
+    public StandEntity getStand(Long id){
         return persistence.findStand(id);
     }
     
@@ -38,7 +36,7 @@ public class StandLogic
     public StandEntity updateStand(StandEntity entity){
         return persistence.updateStand(entity);
     }
-    public void deleteStand (int id){
+    public void deleteStand (Long id){
         persistence.deleteStand(id);
     }
 }

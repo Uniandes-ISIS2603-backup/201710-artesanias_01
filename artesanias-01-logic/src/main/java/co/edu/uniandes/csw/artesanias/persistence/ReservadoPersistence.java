@@ -34,7 +34,7 @@ public class ReservadoPersistence {
 
     }
 
-    public ReservadoEntity findReservado(Long id) {
+    public ReservadoEntity findReservado(int id) {
 
         return em.find(ReservadoEntity.class, id);
 
@@ -46,7 +46,7 @@ public class ReservadoPersistence {
 
     }
 
-    public void deleteReservado(Long id) {
+    public void deleteReservado(int id) {
 
         ReservadoEntity entity = em.find(ReservadoEntity.class, id);
         em.remove(entity);

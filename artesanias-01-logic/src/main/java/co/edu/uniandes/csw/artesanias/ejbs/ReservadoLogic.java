@@ -33,7 +33,7 @@ public class ReservadoLogic {
         return persistence.findAllReservados();
     }
     
-    public ReservadoEntity getReservado(Long id){
+    public ReservadoEntity getReservado(int id){
          return persistence.findReservado(id);
      }
     
@@ -41,7 +41,7 @@ public class ReservadoLogic {
         return persistence.updateReservado(entity);
     }
     
-    public void deleteReservado (Long id)
+    public void deleteReservado (int id)
     {
         persistence.deleteReservado(id);
     }

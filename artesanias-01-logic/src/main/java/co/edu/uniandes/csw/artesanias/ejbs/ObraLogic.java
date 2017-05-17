@@ -1,6 +1,7 @@
 package co.edu.uniandes.csw.artesanias.ejbs;
 
 import co.edu.uniandes.csw.artesanias.entities.ObraEntity;
+import co.edu.uniandes.csw.artesanias.exceptions.BusinessLogicException;
 import co.edu.uniandes.csw.artesanias.persistence.ObraPersistence;
 import java.util.List;
 import javax.inject.Inject;
@@ -31,7 +32,9 @@ public class ObraLogic
     public ObraEntity getObra(Long id){
         return persistence.findObra(id);
     }
-    public ObraEntity createObra(ObraEntity entity){
+    public ObraEntity createObra(ObraEntity entity) throws BusinessLogicException {
+        if(entity.getUsuario() == null)
+            throw new BusinessLogicException("No tiene usuario la obra");
         return persistence.createObra(entity);
     }
     public ObraEntity updateObra(ObraEntity entity){

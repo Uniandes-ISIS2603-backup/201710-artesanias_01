@@ -14,8 +14,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.ManyToOne;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -27,7 +27,7 @@ public class ObraEntity extends BaseEntity implements Serializable
     //Atributos
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private int id;
+private Long id;
 
 private String nombre;
 
@@ -42,14 +42,17 @@ private String tecnica;
 //asociaciones
 // TODO: implementar la relación en la entidad ComentarioEntity
 //Asociacion con los comentarios
+@PodamExclude
 @OneToMany (mappedBy="obra", cascade= CascadeType.ALL, orphanRemoval = true)
 private List<ComentarioEntity> comentarios= new ArrayList<>();
 
 // TODO: incluir la relación ManyToOne en FotoEntity
 //Asociacion con las fotods
+@PodamExclude
 @OneToMany(mappedBy="obra", cascade= CascadeType.ALL, orphanRemoval = true)
 private List<FotoEntity> fotos= new ArrayList<>();
 
+@PodamExclude
 @ManyToOne
 private UsuarioEntity usuario;
 
@@ -61,7 +64,7 @@ private UsuarioEntity usuario;
     }
 
     public ObraEntity(int id, String nombre, int rating, String material, String tecnica, UsuarioEntity usuario) {
-        this.id = id;
+        this.id = (long)id;
         this.nombre = nombre;
         this.rating = rating;
         this.material = material;
@@ -73,11 +76,21 @@ private UsuarioEntity usuario;
 
 //metodos setters y getters
 
+    @Override
    public int getId() {
-        return id;
+        return Math.toIntExact(id);
+   }
+   
+   public Long getLongId(){
+       return id;
    }
 
-   public void setId(int id) {
+   @Override
+   public void setId(int id){
+       this.id = (long) id;
+   }
+   
+   public void setLongId(Long id) {
        this.id = id;
    }
 
@@ -113,7 +126,32 @@ private UsuarioEntity usuario;
         this.tecnica = tecnica;
     }
     
+    public UsuarioEntity getUsuario(){
+        return usuario;
+    }
+    
+    public void setUsuario(UsuarioEntity usuario){
+        this.usuario = usuario;
+    }
+    
     // TODO: implementar getComentarios y setComentarios
     // TODO: implementar getFotos y setFotos
+
+    public List<ComentarioEntity> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<ComentarioEntity> comentarios) {
+        this.comentarios = comentarios;
+    }
+
+    public List<FotoEntity> getFotos() {
+        return fotos;
+    }
+
+    public void setFotos(List<FotoEntity> fotos) {
+        this.fotos = fotos;
+    }
+    
     
 }

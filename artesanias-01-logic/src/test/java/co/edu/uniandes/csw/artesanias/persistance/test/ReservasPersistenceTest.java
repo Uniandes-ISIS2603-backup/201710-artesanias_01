@@ -1,8 +1,8 @@
 package co.edu.uniandes.csw.artesanias.persistance.test;
 
-import co.edu.uniandes.csw.artesanias.ejbs.StandLogic;
-import co.edu.uniandes.csw.artesanias.entities.StandEntity;
-import co.edu.uniandes.csw.artesanias.persistence.StandPersistence;
+import co.edu.uniandes.csw.artesanias.ejbs.ReservadoLogic;
+import co.edu.uniandes.csw.artesanias.entities.ReservadoEntity;
+import co.edu.uniandes.csw.artesanias.persistence.ReservadoPersistence;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -25,12 +25,12 @@ import uk.co.jemos.podam.api.PodamFactory;
 import uk.co.jemos.podam.api.PodamFactoryImpl;
 
 @RunWith(Arquillian.class)
-public class StandPersistenceTest {
+public class ReservasPersistenceTest {
 
-  private static final Logger logger = Logger.getLogger(StandLogic.class.getName());
+  private static final Logger logger = Logger.getLogger(ReservadoLogic.class.getName());
 
   @Inject
-  StandPersistence standPersistence;
+  ReservadoPersistence reservadoPersistence;
 
   @PersistenceContext(unitName = "feriaPU")
   protected EntityManager em;
@@ -42,8 +42,8 @@ public class StandPersistenceTest {
   public static JavaArchive creaDespliege() {
     logger.info("Generando archivo de despliegue");
     JavaArchive archive = ShrinkWrap.create(JavaArchive.class)
-            .addPackage(StandEntity.class.getPackage())
-            .addPackage(StandPersistence.class.getPackage())
+            .addPackage(ReservadoEntity.class.getPackage())
+            .addPackage(ReservadoPersistence.class.getPackage())
             .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
             .addAsManifestResource("META-INF/beans.xml", "beans.xml")
             .addAsManifestResource("META-INF/logging.properties", "logging.properties");
@@ -72,17 +72,17 @@ public class StandPersistenceTest {
 
   // borra las tablas
   private void clearData() {
-    em.createQuery("delete from StandEntity").executeUpdate();
+    em.createQuery("delete from ReservadoEntity").executeUpdate();
   }
 
   // datos de prueba
-  private List<StandEntity> data = new ArrayList<>();
+  private List<ReservadoEntity> data = new ArrayList<>();
 
   // inserta datos de prueba en las tablas
   private void insertData() {
     PodamFactory factory = new PodamFactoryImpl();
     for (int i = 0; i < 3; i++) {
-      StandEntity entity = factory.manufacturePojo(StandEntity.class);
+      ReservadoEntity entity = factory.manufacturePojo(ReservadoEntity.class);
       em.persist(entity);
       data.add(entity);
     }
@@ -95,19 +95,20 @@ public class StandPersistenceTest {
      * @generated
      */
     @Test
-    public void createStandTest() {
+    public void createReservaTest() {
         PodamFactory factory = new PodamFactoryImpl();
-        StandEntity newEntity = factory.manufacturePojo(StandEntity.class);
-        StandEntity result = standPersistence.createStand(newEntity);
+        ReservadoEntity newEntity = factory.manufacturePojo(ReservadoEntity.class);
+        ReservadoEntity result = reservadoPersistence.createReservado(newEntity);
 
         Assert.assertNotNull(result);
 
-        StandEntity entity = em.find(StandEntity.class, result.getNumeroStand());
+        ReservadoEntity entity = em.find(ReservadoEntity.class, result.getId());
 
        
-         Assert.assertEquals(entity.getCaracteristicas(), newEntity.getCaracteristicas());
-        Assert.assertEquals(entity.getPrecio(), newEntity.getPrecio());
-        Assert.assertEquals(entity.getTamanio(), newEntity.getTamanio());
+         Assert.assertEquals(entity.getArtesano(), newEntity.getArtesano());
+        Assert.assertEquals(entity.getCosto(), newEntity.getCosto());
+        Assert.assertEquals(entity.getEstado(), newEntity.getEstado());
+         Assert.assertEquals(entity.getStand(), newEntity.getStand());
         
     }
 
@@ -117,13 +118,13 @@ public class StandPersistenceTest {
      * @generated
      */
     @Test
-    public void getStandsTest() {
-        List<StandEntity> list = standPersistence.findAllStands();
+    public void getReservasTest() {
+        List<ReservadoEntity> list = reservadoPersistence.findAllReservados();
         Assert.assertEquals(data.size(), list.size());
-        for (StandEntity ent : list) {
+        for (ReservadoEntity ent : list) {
             boolean found = false;
-            for (StandEntity entity : data) {
-                if (Long.valueOf(ent.getNumeroStand()).equals(Long.valueOf(entity.getNumeroStand()))) 
+            for (ReservadoEntity entity : data) {
+                if (ent.getId() == entity.getId()) 
                 {
                     found = true;
                 }
@@ -138,13 +139,13 @@ public class StandPersistenceTest {
      * @generated
      */
     @Test
-    public void getBookTest() {
-        StandEntity entity = data.get(1);
-        StandEntity newEntity = standPersistence.findStand(entity.getNumeroStand());
+    public void getReservaTest() {
+        ReservadoEntity entity = data.get(1);
+        ReservadoEntity newEntity = reservadoPersistence.findReservado(entity.getId());
         Assert.assertNotNull(newEntity);
-        Assert.assertEquals(entity.getCaracteristicas(), newEntity.getCaracteristicas());
-        Assert.assertEquals(entity.getPrecio(), newEntity.getPrecio());
-        Assert.assertEquals(entity.getTamanio(), newEntity.getTamanio());
+        Assert.assertEquals(entity.getArtesano(), newEntity.getArtesano());
+        Assert.assertEquals(entity.getCosto(), newEntity.getCosto());
+        Assert.assertEquals(entity.getEstado(), newEntity.getEstado());
         
     }
 
@@ -154,10 +155,10 @@ public class StandPersistenceTest {
      * @generated
      */
     @Test
-    public void deleteStandTest() {
-        StandEntity entity = data.get(1);
-        standPersistence.deleteStand(entity.getNumeroStand());
-        StandEntity deleted = em.find(StandEntity.class, entity.getNumeroStand());
+    public void deleteReservaTest() {
+        ReservadoEntity entity = data.get(1);
+        reservadoPersistence.deleteReservado(entity.getId());
+        ReservadoEntity deleted = em.find(ReservadoEntity.class, entity.getId());
         Assert.assertNull(deleted);
     }
 
@@ -168,18 +169,18 @@ public class StandPersistenceTest {
      */
     @Test
     public void updateBookTest() {
-        StandEntity entity = data.get(0);
+        ReservadoEntity entity = data.get(0);
         PodamFactory factory = new PodamFactoryImpl();
-        StandEntity newEntity = factory.manufacturePojo(StandEntity.class);
-        newEntity.setNumeroStand(entity.getNumeroStand());
+        ReservadoEntity newEntity = factory.manufacturePojo(ReservadoEntity.class);
+        newEntity.setId(entity.getId());
 
-        standPersistence.updateStand(newEntity);
+        reservadoPersistence.updateReservado(newEntity);
 
-        StandEntity resp = em.find(StandEntity.class, entity.getNumeroStand());
+        ReservadoEntity resp = em.find(ReservadoEntity.class, entity.getId());
 
-        Assert.assertEquals(newEntity.getCaracteristicas(), resp.getCaracteristicas());
-        Assert.assertEquals(newEntity.getPrecio(), resp.getPrecio());
-        Assert.assertEquals(newEntity.getTamanio(), resp.getTamanio());
+        Assert.assertEquals(newEntity.getArtesano(), resp.getArtesano());
+        Assert.assertEquals(newEntity.getCosto(), resp.getCosto());
+        Assert.assertEquals(newEntity.getEstado(), resp.getEstado());
 
     }
 }
