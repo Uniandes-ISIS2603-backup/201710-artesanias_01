@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class FeriaArtesanalDTO implements Serializable{
     
-    private Integer    id;
+    private Long    id;
     private String  nombre;
     private String  lugar;
     private Date    fechaInicio;
@@ -49,11 +49,11 @@ public class FeriaArtesanalDTO implements Serializable{
         return entity;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
