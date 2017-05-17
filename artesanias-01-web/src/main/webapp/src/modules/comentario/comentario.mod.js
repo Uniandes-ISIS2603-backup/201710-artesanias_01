@@ -1,45 +1,38 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 (function (ng) {
-    var mod = ng.module("reviewModule", ['ui.router']);
-
-    mod.constant("booksContext", "api/reviews");
-
-    mod.constant("reviewsContext", "reviews");
-
+    var mod = ng.module("comentarioModule", ['ui.router']);
+    mod.constant("comentarioContext", "api/cometario");
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            var basePath = 'src/modules/Comentario/';
-            $urlRouterProvider.otherwise("/reviewsList");
-
-            $stateProvider.state('reviews', {
-                url: '/reviews',
+            var basePath = 'src/modules/comentario/';
+            $urlRouterProvider.otherwise("/comentarioList");
+            self = this;            
+            $stateProvider.state('comentario', {
+                url: '/comentario',
                 abstract: true,
-                parent: 'obrasDetail',
                 resolve: {
-                    reviews: ['$http', 'obrasContext', 'reviewsContext', '$stateParams', function ($http, obrasContext, reviewsContext, $params) {
-                            return $http.get(obrasContext + '/' + $params.obraId + '/' + reviewsContext);
+                    pabellones: ['$http',function ($http) {
+                            console.log("P-Holi-11");
+                            return $http.get('data/comentarios.json');  
+                            console.log("P-Holi-12");
                         }]
                 },
                 views: {
-                    'childrenView': {
-                        templateUrl: basePath + 'reviews.html'
+                    'mainView': {
+                        templateUrl: basePath + 'comentario.html',
+                        controller: ['$scope', 'comentario', function ($scope, comentario) {
+                                console.log("P-Holi-21");
+                                $scope.comentarioRecords = comentario.data;
+                                console.log("P-Holi-22");
+                            }]
                     }
-                },
-            }).state('reviewsList', {
+                }
+            }).state('comentarioList', {
                 url: '/list',
-                parent: 'reviews',
+                parent: 'comentario',
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'reviews.list.html',
-                        controller: ['$scope', 'reviews', function ($scope, reviews) {
-                                $scope.reviewsRecords = reviews.data;
-                            }]
+                        templateUrl: basePath + 'comentario.list.html'
                     }
                 }
             });
         }]);
 })(window.angular);
-

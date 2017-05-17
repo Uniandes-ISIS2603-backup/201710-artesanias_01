@@ -34,6 +34,8 @@ SOFTWARE.
         'pabellonModule',
         'feriaModule',
         'obrasModule',
+        'comentarioModule',
+        
         
         
     ]);
