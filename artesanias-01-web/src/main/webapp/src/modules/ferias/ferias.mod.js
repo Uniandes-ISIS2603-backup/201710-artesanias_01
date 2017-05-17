@@ -1,6 +1,6 @@
 (function (ng) {
     var mod = ng.module("feriaModule", ['ui.router']);
-    mod.constant("feriasContext", "api/ferias");
+    mod.constant("feriasContext", "api/feria");
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             var basePath = 'src/modules/ferias/';
             $urlRouterProvider.otherwise("/feriasList");
@@ -9,15 +9,21 @@
                 url: '/ferias',
                 abstract: true,
                 resolve: {
-                    ferias: ['$http', function ($http) {
-                            return $http.get('data/ferias.json');
+                    ferias: ['$http','feriasContext', function ($http, feriasContext) {
+                            console.log("Holi-11");
+                            console.log("feriasContext: "+feriasContext);
+                            console.log("return: "+$http.get(feriasContext));
+                            return $http.get(feriasContext);
+                            console.log("Holi-12");
                         }]
                 },
                 views: {
                     'mainView': {
                         templateUrl: basePath + 'ferias.html',
                         controller: ['$scope', 'ferias', function ($scope, ferias) {
+                                console.log("Holi-21");
                                 $scope.feriasRecords = ferias.data;
+                                console.log("Holi-22");
                             }]
                     }
                 }
